@@ -1057,7 +1057,7 @@
       .contant-inner .segment .title.click-filter {
         cursor: pointer; }
         .contant-inner .segment .title.click-filter i {
-          font-size: 20px; }
+          font-size: 17px; }
       @media (max-width: 450px) {
         .contant-inner .segment .title {
           font-size: 20px; } }
@@ -1099,6 +1099,8 @@
         font-weight: 700; }
       .contant-inner .segment .table .order_money {
         color: #7cc331; }
+      .contant-inner .segment .table .mer {
+        margin-left: 5px; }
       .contant-inner .segment .table .bottom {
         position: relative;
         padding: 5px 30px;
@@ -1202,7 +1204,7 @@
         .contant-inner .segment .table .up-alt:hover {
           color: #279bc0; }
       .contant-inner .segment .table .secret {
-        padding: 5px 25px;
+        padding: 2px 15px;
         background: #7cc331;
         color: #fff;
         font-weight: 600;
@@ -1292,6 +1294,8 @@
           text-align: center;
           font-size: 12px;
           padding-top: 5px; }
+    .contant-inner .segment .list-bill li {
+      display: block; }
   .contant-inner .optionBox {
     width: 100%; }
     .contant-inner .optionBox .block {
@@ -1420,13 +1424,14 @@
   100% {
     transform: scale(1); } }
   .contant-inner .btnright a {
-    margin-left: 15px;
+    margin-left: 5px;
     -moz-transition: all 0.5s ease-in-out 0s;
     -o-transition: all 0.5s ease-in-out 0s;
     -webkit-transition: all 0.5s ease-in-out 0s;
-    transition: all 0.5s ease-in-out 0s; }
+    transition: all 0.5s ease-in-out 0s;
+    color: #279bc0; }
     .contant-inner .btnright a:hover {
-      color: #279bc0; }
+      text-decoration: underline; }
   .contant-inner .slidedwn-filter {
     display: none; }
   .contant-inner .form .field {

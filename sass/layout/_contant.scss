@@ -248,7 +248,7 @@
         cursor: pointer;
 
         i {
-          font-size: 20px;
+          font-size: 17px;
         }
       }
 
@@ -319,6 +319,11 @@
         color: $green;
       }
 
+      .mer {
+        margin-left: 5px;
+      }
+
+
       .bottom {
         @include bottom;
         height: 40px;
@@ -381,7 +386,7 @@
       }
 
       .secret {
-        padding: 5px 25px;
+        padding: 2px $minmargin;
         background: $green;
         color: $white;
         font-weight: 600;
@@ -498,6 +503,13 @@
         }
       }
     }
+
+    .list-bill {
+      li {
+        display: $block;
+      }
+    }
+
   }
 
   .optionBox {
@@ -589,11 +601,12 @@
 
   .btnright {
     a {
-      margin-left: $minmargin;
+      margin-left: 5px;
       @include transition(all 0.5s ease-in-out 0s);
+      color: $ofblue;
 
       &:hover {
-        color: $ofblue;
+        text-decoration: underline;
       }
     }
   }
