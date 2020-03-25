@@ -1,0 +1,334 @@
+.header {
+    @include position(fixed, $top: 0, $left: 0px);
+    padding-left: 260px;
+    @include prefixer (box-shadow, 0 1px 5px rgba(4, 6, 8, 0.21), webkit moz o ms);
+    background: $white;
+    width: $fullwidth;
+    z-index: 1000;
+    @include transition(all 0.5s ease-in-out 0s);
+
+    @media (max-width:991px) {
+        padding-left: $zero;
+    }
+
+    .logo-rspon {
+        width: $fullwidth;
+        height: 60px;
+        background: $blue;
+        display: $none;
+        padding: 8px $zero;
+        text-align: $center;
+        overflow: hidden;
+        @include transition(all 0.5s ease-in-out 0s);
+
+        @media (max-width:991px) {
+            display: $block;
+        }
+    }
+
+    &.sticky {
+        @include position(fixed);
+
+        .min-header {
+            height: $zero;
+            padding: $zero $minmargin;
+            overflow: hidden;
+
+            @media (max-width:991px) {
+                height: $auto;
+                padding: $minmargin;
+                overflow: visible;
+            }
+        }
+
+        .header-menu {
+            border: $zero;
+            justify-content: space-between;
+
+            .sidebarCollapse {
+                display: $block;
+                color: $blue;
+                cursor: pointer;
+                @include transition(all 0.5s ease-in-out 0s);
+
+                &:hover {
+                    color: $ofblue;
+                }
+            }
+
+            .boxsearch {
+                display: $block;
+            }
+
+
+            .textmenu {
+                margin-left: 50px;
+
+                @media (max-width: 1250px) {
+                    margin-left: $zero;
+                }
+
+                a {
+                    @media (max-width: 1199px) {
+                        margin-right: $minmargin;
+                    }
+
+                    &:hover:before,
+                    &.active:before {
+                        bottom: -12px;
+                    }
+                }
+            }
+        }
+
+        .logo-rspon {
+            height: $zero;
+            padding: $zero;
+        }
+    }
+
+    .min-header {
+        padding: $minmargin;
+        @include flex;
+        justify-content: space-between;
+        @include transition(all 0.5s ease-in-out 0s);
+
+
+        .link_store {
+            .sidebarCollapse {
+                color: $blue;
+                cursor: pointer;
+                @include transition(all 0.5s ease-in-out 0s);
+
+                &:hover {
+                    color: $ofblue;
+                }
+            }
+
+            a {
+                @include transition(all 0.5s ease-in-out 0s);
+                margin-left: $minmargin;
+                font-weight: 600;
+
+                @media (max-width:991px) {
+                    display: $none;
+                }
+
+                &:hover {
+                    color: $ofblue;
+                }
+            }
+        }
+
+        .boxsearch {
+            position: relative;
+            width: 300px;
+
+            @media (max-width: 1200px) {
+                width: 200px;
+            }
+
+            @media (max-width: 991px) {
+                width: $auto;
+                @include position(absolute, $right: 180px);
+            }
+
+            .onclick-bot {
+                display: $none;
+                cursor: pointer;
+
+
+                @media (max-width: 991px) {
+                    display: $block;
+                    font-size: 14px;
+                    margin-right: 5px;
+                    @include flex;
+                    @include border-radius(50%);
+                    width: 30px;
+                    height: 30px;
+                    background: $ofwhite;
+                    justify-content: $center;
+                    text-align: $center;
+                }
+
+                i {
+                    width: 30px;
+                    height: 30px;
+                    padding: 8px $zero;
+                }
+
+                i.fas.fa-times.cancel {
+                    color: $red;
+                    display: $none;
+                }
+            }
+
+            .formsearch {
+                @media (max-width: 991px) {
+                    display: $none;
+                    width: 200px;
+                    @include position(absolute, $top: 46px, $left:0px);
+                    @include prefixer (box-shadow, 0 1px 5px rgba(4, 6, 8, 0.21), webkit moz o ms);
+                    background-color: $white;
+                    z-index: 22;
+                    padding: 10px;
+                }
+            }
+
+            .form-control {
+                width: $fullwidth;
+                height: 35px;
+                border: $zero;
+                box-shadow: $none;
+                outline: $none;
+                background: $ofwhite;
+                text-transform: $none;
+                @include border-radius(60px);
+                padding: 5px 35px 5px $minmargin;
+            }
+
+            .btn {
+                @include position(absolute, $top:11px, $right: 13px);
+                color: $blue;
+                padding: $zero;
+                background: $none;
+                border: $zero;
+                @include transition(all 0.5s ease-in-out 0s);
+
+                @media (max-width: 991px) {
+                    top: 20px;
+                    right: 20px;
+                }
+
+                &:hover {
+                    color: $ofblue;
+                }
+            }
+
+        }
+
+        .text-dropdown {
+            @include flex;
+
+            .language {
+                @include transition(all 0.5s ease-in-out 0s);
+                margin-left: $minmargin;
+
+                @media (max-width:991px) {
+                    margin-left: 5px;
+                }
+
+
+                &:hover {
+                    color: $ofblue;
+                }
+            }
+
+            .support_dropdown-head {
+                @include dropdown;
+            }
+        }
+    }
+
+    .header-menu {
+        @include flex;
+        width: $fullwidth;
+        height: 58px;
+        padding: $minmargin;
+        border-top: 1px solid $border;
+
+        @media (max-width:991px) {
+            display: $none;
+        }
+
+
+        .boxsearch {
+            position: relative;
+            width: 300px;
+
+            @media (max-width: 1200px) {
+                width: 200px;
+            }
+
+            .form-control {
+                width: $fullwidth;
+                height: 35px;
+                border: $zero;
+                box-shadow: $none;
+                outline: $none;
+                background: $ofwhite;
+                text-transform: $none;
+                @include border-radius(60px);
+                padding: 5px 35px 5px $minmargin;
+            }
+
+            .btn {
+                @include position(absolute, $top:11px, $right: 13px);
+                color: $blue;
+                padding: $zero;
+                background: $none;
+                border: $zero;
+                @include transition(all 0.5s ease-in-out 0s);
+
+                &:hover {
+                    color: $ofblue;
+                }
+            }
+
+        }
+
+        .textmenu {
+            a {
+                font-size: 20px;
+                color: $blue;
+                font-weight: 600;
+                position: relative;
+                margin-right: 50px;
+
+                &:before {
+                    content: "";
+                    @include position(absolute, $bottom: 30px, $left: 0px, $right:0px);
+                    background: $blue;
+                    height: 5px;
+                    width: 5px;
+                    opacity: 0;
+                    @include border-radius(50%);
+                    -webkit-transition: opacity 0.5s ease 0s, bottom 0s ease 0.5s, height 0s ease 0.5s, width 0s ease 0.5s, border-radius 0s ease 0.5s, left 0s ease 0.5s;
+                    -o-transition: opacity 0.5s ease 0s, bottom 0s ease 0.5s, height 0s ease 0.5s, width 0s ease 0.5s, border-radius 0s ease 0.5s, left 0s ease 0.5s;
+                    transition: opacity 0.5s ease 0s, bottom 0s ease 0.5s, height 0s ease 0.5s, width 0s ease 0.5s, border-radius 0s ease 0.5s, left 0s ease 0.5s;
+                    margin: $zero $auto;
+                }
+
+
+                img {
+                    max-width: 17px;
+                    margin-top: -5px;
+                }
+
+                &:hover:before,
+                &.active:before {
+                    height: 2px;
+                    width: 100%;
+                    @include border-radius(10px);
+                    bottom: -11px;
+                    opacity: 1;
+                    text-align: $center;
+                    -webkit-transition: opacity 0s ease 0s, bottom 0.3s ease 0s, height 0.3s ease 0.3s, width 0.3s ease 0.3s, border-radius 0.3s ease 0.3s, left 0.3s ease 0.3s;
+                    -o-transition: opacity 0s ease 0s, bottom 0.3s ease 0s, height 0.3s ease 0.3s, width 0.3s ease 0.3s, border-radius 0.3s ease 0.3s, left 0.3s ease 0.3s;
+                    transition: opacity 0s ease 0s, bottom 0.3s ease 0s, height 0.3s ease 0.3s, width 0.3s ease 0.3s, border-radius 0.3s ease 0.3s, left 0.3s ease 0.3s;
+                }
+            }
+        }
+
+
+        .sidebarCollapse,
+        .boxsearch {
+            display: $none;
+            margin-top: $zero;
+        }
+    }
+
+
+}
+
+/* End Style Header*/

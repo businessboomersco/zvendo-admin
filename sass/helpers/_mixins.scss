@@ -1,0 +1,906 @@
+@mixin reset {
+    margin: $zero;
+    padding: $zero;
+    border: $zero;
+    text-decoration: $none;
+    list-style: $none;
+    font-size: $fontsize;
+    line-height: $lineheight;
+    text-transform: capitalize;
+    color: $colortext;
+    font-family: "Cairo", sans-serif;
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin overlay {
+    content: "";
+    @include position(absolute, $top: 0, $left: 0, $right: auto, $bottom: auto);
+    width: $fullwidth;
+    height: $fullwidth;
+}
+
+@mixin section {
+    width: $fullwidth;
+    padding: $minmargin;
+    background: $white;
+    @include border-radius(5px);
+    @include prefixer (box-shadow, 0px 0px 4px #d4d4d4, webkit moz o ms);
+    @include position(relative);
+}
+
+@mixin flex {
+    display: flex;
+    align-items: $center;
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+@mixin scale($degscale) {
+    -webkit-transform: scale($degscale);
+    -moz-transform: scale($degscale);
+    -ms-transform: scale($degscale);
+    -o-transform: scale($degscale);
+    transform: scale($degscale);
+}
+
+@mixin bottom {
+    @include position(relative);
+    padding: 5px 30px;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    overflow: hidden;
+    color: $white;
+    outline: $none;
+    outline-style: $none;
+    border: $zero;
+    background: $blue;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-flex;
+    justify-content: $center;
+    align-items: $center;
+    @include transition(all 0.5s ease-in-out 0s);
+    cursor: pointer;
+    @include border-radius(60px);
+    text-transform: capitalize;
+
+    @media (max-width:450px) {
+        padding: 3px 20px;
+    }
+
+    &:before {
+        content: "";
+        @include position(absolute, $top: 0, $left: 0, $right: 0, $bottom: 0);
+        z-index: -1;
+        background: $ofblue;
+        @include scale(0);
+        @include transition(all 0.5s ease-in-out 0s);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover:before {
+        @include scale(2);
+    }
+
+    &:hover {
+        color: $white;
+    }
+
+    i {
+        margin-right: 5px;
+    }
+}
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    #{$property}: $value;
+}
+
+@mixin keyFrame($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin social {
+    float: $left;
+
+    a {
+        float: $left;
+        width: 30px;
+        height: 30px;
+        text-align: $center;
+        @include flex;
+        font-size: 16px;
+        @include border-radius(2px);
+        @include transition(all 0.5s ease-in-out 0s);
+        color: $white;
+
+        @each $type in $social {
+            &.icon-#{nth($type, 1)} {
+                &:hover {
+                    background-color: nth($type, 2);
+                }
+            }
+        }
+    }
+}
+
+@mixin title {
+    color: $blak;
+    font-size: 30px;
+    font-weight: 600;
+    @include position(relative);
+
+    @media (max-width: 991px) {
+        font-size: 25px;
+    }
+}
+
+@mixin banner {
+    @include section;
+    height: 450px;
+    padding: $zero;
+    background: $white url(../images/slides/img1.jpg) no-repeat fixed center center/cover;
+    @include flex;
+
+    @media (max-width: 991px) {
+        height: 250px;
+        margin-top: -30px;
+    }
+
+    .container {
+        margin-top: 115px;
+
+        @media (max-width: 991px) {
+            margin-top: $zero;
+        }
+    }
+
+    .title {
+        @include title;
+        color: $white;
+        padding: $zero;
+        margin-top: $zero;
+        text-align: $right;
+
+        &:before {
+            display: $none;
+        }
+    }
+
+    .maplink {
+        @include section;
+        padding: $zero !important;
+        margin-top: $minmargin;
+
+        li {
+            display: $inline;
+            color: $red;
+
+            a {
+                color: $white;
+                position: relative;
+                padding-left: $minmargin;
+                @include transition(all 0.5s ease-in-out 0s);
+
+                &:hover {
+                    color: $red;
+                }
+
+                i {
+                    font-size: 12px;
+                }
+
+                &:before {
+                    @include position(absolute, $top: 1px, $left: 2px);
+                    content: "/";
+                    display: $inline;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@mixin form {
+    .field {
+        position: relative;
+        margin-top: $minmargin;
+
+        &.pad {
+            padding: $zero $maxmargin+$maxmargin;
+
+            @media (max-width:550px) {
+                padding: $zero;
+            }
+        }
+
+        @media (max-width:991px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+
+        @media (max-width:550px) {}
+
+        label {
+            font-weight: bold;
+            margin: $zero;
+
+            em {
+                color: $red;
+                font-style: normal;
+            }
+        }
+
+        .form-control {
+            height: 50px;
+            text-transform: $none;
+            border: 1px solid $border;
+        }
+
+        select.form-control {
+            -webkit-appearance: $none;
+        }
+
+        textarea.form-control {
+            height: 160px;
+            resize: $none;
+        }
+
+        i {
+            @include position(absolute, $top:43px, $right:30px);
+            z-index: 10;
+        }
+
+        .disabled {
+            opacity: .5;
+        }
+
+        .labeled {
+            position: relative;
+
+            .descr {
+                @include position(absolute, $top:1px, $left:1px);
+                background: $ofwhite;
+                height: 48px;
+                padding: $zero 10px;
+                color: $blak;
+                @include flex;
+                justify-content: $center;
+            }
+
+            .form-control {
+                padding-left: 65px;
+            }
+        }
+
+        .text {
+            font-weight: 600;
+            margin-left: 5px;
+        }
+    }
+
+    .switch {
+        position: relative;
+        display: $inline;
+        width: 55px;
+        height: 25px;
+
+        input {
+            opacity: 0;
+            width: $zero;
+            height: $zero;
+        }
+
+        .slider {
+            @include position(absolute, $top: 0, $left: 0, $right:0, $bottom:0);
+            cursor: pointer;
+            background: #ccc;
+            @include transition(all 0.5s ease-in-out 0s);
+
+            &:before {
+                content: "";
+                @include position(absolute, $left:6px, $bottom:3px);
+                height: 19px;
+                width: 19px;
+                background-color: $white;
+                @include transition(all 0.5s ease-in-out 0s);
+            }
+        }
+
+        input:checked+.slider {
+            background: $green;
+        }
+
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            @include border-radius(60px);
+
+            &:before {
+                @include border-radius(50%);
+            }
+        }
+
+    }
+
+    .disabled {
+
+        .switch,
+        .text {
+            opacity: .5;
+        }
+    }
+
+}
+
+@mixin spinner {
+    @include position(absolute, $top: 0, $left: 0);
+    width: $fullwidth;
+    height: $fullwidth;
+    background: rgba(255, 255, 255, 0.62);
+    @include flex;
+    justify-content: $center;
+    @include border-radius(5px);
+
+    .sk-chase {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        animation: sk-chase 2.5s infinite linear both;
+    }
+
+    .sk-chase-dot {
+        @include position(absolute, $top: 0, $left: 0);
+        width: $fullwidth;
+        height: $fullwidth;
+        animation: sk-chase-dot 2.0s infinite ease-in-out both;
+    }
+
+    .sk-chase-dot:before {
+        content: '';
+        display: block;
+        width: 25%;
+        height: 25%;
+        background-color: $blue;
+        border-radius: 100%;
+        animation: sk-chase-dot-before 2.0s infinite ease-in-out both;
+    }
+
+    .sk-chase-dot:nth-child(1) {
+        animation-delay: -1.1s;
+    }
+
+    .sk-chase-dot:nth-child(2) {
+        animation-delay: -1.0s;
+    }
+
+    .sk-chase-dot:nth-child(3) {
+        animation-delay: -0.9s;
+    }
+
+    .sk-chase-dot:nth-child(4) {
+        animation-delay: -0.8s;
+    }
+
+    .sk-chase-dot:nth-child(5) {
+        animation-delay: -0.7s;
+    }
+
+    .sk-chase-dot:nth-child(6) {
+        animation-delay: -0.6s;
+    }
+
+    .sk-chase-dot:nth-child(1):before {
+        animation-delay: -1.1s;
+    }
+
+    .sk-chase-dot:nth-child(2):before {
+        animation-delay: -1.0s;
+    }
+
+    .sk-chase-dot:nth-child(3):before {
+        animation-delay: -0.9s;
+    }
+
+    .sk-chase-dot:nth-child(4):before {
+        animation-delay: -0.8s;
+    }
+
+    .sk-chase-dot:nth-child(5):before {
+        animation-delay: -0.7s;
+    }
+
+    .sk-chase-dot:nth-child(6):before {
+        animation-delay: -0.6s;
+    }
+
+    @keyframes sk-chase {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes sk-chase-dot {
+
+        80%,
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes sk-chase-dot-before {
+        50% {
+            transform: scale(0.4);
+        }
+
+        100%,
+        0% {
+            transform: scale(1.0);
+        }
+    }
+}
+
+
+@mixin arrow {
+    @include position(absolute, $top:3px, $right:-20px);
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+    display: $inline;
+    font-weight: 900;
+    font-size: 13px;
+}
+
+
+@mixin dropdown {
+    position: relative;
+    margin-left: $maxmargin;
+
+    @media (max-width: 1200px) {
+        margin-left: 10px;
+    }
+
+    @media (max-width:991px) {
+        margin-left: 5px;
+    }
+
+    .name-user {
+        @include flex;
+        position: relative;
+        cursor: pointer;
+
+        p {
+            @include transition(all 0.5s ease-in-out 0s);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media (max-width:991px) {
+                display: $none;
+            }
+
+            &:hover {
+                color: $ofblue;
+            }
+        }
+
+        i {
+            font-size: 14px;
+            margin-right: 5px;
+            @include transition(all 0.5s ease-in-out 0s);
+
+            @media (max-width:991px) {
+                @include flex;
+                @include border-radius(50%);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: $ofwhite;
+                justify-content: $center;
+            }
+
+            &.icon-mar {
+                margin: $zero;
+                font-size: 12px;
+                margin-left: 2px;
+
+                @media (max-width:991px) {
+                    display: $none;
+                }
+
+            }
+        }
+
+
+        .number {
+            @include position(absolute, $top: -10px, $right: -10px);
+            background: $red;
+            width: 18px;
+            height: 18px;
+            @include border-radius(50%);
+            color: $white;
+            font-size: 10px;
+            @include flex;
+            justify-content: $center;
+        }
+
+        &:hover {
+
+            p,
+            i {
+                color: $ofblue;
+            }
+
+        }
+    }
+
+    .support_dropdown-content {
+        @include position(absolute, $top: 30px, $right:0px);
+        width: 150px;
+        @include prefixer (box-shadow, 0 1px 5px rgba(4, 6, 8, 0.21), webkit moz o ms);
+        background-color: $white;
+        z-index: 22;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(all 0.5s ease-in-out 0s);
+        padding: $minmargin;
+
+        li {
+            a {
+                @include transition(all 0.5s ease-in-out 0s);
+
+                &:hover {
+                    color: $ofblue;
+                }
+            }
+
+            i {
+                width: 15px;
+                font-size: 14px;
+                margin-right: 5px;
+            }
+        }
+
+        &.bell {
+            width: 170px;
+
+            @media (max-width:991px) {
+                right: $auto;
+                left: $zero;
+            }
+
+
+            .warning {
+                display: $inline;
+                width: $fullwidth;
+                color: $red;
+                text-align: $center;
+            }
+        }
+
+    }
+
+
+    &:hover {
+        .name-user {
+
+            p,
+            i {
+                color: $ofblue;
+            }
+
+        }
+
+        .support_dropdown-content {
+            top: 47px;
+            opacity: 1;
+            visibility: visible;
+
+            &.bell {
+                top: 40px;
+
+                @media (max-width:991px) {
+                    top: 46px;
+                }
+
+            }
+        }
+    }
+
+}
+
+@mixin check-box {
+    position: relative;
+    width: $fullwidth;
+
+    .che-box {
+        position: relative;
+        padding-left: 20px;
+        margin: $zero;
+
+        &.hide {
+            opacity: .5;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            @include position(absolute, $right:9000px);
+        }
+
+        input[type="checkbox"]+.label-text:before,
+        input[type="radio"]+.label-text:before {
+            @include position(absolute, $top: 5px, $left: 0);
+            content: "\f0c8";
+            font-family: "Font Awesome 5 Free";
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            font-size: 17px;
+            display: $inline;
+            font-style: initial;
+            color: #e2e2e2;
+        }
+
+        input[type="radio"]+.label-text:before {
+            content: "\f192";
+            color: #dadada;
+            font-weight: 900;
+            font-style: initial;
+        }
+
+        input[type="checkbox"]:checked+.label-text:before {
+            content: "\f14a";
+            color: $ofblue;
+            font-weight: 600;
+            animation: effect 250ms ease-in;
+        }
+
+        input[type="radio"]:checked+.label-text:before {
+            color: $ofblue;
+            animation: effect 250ms ease-in;
+        }
+
+        span.label-text {
+            color: $blak;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        @keyframes effect {
+            0% {
+                transform: scale(0);
+            }
+
+            25% {
+                transform: scale(1.3);
+            }
+
+            75% {
+                transform: scale(1.4);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    }
+
+
+}
+
+@mixin divider {
+    .question {
+        background: $ofwhite;
+        margin-top: 10px;
+        padding: 10px $minmargin;
+        color: $blak;
+        @include border-radius(5px);
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        @include transition(all 0.5s ease-in-out 0s);
+
+        img {
+            width: 16px;
+            height: 11px;
+            margin: -3px 5px $zero $zero;
+        }
+
+        &:last-of-type {
+            margin-bottom: $zero;
+        }
+
+        &:before {
+            @include position(absolute, $top: 10, $right:15px);
+            content: '';
+            display: inline-block;
+            border-top: 7px solid $blak;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            @include rotate(0deg);
+            margin-top: 10px;
+            @include transition(all 0.5s ease-in-out 0s);
+        }
+
+        &.active {
+            background: $ofblue;
+            color: $white;
+            @include border-radius(5px 5px 0px 0px);
+            margin-bottom: $zero;
+
+            &::before {
+                @include rotate(-180deg);
+                border-top: 7px solid $white;
+            }
+        }
+
+        &.not-active {
+            &:before {
+                @include rotate(0deg);
+            }
+        }
+    }
+
+    .answer {
+        display: $none;
+        background: $white;
+        padding: $minmargin;
+        padding-top: $zero;
+        border: 1px solid $ofblue;
+        @include border-radius(0px 0px 10px 10px);
+        border-top: $zero;
+        margin-bottom: $minmargin;
+
+        &:last-of-type {
+            margin-bottom: $zero;
+        }
+    }
+
+}
+
+
+@mixin styleslider {
+    width: $fullwidth;
+    @include position(relative);
+    margin-top: $maxmargin;
+
+    @media (max-width:991px) {
+        margin-top: $zero;
+    }
+
+
+    .slick-list {
+        @include position(relative);
+        display: $block;
+        overflow: hidden;
+        outline: $none;
+        margin: $zero -15px;
+
+        .slick-track {
+            @include position(relative, $top: 0, $left:auto, $right:auto, $bottom:auto);
+            display: $block;
+            overflow: hidden;
+
+            &:after,
+            &:before {
+                display: table;
+                content: '';
+            }
+        }
+
+        /// End .slick-track
+    }
+
+    /// End .Slick-list
+    .slick-prev,
+    .slick-next {
+        @include position(absolute, $top:-50px, $right:0px);
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        border: $zero;
+        padding: $zero;
+        outline: $none;
+        font-size: $zero;
+        @include transition(all 0.5s ease-in-out 0s);
+        background: $blue url(../images/right-arrow.png) no-repeat center center;
+
+        @media (max-width:991px) {
+            display: $none !important;
+        }
+
+        &:hover {
+            background: $ofblue url(../images/right-arrow.png) no-repeat center center;
+        }
+    }
+
+    .slick-prev {
+        right: $auto;
+        right: 41px;
+        @include rotate(180deg);
+    }
+
+    .slick-dots {
+        width: $fullwidth;
+        text-align: $center;
+        display: $none !important;
+
+        @media (max-width:991px) {
+            display: $block !important;
+        }
+
+        li {
+            @include position(relative);
+            display: $inline;
+            margin: $zero 3px;
+            padding: $zero;
+            cursor: pointer;
+            background: $ofwhite;
+            @include border-radius(50%);
+
+            button {
+                font-size: $zero;
+                line-height: $zero;
+                display: $block;
+                width: 13px;
+                height: 13px;
+                cursor: pointer;
+                color: $ofwhite;
+                border: $zero;
+                outline: $none;
+                background: transparent;
+            }
+        }
+
+        li.slick-active {
+            background: $blue;
+        }
+    }
+}

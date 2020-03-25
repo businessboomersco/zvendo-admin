@@ -1,0 +1,76 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/contant";
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+hr,
+strong,
+b,
+input,
+select,
+textarea,
+.highcharts-title,
+.highcharts-axis-labels,
+.highcharts-yaxis-title {
+    @include reset;
+}
+
+/* Handle Scroll style
+==============================*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 1rem;
+    @include transition(all 0.5s ease-in-out 0s);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #25313f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #7a818a;
+    @include transition(all 0.5s ease-in-out 0s);
+    cursor: pointer;
+}
+
+/* Handle on hover */
+
+
+
+html {
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    direction: $direction;
+    text-align: $left;
+    background: $ofwhite;
+}
+
+.container {
+    clear: both;
+    @include position(relative);
+    z-index: 10;
+}
+
+.row {
+    clear: both;
+}
