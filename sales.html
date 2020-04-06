@@ -684,14 +684,14 @@
         <!-- End  alert -->
 
         <div class="new_wizard">
-          <h1 class="title">store lock</h1>
+          <h1 class="title">sales</h1>
         </div>
         <!-- End  Wizard -->
 
         <div class="wizard">
           <ul class="link-wizard">
             <li>
-              store lock
+              sales
               <span
                 data-toggle="tooltip"
                 class="toolink"
@@ -701,62 +701,348 @@
               >
             </li>
             <li><a href="index.html">Administration</a></li>
-            <li>store lock</li>
+            <li>sales</li>
           </ul>
         </div>
         <!--End wizard -->
-        <form action="" method="" class="form">
-          <div class="row">
-            <div class="col-sm-12 wit-rspon">
-              <div class="segment">
-                <div class="head mb-0">
-                  <h2 class="title">store lock</h2>
-                </div>
-                <!-- End Head -->
-                <div class="row">
-                  <div class="col-sm-12 customchick">
-                    <label class="che-box">
-                      <input type="radio" name="check" />
-                      <span class="label-text">Enable</span>
-                    </label>
-                  </div>
-                  <div class="col-sm-12 customchick">
-                    <label class="che-box">
-                      <input type="radio" name="check" />
-                      <span class="label-text">Lock With Password</span>
-                    </label>
-                  </div>
-                  <div class="col-sm-12 field">
-                    <p class="text">
-                      Add Password to make the site visible to specific people.
-                    </p>
-                  </div>
-
-                  <div class="col-sm-12 field">
-                    <label>Password to view store</label>
-                    <input
-                      type="password"
-                      name=""
-                      class="form-control"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <!-- End Row -->
+        <div class="row">
+          <div class="col-sm-6 wit-rspon">
+            <div class="segment">
+              <div class="head mb-0">
+                <h2 class="title">
+                  Product Sale
+                  <br />
+                  <span>26-02-2020 , 26-03-2020</span>
+                </h2>
               </div>
-            </div>
-            <!-- End wit-rspon -->
+              <!-- End Head -->
+              <canvas id="line-chart" width="800" height="450"></canvas>
 
-            <div class="col-sm-12 mt-3">
-              <button class="bottom" type="submit">
-                <i class="fas fa-save"></i>
-                Save changes
-              </button>
-              <!-- <a href="#" class="bottom"><i class="fas fa-times"></i> Cancel</a> -->
+              <div class="box-footer">
+                <div class="row">
+                  <div class="col stut">
+                    <span class="description-percentage text-yellow"> 9</span>
+                    <h5 class="description-header">products</h5>
+                    <span class="description-text">Best Day </span>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col stut">
+                    <span class="description-percentage text-yellow"> 9</span>
+                    <h5 class="description-header">products</h5>
+                    <span class="description-text"> All Time </span>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.box-footer -->
             </div>
+            <!-- End Segment -->
           </div>
-          <!-- End row -->
-        </form>
+          <!-- End wit-rspon -->
+          <div class="col-sm-6 wit-rspon">
+            <div class="segment">
+              <div class="head mb-0">
+                <h2 class="title">
+                  Sales Value
+                  <br />
+                  <span>08-03-2020 , 06-04-2020</span>
+                </h2>
+              </div>
+              <!-- End Head -->
+              <canvas id="line-chart2" width="800" height="450"></canvas>
+
+              <div class="box-footer">
+                <div class="row">
+                  <div class="col stut">
+                    <span class="description-percentage text-yellow">
+                      6000
+                    </span>
+                    <h5 class="description-header">EGP</h5>
+                    <span class="description-text">Best Day </span>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col stut">
+                    <span class="description-percentage text-yellow">
+                      6000</span
+                    >
+                    <h5 class="description-header">EGP</h5>
+                    <span class="description-text"> All Time </span>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.box-footer -->
+            </div>
+            <!-- End Segment -->
+          </div>
+          <!-- End wit-rspon -->
+          <div class="col-sm-12 wit-rspon">
+            <div class="segment">
+              <div class="head mb-0">
+                <h2 class="title">
+                  Channel Sales
+                  <br />
+                  <span>08-03-2020 , 06-04-2020</span>
+                </h2>
+              </div>
+              <!-- End Head -->
+
+              <canvas id="myChart"></canvas>
+
+              <div class="box-footer">
+                <div class="row">
+                  <div class="col stut">
+                    <span class="description-percentage text-yellow">
+                      39
+                    </span>
+                    <h5 class="description-header">Orders</h5>
+                    <span class="description-text">Web </span>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.box-footer -->
+            </div>
+            <!-- End Segment -->
+          </div>
+          <!-- End wit-rspon -->
+          <script>
+            $(document).ready(function() {
+              var ctx = document.getElementById("myChart").getContext("2d");
+              var myChart = new Chart(ctx, {
+                type: "polarArea",
+                data: {
+                  labels: ["M", "T", "W", "T", "F", "S", "S"],
+                  datasets: [
+                    {
+                      backgroundColor: [
+                        "#2ecc71",
+                        "#3498db",
+                        "#95a5a6",
+                        "#9b59b6",
+                        "#f1c40f",
+                        "#e74c3c",
+                        "#34495e"
+                      ],
+                      data: [12, 19, 3, 17, 28, 24, 7]
+                    }
+                  ]
+                }
+              });
+
+              new Chart(document.getElementById("line-chart"), {
+                type: "line",
+                data: {
+                  labels: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                  datasets: [
+                    {
+                      data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
+                      label: "North America",
+                      borderColor: "#279bc0",
+                      fill: false
+                    }
+                  ]
+                },
+                options: {
+                  title: {
+                    display: true,
+                    text: " "
+                  }
+                }
+              });
+
+              new Chart(document.getElementById("line-chart2"), {
+                type: "line",
+                data: {
+                  labels: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                  datasets: [
+                    {
+                      data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
+                      label: "North America",
+                      borderColor: "#7cc331",
+                      fill: false
+                    }
+                  ]
+                },
+                options: {
+                  title: {
+                    display: true,
+                    text: " "
+                  }
+                }
+              });
+            });
+          </script>
+        </div>
+        <!-- End row -->
+        <div class="segment">
+          <div class="revie tab-pad">
+            <div class="head mb-0">
+              <h2 class="title">
+                Channel Sales
+                <br />
+                <span>08-03-2020 , 06-04-2020</span>
+              </h2>
+            </div>
+            <!-- End head -->
+
+            <span class="clickbot">
+              <i class="a-minus"></i>
+            </span>
+
+            <div class="disbox">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>Cushion</td>
+                    <td>
+                      <b>9</b>
+                      Times
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>Cushion</td>
+                    <td>
+                      <b>9</b>
+                      Times
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>Cushion</td>
+                    <td>
+                      <b>9</b>
+                      Times
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>Cushion</td>
+                    <td>
+                      <b>9</b>
+                      Times
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>Cushion</td>
+                    <td>
+                      <b>9</b>
+                      Times
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End disbox -->
+          </div>
+          <!-- End features -->
+        </div>
+        <!-- End segment -->
+        <div class="segment">
+          <div class="revie tab-pad">
+            <div class="head mb-0">
+              <h2 class="title">
+                Country Sales
+                <br />
+                <span>08-03-2020 , 06-04-2020</span>
+              </h2>
+            </div>
+            <!-- End head -->
+
+            <span class="clickbot">
+              <i class="a-minus"></i>
+            </span>
+
+            <div class="disbox">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Egypt</td>
+
+                    <td>
+                      <b>10</b>
+                      Times
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Egypt</td>
+
+                    <td>
+                      <b>10</b>
+                      Times
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>Egypt</td>
+
+                    <td>
+                      <b>10</b>
+                      Times
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>Egypt</td>
+
+                    <td>
+                      <b>10</b>
+                      Times
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End disbox -->
+          </div>
+          <!-- End features -->
+        </div>
+        <!-- End segment -->
 
         <nav class="icon-right">
           <a

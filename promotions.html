@@ -684,14 +684,14 @@
         <!-- End  alert -->
 
         <div class="new_wizard">
-          <h1 class="title">Products</h1>
+          <h1 class="title">Promotions</h1>
         </div>
         <!-- End  Wizard -->
 
         <div class="wizard">
           <ul class="link-wizard">
             <li>
-              Products
+              Promotions
               <span
                 data-toggle="tooltip"
                 class="toolink"
@@ -701,36 +701,16 @@
               >
             </li>
             <li><a href="index.html">Administration</a></li>
-            <li>Products</li>
+            <li>Promotions</li>
           </ul>
+          <nav>
+            <a href="promotions-create.html" class="bottom"
+              ><i class="fas fa-plus-circle"></i> Create</a
+            >
+          </nav>
         </div>
         <!--End wizard -->
-        <div class="alert alert-primary alert—ch" role="alert">
-          This is a info alert—check it out!
 
-          <a
-            href="#"
-            data-toggle="tooltip"
-            data-original-title="Minimum fields required for successful import"
-          >
-            Simple version
-          </a>
-          <a
-            href="#"
-            data-toggle="tooltip"
-            data-original-title="All available fields"
-          >
-            Extended version
-          </a>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="alert"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
         <div class="row">
           <div class="col-sm-12 wit-rspon">
             <div class="segment">
@@ -749,66 +729,34 @@
               <div class="field-filter slidedwn-filter">
                 <form action="" method="" class="form">
                   <div class="row">
-                    <div class="col-sm-3 field">
-                      <label>Name/Code</label
-                      ><input type="text" name="" class="form-control" />
-                    </div>
-                    <div class="col-sm-3 field">
-                      <label>Enabled </label>
+                    <div class="col-sm-4 field">
+                      <label>search </label>
                       <i class="fas fa-sort-down"></i>
                       <select class="form-control"
-                        ><option value="">All</option
+                        ><option value="contains">Contains</option
+                        ><option value="not_contains">Not contains</option
+                        ><option value="equal">Equal</option
+                        ><option value="not_equal">Not equal</option
+                        ><option value="empty">Empty</option
+                        ><option value="not_empty">Not empty</option
+                        ><option value="starts_with">Starts with</option
+                        ><option value="ends_with">Ends with</option
+                        ><option value="in">In</option
+                        ><option value="not_in">Not in</option></select
+                      >
+                    </div>
+                    <div class="col-sm-4 field">
+                      <label> Value </label
+                      ><input type="text" name="" class="form-control" />
+                    </div>
+                    <div class="col-sm-4 field">
+                      <label>Coupon based </label>
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control">
+                        <option value="">All</option
                         ><option value="true">Yes</option
                         ><option value="false">No</option></select
                       >
-                    </div>
-
-                    <div class="col-sm-3 field">
-                      <label>Category </label>
-                      <i class="fas fa-sort-down"></i>
-                      <select class="form-control"
-                        ><option value="">All</option
-                        ><option value="1">Fresh Vegtables</option
-                        ><option value="2">Fresh Fruits</option
-                        ><option value="3">Milk Products</option
-                        ><option value="4">Ready Vegetables</option
-                        ><option value="5">Super Market</option
-                        ><option value="8">Beauty &amp; Hyiene</option></select
-                      >
-                    </div>
-
-                    <div class="col-sm-3 field">
-                      <label>Vendor </label>
-                      <i class="fas fa-sort-down"></i>
-                      <select class="form-control"
-                        ><option value="">All</option></select
-                      >
-                    </div>
-
-                    <div class="col-sm-3 field">
-                      <label>Attribute name </label>
-                      <i class="fas fa-sort-down"></i>
-                      <select class="form-control"
-                        ><option value="">All</option></select
-                      >
-                    </div>
-
-                    <div class="col-sm-3 field">
-                      <label>Attribute value </label
-                      ><input type="text" name="" class="form-control" />
-                    </div>
-
-                    <div class="col-sm-3 field">
-                      <label>Option name</label>
-                      <i class="fas fa-sort-down"></i>
-                      <select class="form-control"
-                        ><option value="">All</option
-                        ><option value="1">size</option></select
-                      >
-                    </div>
-                    <div class="col-sm-3 field">
-                      <label>Option value</label
-                      ><input type="text" name="" class="form-control" />
                     </div>
                   </div>
                   <!-- End Row -->
@@ -832,299 +780,374 @@
 
           <div class="col-sm-12 wit-rspon">
             <div class="segment">
-              <div class="head">
-                <div class="up-ex">
-                  <div class="custom-file">
-                    <input
-                      type="file"
-                      class="custom-file-input"
-                      id="customFile"
-                    />
-                    <label class="custom-file-label" for="customFile">
-                      no file</label
-                    >
-                  </div>
-                  <!-- End custom-file -->
-                  <a href="#" class="bottom">Import</a>
-                  <a
-                    href="#"
-                    class="bottom"
-                    data-toggle="modal"
-                    data-target="#export-categ"
-                    >Export categories</a
-                  >
-                </div>
-                <a href="categories-create.html" class="bottom hide"
-                  ><i class="fas fa-plus-circle"></i> Create</a
-                >
-              </div>
-              <!-- End Head -->
-              <div class="table-responsive">
-                <table class="table table-striped">
-                  <tbody>
-                    <tr>
-                      <th>
-                        <a href="#" class="name-so"
-                          >Name <i class="fas fa-sort"></i
-                        ></a>
-                      </th>
-                      <th>Enabled</th>
-                      <th>Actions</th>
-                      <th>Order</th>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                      <td>
-                        <span class="secret">
-                          <i class="fas fa-check"></i> Enabled
-                        </span>
-                      </td>
-                      <td>
-                        <a
-                          class="bottom  black"
-                          href="categories-create.html"
-                          title="Create"
-                        >
-                          <i class="fas fa-plus-circle"></i>
-                        </a>
-                        <a
-                          class="bottom green"
-                          href="categories-edit.html"
-                          title="Edit"
-                        >
-                          <i class="far fa-edit"></i>
-                        </a>
-                        <a
-                          class="bottom  red"
-                          href="#"
-                          title="Delete"
-                          data-toggle="modal"
-                          data-target="#delete-item"
-                        >
-                          <i class="fas fa-trash-alt"></i>
-                        </a>
-                      </td>
-                      <td>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-up-alt"></i>
-                        </a>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-down-alt"></i>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                      <td>
-                        <span class="secret">
-                          <i class="fas fa-check"></i> Enabled
-                        </span>
-                      </td>
-                      <td>
-                        <a
-                          class="bottom  black"
-                          href="categories-create.html"
-                          title="Create"
-                        >
-                          <i class="fas fa-plus-circle"></i>
-                        </a>
-                        <a
-                          class="bottom green"
-                          href="categories-edit.html"
-                          title="Edit"
-                        >
-                          <i class="far fa-edit"></i>
-                        </a>
-                        <a
-                          class="bottom  red"
-                          href="#"
-                          title="Delete"
-                          data-toggle="modal"
-                          data-target="#delete-item"
-                        >
-                          <i class="fas fa-trash-alt"></i>
-                        </a>
-                      </td>
-                      <td>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-up-alt"></i>
-                        </a>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-down-alt"></i>
-                        </a>
-                      </td>
-                    </tr>
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <th>
+                      <a href="#" class="name-so"
+                        >Priority <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#" class="name-so">
+                        Code <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#" class="name-so">
+                        Name <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>Coupons</th>
+                    <th>
+                      <a href="#" class="name-so">
+                        Usage <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>Actions</th>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>123</td>
+                    <td>
+                      <strong>new </strong>
+                      <span
+                        >10% discount for placing orders through Glow Mobile App
+                        or Website</span
+                      >
+                    </td>
+                    <td>Yes</td>
+                    <td>14 / ∞</td>
+                    <td>
+                      <div class="support_dropdown-head">
+                        <div class="name-user">
+                          <p>
+                            Manage coupons
+                            <i class="fas fa-chevron-down icon-mar"></i>
+                          </p>
+                        </div>
 
-                    <tr>
-                      <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                      <td>
-                        <span class="secret">
-                          <i class="fas fa-check"></i> Enabled
-                        </span>
-                      </td>
-                      <td>
-                        <a
-                          class="bottom  black"
-                          href="categories-create.html"
-                          title="Create"
-                        >
-                          <i class="fas fa-plus-circle"></i>
-                        </a>
-                        <a
-                          class="bottom green"
-                          href="categories-edit.html"
-                          title="Edit"
-                        >
-                          <i class="far fa-edit"></i>
-                        </a>
-                        <a
-                          class="bottom  red"
-                          href="#"
-                          title="Delete"
-                          data-toggle="modal"
-                          data-target="#delete-item"
-                        >
-                          <i class="fas fa-trash-alt"></i>
-                        </a>
-                      </td>
-                      <td>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-up-alt"></i>
-                        </a>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-down-alt"></i>
-                        </a>
-                      </td>
-                    </tr>
+                        <ul class="support_dropdown-content">
+                          <li>
+                            <i class="fas fa-list-ol"></i>
+                            <a href="list-coupons.html"> List coupons</a>
+                          </li>
 
-                    <tr>
-                      <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                      <td>
-                        <span class="secret">
-                          <i class="fas fa-check"></i> Enabled
-                        </span>
-                      </td>
-                      <td>
-                        <a
-                          class="bottom  black"
-                          href="categories-create.html"
-                          title="Create"
-                        >
-                          <i class="fas fa-plus-circle"></i>
-                        </a>
-                        <a
-                          class="bottom green"
-                          href="categories-edit.html"
-                          title="Edit"
-                        >
-                          <i class="far fa-edit"></i>
-                        </a>
-                        <a
-                          class="bottom  red"
-                          href="#"
-                          title="Delete"
-                          data-toggle="modal"
-                          data-target="#delete-item"
-                        >
-                          <i class="fas fa-trash-alt"></i>
-                        </a>
-                      </td>
-                      <td>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-up-alt"></i>
-                        </a>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-down-alt"></i>
-                        </a>
-                      </td>
-                    </tr>
+                          <li>
+                            <i class="fas fa-plus-circle"></i>
+                            <a href="coupons-create.html"> Create</a>
+                          </li>
 
-                    <tr>
-                      <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                      <td>
-                        <span class="secret">
-                          <i class="fas fa-check"></i> Enabled
-                        </span>
-                      </td>
-                      <td>
-                        <a
-                          class="bottom  black"
-                          href="categories-create.html"
-                          title="Create"
-                        >
-                          <i class="fas fa-plus-circle"></i>
-                        </a>
-                        <a
-                          class="bottom green"
-                          href="categories-edit.html"
-                          title="Edit"
-                        >
-                          <i class="far fa-edit"></i>
-                        </a>
-                        <a
-                          class="bottom  red"
-                          href="#"
-                          title="Delete"
-                          data-toggle="modal"
-                          data-target="#delete-item"
-                        >
-                          <i class="fas fa-trash-alt"></i>
-                        </a>
-                      </td>
-                      <td>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-up-alt"></i>
-                        </a>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-down-alt"></i>
-                        </a>
-                      </td>
-                    </tr>
+                          <li>
+                            <i class="fas fa-random"></i>
+                            <a href="generate.html"> Generate </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a
+                        class="bottom  green"
+                        href="promotions-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                      <a
+                        class="bottom red"
+                        href="#"
+                        title="Delete"
+                        data-toggle="modal"
+                        data-target="#delete-item"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>123</td>
+                    <td>
+                      <strong>new </strong>
+                      <span
+                        >10% discount for placing orders through Glow Mobile App
+                        or Website</span
+                      >
+                    </td>
+                    <td>Yes</td>
+                    <td>14 / ∞</td>
+                    <td>
+                      <div class="support_dropdown-head">
+                        <div class="name-user">
+                          <p>
+                            Manage coupons
+                            <i class="fas fa-chevron-down icon-mar"></i>
+                          </p>
+                        </div>
 
-                    <tr>
-                      <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                      <td>
-                        <span class="secret disabled">
-                          <i class="fas fa-check"></i> disabled
-                        </span>
-                      </td>
-                      <td>
-                        <a
-                          class="bottom  black"
-                          href="categories-create.html"
-                          title="Create"
-                        >
-                          <i class="fas fa-plus-circle"></i>
-                        </a>
-                        <a
-                          class="bottom green"
-                          href="categories-edit.html"
-                          title="Edit"
-                        >
-                          <i class="far fa-edit"></i>
-                        </a>
-                        <a
-                          class="bottom  red"
-                          href="#"
-                          title="Delete"
-                          data-toggle="modal"
-                          data-target="#delete-item"
-                        >
-                          <i class="fas fa-trash-alt"></i>
-                        </a>
-                      </td>
-                      <td>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-up-alt"></i>
-                        </a>
-                        <a href="#" class="up-alt">
-                          <i class="fas fa-level-down-alt"></i>
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                        <ul class="support_dropdown-content">
+                          <li>
+                            <i class="fas fa-list-ol"></i>
+                            <a href="list-coupons.html"> List coupons</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-plus-circle"></i>
+                            <a href="coupons-create.html"> Create</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-random"></i>
+                            <a href="generate.html"> Generate </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a
+                        class="bottom  green"
+                        href="promotions-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                      <a
+                        class="bottom red"
+                        href="#"
+                        title="Delete"
+                        data-toggle="modal"
+                        data-target="#delete-item"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>123</td>
+                    <td>
+                      <strong>new </strong>
+                      <span
+                        >10% discount for placing orders through Glow Mobile App
+                        or Website</span
+                      >
+                    </td>
+                    <td>Yes</td>
+                    <td>14 / ∞</td>
+                    <td>
+                      <div class="support_dropdown-head">
+                        <div class="name-user">
+                          <p>
+                            Manage coupons
+                            <i class="fas fa-chevron-down icon-mar"></i>
+                          </p>
+                        </div>
+
+                        <ul class="support_dropdown-content">
+                          <li>
+                            <i class="fas fa-list-ol"></i>
+                            <a href="list-coupons.html"> List coupons</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-plus-circle"></i>
+                            <a href="coupons-create.html"> Create</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-random"></i>
+                            <a href="generate.html"> Generate </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a
+                        class="bottom  green"
+                        href="promotions-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                      <a
+                        class="bottom red"
+                        href="#"
+                        title="Delete"
+                        data-toggle="modal"
+                        data-target="#delete-item"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>123</td>
+                    <td>
+                      <strong>new </strong>
+                      <span
+                        >10% discount for placing orders through Glow Mobile App
+                        or Website</span
+                      >
+                    </td>
+                    <td>Yes</td>
+                    <td>14 / ∞</td>
+                    <td>
+                      <div class="support_dropdown-head">
+                        <div class="name-user">
+                          <p>
+                            Manage coupons
+                            <i class="fas fa-chevron-down icon-mar"></i>
+                          </p>
+                        </div>
+
+                        <ul class="support_dropdown-content">
+                          <li>
+                            <i class="fas fa-list-ol"></i>
+                            <a href="list-coupons.html"> List coupons</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-plus-circle"></i>
+                            <a href="coupons-create.html"> Create</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-random"></i>
+                            <a href="generate.html"> Generate </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a
+                        class="bottom  green"
+                        href="promotions-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                      <a
+                        class="bottom red"
+                        href="#"
+                        title="Delete"
+                        data-toggle="modal"
+                        data-target="#delete-item"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>123</td>
+                    <td>
+                      <strong>new </strong>
+                      <span
+                        >10% discount for placing orders through Glow Mobile App
+                        or Website</span
+                      >
+                    </td>
+                    <td>Yes</td>
+                    <td>14 / ∞</td>
+                    <td>
+                      <div class="support_dropdown-head">
+                        <div class="name-user">
+                          <p>
+                            Manage coupons
+                            <i class="fas fa-chevron-down icon-mar"></i>
+                          </p>
+                        </div>
+
+                        <ul class="support_dropdown-content">
+                          <li>
+                            <i class="fas fa-list-ol"></i>
+                            <a href="list-coupons.html"> List coupons</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-plus-circle"></i>
+                            <a href="coupons-create.html"> Create</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-random"></i>
+                            <a href="generate.html"> Generate </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a
+                        class="bottom  green"
+                        href="promotions-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                      <a
+                        class="bottom red"
+                        href="#"
+                        title="Delete"
+                        data-toggle="modal"
+                        data-target="#delete-item"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>123</td>
+                    <td>
+                      <strong>new </strong>
+                      <span
+                        >10% discount for placing orders through Glow Mobile App
+                        or Website</span
+                      >
+                    </td>
+                    <td>Yes</td>
+                    <td>14 / ∞</td>
+                    <td>
+                      <div class="support_dropdown-head">
+                        <div class="name-user">
+                          <p>
+                            Manage coupons
+                            <i class="fas fa-chevron-down icon-mar"></i>
+                          </p>
+                        </div>
+
+                        <ul class="support_dropdown-content">
+                          <li>
+                            <i class="fas fa-list-ol"></i>
+                            <a href="list-coupons.html"> List coupons</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-plus-circle"></i>
+                            <a href="coupons-create.html"> Create</a>
+                          </li>
+
+                          <li>
+                            <i class="fas fa-random"></i>
+                            <a href="generate.html"> Generate </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a
+                        class="bottom  green"
+                        href="promotions-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                      <a
+                        class="bottom red"
+                        href="#"
+                        title="Delete"
+                        data-toggle="modal"
+                        data-target="#delete-item"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <!-- segment -->
           </div>
@@ -1180,194 +1203,6 @@
           </div>
         </div>
         <!-- End POPUP -->
-        <div
-          class="modal fade show"
-          id="export-categ"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
-        >
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="title">Export taxons</h2>
-                <span
-                  class="close de-close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  ×
-                </span>
-              </div>
-              <form action="" method="">
-                <div class="modal-body">
-                  <div class="segment in-seg">
-                    <div class="head">
-                      <h2 class="title">Filters</h2>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6 customchick">
-                        <label class="che-box">
-                          <input type="checkbox" name="check" />
-                          <span class="label-text">Enabled </span>
-                        </label>
-                      </div>
-                      <!-- customchick -->
-                      <div class="col-sm-6 customchick">
-                        <label class="che-box">
-                          <input type="checkbox" name="check" />
-                          <span class="label-text">Featured</span>
-                        </label>
-                      </div>
-                      <!-- customchick -->
-                    </div>
-                  </div>
-
-                  <div class="segment in-seg">
-                    <div class="head">
-                      <h2 class="title">fields</h2>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6 customchick">
-                        <label class="che-box hide">
-                          <input
-                            type="checkbox"
-                            name="check"
-                            checked="checked"
-                            disabled="disabled"
-                          />
-                          <span class="label-text">code </span>
-                        </label>
-                      </div>
-                      <!-- customchick -->
-                      <div class="col-sm-6 customchick">
-                        <label class="che-box hide">
-                          <input
-                            type="checkbox"
-                            name="check"
-                            checked="checked"
-                            disabled="disabled"
-                          />
-                          <span class="label-text">Parent </span>
-                        </label>
-                      </div>
-                      <!-- customchick -->
-                      <div class="col-sm-6 customchick">
-                        <label class="che-box">
-                          <input type="checkbox" name="check" />
-                          <span class="label-text">Enabled </span>
-                        </label>
-                      </div>
-                      <!-- customchick -->
-                      <div class="col-sm-6 customchick">
-                        <label class="che-box">
-                          <input type="checkbox" name="check" />
-                          <span class="label-text">Images </span>
-                        </label>
-                      </div>
-                      <!-- customchick -->
-                      <div class="col-sm-6 customchick">
-                        <label class="che-box">
-                          <input type="checkbox" name="check" />
-                          <span class="label-text">Featured </span>
-                        </label>
-                      </div>
-                      <!-- customchick -->
-                    </div>
-
-                    <div class="vertical">
-                      <div class="question">
-                        <img src="images/use.jpg" alt="" /> English (United
-                        States)
-                      </div>
-                      <div class="answer">
-                        <div class="row">
-                          <div class="col-sm-6 customchick">
-                            <label class="che-box hide">
-                              <input
-                                type="checkbox"
-                                name="check"
-                                checked="checked"
-                                disabled="disabled"
-                              />
-                              <span class="label-text">Name </span>
-                            </label>
-                          </div>
-                          <!-- customchick -->
-                          <div class="col-sm-6 customchick">
-                            <label class="che-box">
-                              <input type="checkbox" name="check" />
-                              <span class="label-text">Description </span>
-                            </label>
-                          </div>
-                          <!-- customchick -->
-                          <div class="col-sm-6 customchick">
-                            <label class="che-box">
-                              <input type="checkbox" name="check" />
-                              <span class="label-text">Slug </span>
-                            </label>
-                          </div>
-                          <!-- customchick -->
-                        </div>
-                        <!-- row -->
-                      </div>
-                      <!-- question -->
-                      <div class="question">
-                        <img src="images/eg.jpg" alt="" /> Arabic (Egypt)
-                      </div>
-                      <div class="answer">
-                        <div class="row">
-                          <div class="col-sm-6 customchick">
-                            <label class="che-box hide">
-                              <input
-                                type="checkbox"
-                                name="check"
-                                checked="checked"
-                                disabled="disabled"
-                              />
-                              <span class="label-text">Name </span>
-                            </label>
-                          </div>
-                          <!-- customchick -->
-                          <div class="col-sm-6 customchick">
-                            <label class="che-box">
-                              <input type="checkbox" name="check" />
-                              <span class="label-text">Description </span>
-                            </label>
-                          </div>
-                          <!-- customchick -->
-                          <div class="col-sm-6 customchick">
-                            <label class="che-box">
-                              <input type="checkbox" name="check" />
-                              <span class="label-text">Slug </span>
-                            </label>
-                          </div>
-                          <!-- customchick -->
-                        </div>
-                        <!-- row -->
-                      </div>
-                      <!-- question -->
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="submit" class="bottom">
-                    Export
-                  </button>
-                  <!-- <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button> -->
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- End POPUP -->
-
         <div
           class="modal fade show"
           id="delete-item"

@@ -219,6 +219,15 @@
     @include bottom;
   }
 
+  .bot-st {
+    background: $none;
+    color: $blue;
+    border: 1px solid $blue;
+
+    &:hover {
+      border: 1px solid $ofblue;
+    }
+  }
 
   .segment {
     margin-top: $minmargin;
@@ -238,6 +247,8 @@
           display: $none;
         }
       }
+
+
     }
 
     .title {
@@ -250,6 +261,11 @@
         i {
           font-size: 17px;
         }
+      }
+
+      span {
+        font-size: 14px;
+        color: $ofblue;
       }
 
       @media (max-width:450px) {
@@ -326,8 +342,8 @@
 
       .bottom {
         @include bottom;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         @include border-radius(3px);
         padding: $zero;
         background: #9eafb5;
@@ -335,15 +351,6 @@
         i {
           font-size: 13px;
           margin-right: $zero;
-        }
-
-        &.witd {
-          width: 30px;
-          height: 30px;
-
-          @media (max-width: 450px) {
-            padding: $zero;
-          }
         }
 
         &.black {
@@ -390,6 +397,9 @@
         background: $green;
         color: $white;
         font-weight: 600;
+        outline: $zero;
+        outline-style: $none;
+        border: $zero;
         @include border-radius(60px);
 
         i {
@@ -401,8 +411,24 @@
           }
         }
 
-        &.disabled {
+        &.disabled,
+        &.accept {
           background: #b5b5b5;
+        }
+
+        &.accept,
+        &.yellow {
+          cursor: pointer;
+          width: $auto;
+        }
+
+        &.yellow,
+        &.yel {
+          background: $yellow;
+        }
+
+        &.blu {
+          background: $ofblue;
         }
       }
 
@@ -444,6 +470,104 @@
           }
         }
 
+      }
+
+      span.label-text {
+        font-weight: normal !important;
+      }
+
+      .support_dropdown-head {
+        position: relative;
+        display: $inline;
+        margin-right: $minmargin;
+
+        .name-user {
+          @include flex;
+          position: relative;
+          cursor: pointer;
+
+          p {
+            color: $ofblue;
+            @include transition(all 0.5s ease-in-out 0s);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          i {
+            font-size: 12px;
+            @include transition(all 0.5s ease-in-out 0s);
+          }
+        }
+
+        .support_dropdown-content {
+          @include position(absolute, $top:10px, $right:0px);
+          width: 150px;
+          @include prefixer (box-shadow, 0 1px 5px rgba(4, 6, 8, 0.21), webkit moz o ms);
+          background-color: $white;
+          @include border-radius(5px);
+          z-index: 22;
+          height: $zero;
+          overflow: hidden;
+          @include transition(all 0.5s ease-in-out 0s);
+
+          li {
+            padding: 10px $minmargin $zero $minmargin;
+
+            &:last-child {
+              padding-bottom: 10px;
+            }
+
+            a {
+              @include transition(all 0.5s ease-in-out 0s);
+
+              &:hover {
+                color: $ofblue;
+              }
+            }
+
+            i {
+              width: 15px;
+              font-size: 14px;
+              margin-right: 5px;
+            }
+          }
+        }
+
+
+        &:hover {
+          .name-user {
+
+            p,
+            i {
+              color: $green;
+            }
+
+          }
+
+          .support_dropdown-content {
+            top: $maxmargin;
+            height: $auto;
+          }
+        }
+
+      }
+
+      .img-tab {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+
+    .rating {
+      li {
+        display: $inline;
+        font-size: 12px;
+        color: #b7b7b7;
+
+        &.active {
+          color: $yellow;
+        }
       }
     }
 
@@ -510,12 +634,320 @@
       }
     }
 
+    .features {
+      background: rgb(253, 253, 253);
+      margin-top: $minmargin;
+      padding: $minmargin;
+      padding-bottom: $zero;
+      position: relative;
+      @include border-radius(5px);
+      border: 1px solid $ofwhite;
+
+      .customchick {
+        margin: $zero;
+        margin-bottom: $minmargin;
+      }
+
+      .label-text {
+        font-size: 20px !important;
+        color: $blak !important;
+
+        &::before {
+          font-size: 19px !important;
+        }
+      }
+
+      .price {
+        font-size: 18px;
+        color: $ofblue;
+        margin-left: 5px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .package {
+        .title {
+          background: $ofwhite;
+          font-size: 17px;
+          padding: 10px;
+          color: $blue;
+          margin-bottom: 10px;
+        }
+
+        p {
+          padding: $zero 10px 10px $maxmargin;
+        }
+      }
+
+
+    }
+
+    .ca-city {
+      background: $ofwhite;
+      border: $zero;
+      padding: 5px $minmargin;
+      margin: $zero;
+      margin-bottom: 5px;
+      @include border-radius(0px);
+      border-bottom: 1px solid $border;
+
+      &:last-child {
+        margin: $zero;
+      }
+
+      .customchick {
+        margin: $zero;
+      }
+
+      .label-text {
+        font-size: 16px !important;
+
+        &::before {
+          top: 8px !important;
+          font-size: 15px !important;
+          color: $gray !important;
+        }
+
+        img {
+          width: 16px;
+          height: 11px;
+          margin: -2px 2px $zero $zero;
+        }
+      }
+
+      input[type="checkbox"]:checked+.label-text:before {
+        color: $ofblue !important;
+      }
+
+
+      .disbox {
+        display: $none;
+        padding: 10px $minmargin 5px $minmargin;
+
+        .customchick {
+          border-bottom: 1px solid $border;
+          padding-bottom: 5px;
+          margin-bottom: 5px;
+
+          &:last-child {
+            padding: $zero;
+            margin: $zero;
+            border: $zero;
+          }
+        }
+      }
+    }
+
+    .box-hide {
+      display: $none;
+      width: $fullwidth;
+    }
+
+    .package {
+      margin-top: $minmargin;
+    }
+
+    .clickbot {
+      @include position(absolute, $top:0px, $right:0px);
+      cursor: pointer;
+      width: $fullwidth;
+      height: $fullwidth;
+      display: flex;
+      justify-content: flex-end;
+      padding: $zero $minmargin;
+
+      .a-minus {
+        position: relative;
+        width: $fullwidth;
+        font-style: inherit;
+
+        &:after {
+          content: "\f068";
+          @include position(absolute, $top:0px, $right: 0);
+          @include transition(all 0.5s ease-in-out 0s);
+          font-weight: 600;
+          font-family: "Font Awesome 5 Free";
+          color: $blak;
+          z-index: 1;
+        }
+
+        &.rotate:after {
+          content: "\f067";
+          @include transition(all 0.5s ease-in-out 0s);
+        }
+      }
+    }
+
+    .revie {
+      padding: $minmargin;
+
+      .clickbot {
+        top: $minmargin;
+
+        .a-minus {
+          &:after {
+            content: "\f067";
+          }
+
+          &.rotate:after {
+            content: "\f068";
+          }
+        }
+      }
+
+      .red {
+        @include position(absolute, $top: 23px, $right: 43px);
+        font-size: 13px;
+        color: $red;
+        z-index: 10;
+        cursor: pointer;
+        @include transition(all 0.5s ease-in-out 0s);
+
+        &:hover {
+          color: $green;
+        }
+      }
+
+      .tags-box {
+        border: $zero;
+        padding: $zero;
+
+        li {
+          margin: $zero;
+          margin-right: 5px;
+          background: $colortext;
+          color: $white;
+        }
+      }
+
+      .disbox {
+        display: $none;
+      }
+
+      &.tab-pad {
+        padding: $zero;
+
+        .clickbot {
+          top: $zero;
+          padding: $zero;
+          height: 89px;
+
+          .a-minus {
+            &:after {
+              top: $maxmargin;
+              right: $minmargin;
+            }
+          }
+        }
+
+        .disbox {
+          margin-top: $minmargin;
+        }
+      }
+    }
+
+    #chartdiv {
+      float: left;
+      width: 100%;
+      height: 300px;
+    }
+
+    .form-ac {
+      display: $inline;
+
+      .bottom {
+        font-size: 14px;
+        line-height: 10px;
+      }
+    }
+
+    .connected {
+      width: $fullwidth;
+      height: 350px;
+      overflow: hidden;
+      overflow-y: scroll;
+
+      .row {
+        padding-right: $minmargin;
+      }
+    }
+
+    .up-img {
+      margin-top: $minmargin;
+      width: $fullwidth;
+      overflow: hidden;
+
+
+      .custom-file {
+        width: $fullwidth;
+
+        .custom-file-label {
+          padding: $zero;
+
+          &:after {
+            @include border-radius(0px);
+            cursor: pointer;
+            width: $fullwidth;
+            text-align: $center;
+          }
+        }
+      }
+    }
+
+
+    .upload-demo {
+      margin: $zero $auto;
+      width: 175px;
+      position: relative;
+
+      img.portimg {
+        margin: $minmargin $auto $zero $auto;
+        width: 175px;
+        max-height: 175px;
+        padding: 5px;
+        border: 2px solid $ofblue;
+        position: relative;
+        display: $none;
+      }
+
+      .removebtn {
+        @include position(absolute, $top: 6px, $right: -10px);
+        width: 25px;
+        height: 25px;
+        color: $white;
+        background: $red;
+        @include border-radius(50%);
+        @include flex;
+        justify-content: $center;
+        font-size: 12px;
+        padding-top: 2px;
+        cursor: pointer;
+        @include transition(all 0.5s ease-in-out 0s);
+
+        &:hover {
+          background: $green;
+        }
+      }
+    }
+
   }
 
-  .optionBox {
+  .optionBox,
+  .optionBox2,
+  .optionBox3,
+  .optionBox4,
+  .optionBox5,
+  .optionBox6,
+  .optionBox7 {
     width: $fullwidth;
 
-    .block {
+    .block,
+    .block2,
+    .block3,
+    .block4,
+    .block5,
+    .block6,
+    .block7 {
       position: relative;
 
       @media (max-width:991px) {
@@ -530,11 +962,20 @@
 
 
       .field {
-        margin-top: $zero;
-        max-width: $fullwidth;
+        width: $fullwidth;
+
+        &:first-child {
+          margin-top: $zero;
+        }
       }
 
-      .remove {
+      .remove,
+      .remove2,
+      .remove3,
+      .remove4,
+      .remove5,
+      .remove6,
+      .remove7 {
         @include position(absolute, $top: 5px, $right: 5px);
         width: 25px;
         height: 25px;
@@ -550,6 +991,45 @@
         &:hover {
           background: $green;
         }
+      }
+    }
+
+    .block4 {
+      margin-top: $minmargin;
+      width: $fullwidth;
+
+      .field {
+        padding-right: 50px;
+
+        i {
+          right: 65px;
+          top: $minmargin;
+        }
+      }
+
+      .remove4 {
+        @include border-radius(0px 4px 4px 0px);
+        right: $minmargin;
+        top: $zero;
+        width: 51px;
+        height: 50px;
+      }
+
+      &:last-child {}
+    }
+
+    .block5 {
+      padding-right: 40px;
+
+      .field,
+      .field:first-child {
+        margin-top: $minmargin;
+      }
+
+      .remove5 {
+        top: $auto;
+        bottom: 14px;
+        right: $minmargin;
       }
     }
   }
@@ -593,6 +1073,53 @@
     }
   }
 
+  .pagination {
+    margin-top: $minmargin;
+    padding: $zero !important;
+
+    li {
+      display: $inline;
+      margin: $zero 10px $zero $zero;
+
+      a,
+      span {
+        display: $block;
+        padding-top: 12px;
+        text-align: $center;
+        color: $blak;
+        @include border-radius(5px !important);
+        width: 40px;
+        height: 40px;
+        display: $block;
+        border: $zero;
+        background: $white;
+        @include prefixer (box-shadow, 0px 0px 4px #d4d4d4, webkit moz o ms);
+        @include transition(all 0.5s ease-in-out 0s);
+      }
+    }
+
+    .page-link.active,
+    .page-link:hover {
+      background: $blue !important;
+      color: $white !important;
+    }
+  }
+
+  ///* End Pagination
+
+  .tags-box {
+    padding: 10px;
+    border: 1px solid $border;
+    @include border-radius(4px);
+
+    li {
+      display: $inline;
+      @include border-radius(4px);
+      margin: 2px;
+      background: $ofwhite;
+      padding: $zero 13px;
+    }
+  }
 
   .customchick {
     @include check-box;
@@ -601,7 +1128,6 @@
 
   .btnright {
     a {
-      margin-left: 5px;
       @include transition(all 0.5s ease-in-out 0s);
       color: $ofblue;
 
@@ -617,6 +1143,17 @@
 
   .form {
     @include form;
+
+    .show-num {
+      margin: $zero;
+      margin-bottom: $minmargin;
+      width: 150px;
+
+      i {
+        top: 17px;
+        right: $minmargin;
+      }
+    }
   }
 
   .spinner {
@@ -630,6 +1167,7 @@
       display: $block;
       width: $fullwidth;
     }
+
 
     .custom-file {
       width: $auto;
@@ -970,6 +1508,32 @@
   }
 }
 
+.error {
+  @extend .login;
+
+  @media (max-width:991px) {
+    @include flex;
+  }
+
+  .des-error {
+    text-align: $center;
+
+    i {
+      font-size: 80px;
+      color: $red;
+    }
+
+    .title {
+      @include title;
+      font-size: 25px !important;
+      margin: $minmargin $zero;
+    }
+
+    .bottom {
+      @include bottom;
+    }
+  }
+}
 
 // .wizard .tooltip-inner {
 //   background: rgba(0, 0, 0, 0.90) !important;
@@ -1041,10 +1605,27 @@
     .modal-body {
       padding: $zero;
       background: $ofwhite;
+
+      &.padd {
+        padding: $minmargin;
+        padding-top: $zero;
+      }
+    }
+  }
+
+  .modal-dialog.witcard {
+    max-width: 650px;
+
+    .modal-body {
+      padding: $minmargin;
     }
   }
 
   .modal-header {
+    img {
+      max-width: 100px;
+    }
+
     .title {
       @include title;
       margin: $zero;
@@ -1054,11 +1635,14 @@
 
   .modal-dialog {
     margin: $zero $auto;
+    max-width: 530px;
   }
 
   .close.de-close {
     margin: $zero;
     padding: $zero;
+    color: $red;
+    opacity: 1;
   }
 
   .in-seg {
@@ -1113,6 +1697,25 @@
 
       &.red {
         background: $red;
+      }
+    }
+  }
+
+  .modal-footer {
+    .imgpord {
+      width: 50%;
+      text-align: $center;
+
+      img {
+        max-width: 185px;
+
+        @media (max-width:667px) {
+          max-width: 85px;
+        }
+      }
+
+      p {
+        color: $blak;
       }
     }
   }
@@ -1186,4 +1789,21 @@
 
 .vertical {
   @include divider;
+}
+
+.box-footer {
+  margin-top: $minmargin;
+  padding: $minmargin;
+  text-align: $center;
+  background: $ofwhite;
+
+  .description-text,
+  .text-yellow {
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .text-yellow {
+    color: $ofblue;
+  }
 }

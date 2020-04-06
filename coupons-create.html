@@ -684,14 +684,14 @@
         <!-- End  alert -->
 
         <div class="new_wizard">
-          <h1 class="title">store lock</h1>
+          <h1 class="title">coupons create</h1>
         </div>
         <!-- End  Wizard -->
 
         <div class="wizard">
           <ul class="link-wizard">
             <li>
-              store lock
+              coupons create
               <span
                 data-toggle="tooltip"
                 class="toolink"
@@ -701,7 +701,8 @@
               >
             </li>
             <li><a href="index.html">Administration</a></li>
-            <li>store lock</li>
+            <li><a href="list-coupons.html">list coupons </a></li>
+            <li>create</li>
           </ul>
         </div>
         <!--End wizard -->
@@ -710,49 +711,67 @@
             <div class="col-sm-12 wit-rspon">
               <div class="segment">
                 <div class="head mb-0">
-                  <h2 class="title">store lock</h2>
+                  <h2 class="title">details</h2>
                 </div>
                 <!-- End Head -->
                 <div class="row">
-                  <div class="col-sm-12 customchick">
-                    <label class="che-box">
-                      <input type="radio" name="check" />
-                      <span class="label-text">Enable</span>
-                    </label>
-                  </div>
-                  <div class="col-sm-12 customchick">
-                    <label class="che-box">
-                      <input type="radio" name="check" />
-                      <span class="label-text">Lock With Password</span>
-                    </label>
-                  </div>
                   <div class="col-sm-12 field">
-                    <p class="text">
-                      Add Password to make the site visible to specific people.
-                    </p>
+                    <label>Coupon name <em>*</em></label>
+                    <input type="text" name="" class="form-control" value="" />
                   </div>
-
-                  <div class="col-sm-12 field">
-                    <label>Password to view store</label>
+                </div>
+                <!-- End Row -->
+              </div>
+              <!-- End segment -->
+              <div class="segment">
+                <div class="head mb-0">
+                  <h2 class="title">Expiration and usage limits</h2>
+                </div>
+                <!-- End Head -->
+                <div class="row">
+                  <div class="col-sm-4 field">
+                    <label>Expires at <em>*</em></label>
                     <input
-                      type="password"
+                      type="date"
                       name=""
                       class="form-control"
+                      placeholder=""
+                      value=""
+                    />
+                  </div>
+
+                  <div class="col-sm-4 field">
+                    <label>Usage limit <em>*</em></label>
+                    <input
+                      type="number"
+                      name=""
+                      class="form-control"
+                      placeholder=""
+                      value=""
+                    />
+                  </div>
+                  <div class="col-sm-4 field">
+                    <label>Per-Customer Usage Limit <em>*</em></label>
+                    <input
+                      type="number"
+                      name=""
+                      class="form-control"
+                      placeholder=""
                       value=""
                     />
                   </div>
                 </div>
                 <!-- End Row -->
               </div>
+              <!-- End segment -->
             </div>
             <!-- End wit-rspon -->
-
             <div class="col-sm-12 mt-3">
               <button class="bottom" type="submit">
-                <i class="fas fa-save"></i>
-                Save changes
+                <i class="fas fa-plus-circle"></i>
+                Create
               </button>
-              <!-- <a href="#" class="bottom"><i class="fas fa-times"></i> Cancel</a> -->
+              <a href="#" class="bottom"><i class="fas fa-times"></i> Cancel</a>
             </div>
           </div>
           <!-- End row -->

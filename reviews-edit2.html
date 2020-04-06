@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Zvendo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/chosen.min.css" />
+    <link rel="stylesheet" href="css/richtext.min.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&amp;display=swap&amp;subset=arabic,latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/bootstrap-colorpicker.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery.richtext.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/plugin.js"></script>
+  </head>
+  <body>
+    <div class="vertical-nav" id="sidebar">
+      <span class="fas fa-times removal"> </span>
+      <div class="logo">
+        <a href="index.html" title="Zvendo"
+          ><img src="images/logo.png" alt="Zvendo"
+        /></a>
+      </div>
+      <!-- End Logo -->
+      <div class="username">
+        <div class="imguser"><img src="images/photo.jpg" alt="" /></div>
+        <h3 class="title">Mohamed Ahmed</h3>
+        <a href="#" class="linkaccount">My account</a>
+      </div>
+      <!-- End username -->
+      <ul class="accordion">
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-box-open"></i> Product catalog</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="categories.html"
+                data-toggle="tooltip"
+                title="You can create a product category, and add then add products to this category."
+                >Categories</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="products.html"
+                data-toggle="tooltip"
+                title="You can create products; simple products, or products with several variants."
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="attributes.html"
+                data-toggle="tooltip"
+                title="You can create special product attributes as material type."
+                >Attributes</a
+              >
+            </li>
+            <li>
+              <a
+                href="options.html"
+                data-toggle="tooltip"
+                title="You can create a product option to classify its variants, as different sizes or colors."
+                >Options</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="connected-types.html"
+                data-toggle="tooltip"
+                title="You can connect related products to show them as related products to your customers."
+                >Connected types</a
+              >
+            </li>
+            <li>
+              <a
+                href="inventory.html"
+                data-toggle="tooltip"
+                title="You can add your products’ stock to your warehouse to track inventory."
+                >Inventory</a
+              >
+            </li>
+            <li>
+              <a
+                href="warehouse.html"
+                data-toggle="tooltip"
+                title="You can create a warehouse which you can add your products inventory to, so you can track your inventory."
+                >Warehouse</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="vendors.html"
+                data-toggle="tooltip"
+                title="You can create a warehouse which you can add your products inventory to, so you can track your inventory."
+                >Vendors</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a>
+        </li>
+
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-users"></i> Customers</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="customers.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Customers</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="groups.html"
+                data-toggle="tooltip"
+                title="You can put your customers into group."
+                >Groups</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-mail-bulk"></i> Marketing</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="promotions.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Promotions</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="reviews.html"
+                data-toggle="tooltip"
+                title="You can put your customers into group."
+                >Reviews</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-cogs"></i> Store configuration</a
+          >
+          <ul class="inner towlist">
+            <li>
+              <a href="javascript:void(0);" class="toggle child-lin"
+                >Store settings</a
+              >
+              <ul class="inner act-link">
+                <li>
+                  <a
+                    href="channels.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Channels</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="countries.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Countries</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="currencies.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Currencies</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="javascript:void(0);" class="toggle child-lin"
+                >Shipping</a
+              >
+              <ul class="inner act-link">
+                <li>
+                  <a
+                    href="shipping-methods.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                  >
+                    Shipping methods</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="shipping-categories.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                  >
+                    Shipping categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="zones.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Zones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="cities.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Cities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="time-slots.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Time Slots</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="javascript:void(0);" class="toggle child-lin">Payment</a>
+              <ul class="inner act-link">
+                <li>
+                  <a
+                    href="payment-methods.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                  >
+                    Payment methods</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="tax-categories.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                  >
+                    Tax categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="tax-rates.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Tax rates</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="administrators.html"
+                class="toggle"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Administrators</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="contacts.html"
+                class="toggle"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Contacts</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="messages.html"
+                class="toggle"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Messages</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="emails.html"
+                class="toggle"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Emails</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="store-identity.html"
+                class="toggle"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Store Identity</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="custom-theme.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                Custom theme</a
+              >
+            </li>
+
+            <li>
+              <a href="javascript:void(0);" class="toggle child-lin"
+                >Content manager</a
+              >
+              <ul class="inner act-link">
+                <li>
+                  <a
+                    href="languages.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Languages</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="main-menu.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Main menu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="image-slider.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Image slider</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="pages.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Pages</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="media-gallery.html"
+                class="toggle"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                Media gallery</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="store-lock.html"
+                class="toggle"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                Store Lock</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="domains.html"
+                class="toggle"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                Domains</a
+              >
+            </li>
+            <li>
+              <a
+                href="notifications.html"
+                class="toggle"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                Notifications</a
+              >
+            </li>
+            <li>
+              <a
+                href="reset-store.html"
+                class="toggle red"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                reset store</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="far fa-lightbulb"></i> Insights</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="sales.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Sales</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-chart-line"></i> My plan</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="start-trial.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Start Your Free Trial</a
+              >
+            </li>
+            <li>
+              <a
+                href="billing.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Billing</a
+              >
+            </li>
+            <li>
+              <a
+                href="my-features.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >My features</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="tutorials.html"
+            ><i class="far fa-play-circle"></i> Tutorials</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- Vertical navbar -->
+    <div class="page-content" id="content">
+      <header class="header">
+        <div class="logo-rspon">
+          <a href="index.html" title="Zvendo"
+            ><img src="images/logo-rspon.png" alt="Zvendo"
+          /></a>
+        </div>
+        <!-- End Logo Rspon-->
+
+        <div class="min-header">
+          <div class="link_store">
+            <span class="fa fa-bars sidebarCollapse"></span>
+            <a href="#" target="_blank">View your store</a>
+          </div>
+          <!-- End link_store -->
+
+          <div class="boxsearch">
+            <span class="onclick-bot">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-times cancel"></i>
+            </span>
+            <!-- onclick-bot -->
+            <form class="formsearch" action="#" method="">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Search products..."
+              />
+              <button class=" fas fa-search btn" type="submit"></button>
+            </form>
+          </div>
+          <!-- End showboxsearch -->
+
+          <div class="text-dropdown">
+            <div class="support_dropdown-head">
+              <div class="name-user">
+                <i class="fas fa-bell"></i>
+                <!-- <span class="number">52</span> -->
+              </div>
+
+              <div class="support_dropdown-content bell">
+                <span class="warning"> No new notifications</span>
+              </div>
+            </div>
+            <!-- End support_dropdown-head -->
+
+            <div class="support_dropdown-head">
+              <div class="name-user">
+                <i class="far fa-life-ring"></i>
+                <p>
+                  get support
+                  <i class="fas fa-chevron-down icon-mar"></i>
+                </p>
+              </div>
+
+              <ul class="support_dropdown-content">
+                <li>
+                  <i class="fas fa-book"> </i>
+                  <a href="#" target="_blank">help center</a>
+                </li>
+
+                <li>
+                  <i class="fab fa-blogger-b"></i>
+                  <a href="#" target="_blank">blog</a>
+                </li>
+
+                <li>
+                  <i class="fab fa-youtube"></i>
+                  <a href="#" target="_blank"> youtube </a>
+                </li>
+
+                <li>
+                  <i class="fas fa-mobile-alt"></i>
+                  <a href="tel:01021108336">01021108336</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End support_dropdown-head -->
+            <div class="support_dropdown-head">
+              <div class="name-user">
+                <i class="far fa-user"> </i>
+                <p>
+                  Mohamed ahmed
+                  <i class="fas fa-chevron-down icon-mar"></i>
+                </p>
+              </div>
+
+              <ul class="support_dropdown-content">
+                <li>
+                  <i class="fas fa-user"> </i>
+                  <a href="#">My account</a>
+                </li>
+
+                <li>
+                  <i class="fas fa-sign-out-alt"></i>
+                  <a href="#">Logout</a>
+                </li>
+
+                <li>
+                  <i class="fas fa-file-alt"></i>
+                  <a href="#"> Log </a>
+                </li>
+              </ul>
+            </div>
+            <!-- End support_dropdown-head -->
+            <a href="#" class="language">العربية</a>
+          </div>
+          <!-- End Text Dropdown -->
+        </div>
+        <!-- End Min-Header -->
+        <div class="header-menu">
+          <span class="fa fa-bars sidebarCollapse"></span>
+          <nav class="textmenu">
+            <a class="active" href="index.html">
+              <img src="images/home.svg" /> Home</a
+            >
+            <a href="products.html">
+              <img src="images/products.svg" /> Products</a
+            >
+            <a href="orders.html"> <img src="images/orders.svg" /> Orders </a>
+            <a href="customers.html">
+              <img src="images/customers.svg" /> Customers
+            </a>
+          </nav>
+          <div class="boxsearch">
+            <form class="formsearch" action="#" method="">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Search products..."
+              />
+              <button class=" fas fa-search btn" type="submit"></button>
+            </form>
+          </div>
+          <!-- End showboxsearch -->
+        </div>
+
+        <!-- End Menu-Header -->
+      </header>
+      <!-- End Header -->
+
+      <div class="contant-inner">
+        <!-- <div class="alert alert-danger">
+          <i class="fas fa-times"></i>
+
+          <strong> Error</strong>
+          Please upload a valid CSV file.
+
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="alert alert-success" role="alert">
+          <i class="fas fa-check"></i>
+          sent succesfully
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <!-- End  alert -->
+
+        <div class="new_wizard">
+          <h1 class="title">Edit product</h1>
+        </div>
+        <!-- End  Wizard -->
+
+        <div class="wizard">
+          <ul class="link-wizard">
+            <li>
+              Edit product
+              <span
+                data-toggle="tooltip"
+                class="toolink"
+                title="You can see all administrators’ Emails, edit them, or create new ones.
+      You can Edit store Admin panel language."
+                >!</span
+              >
+            </li>
+            <li><a href="index.html">Administration</a></li>
+            <li><a href="reviews.html">reviews</a></li>
+            <li>Edit product</li>
+          </ul>
+        </div>
+        <!--End wizard -->
+        <form action="" method="" class="form">
+          <div class="row">
+            <div class="col-sm-8 wit-rspon">
+              <div class="segment">
+                <div class="head">
+                  <h2 class="title">details</h2>
+                </div>
+                <!-- End Head -->
+
+                <div class="field mb-4">
+                  <label>Code <em>*</em></label>
+                  <input
+                    type="text"
+                    name=""
+                    class="form-control"
+                    value="Orange-and-Carrot"
+                    disabled="disabled"
+                  />
+                </div>
+                <!-- End field -->
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="languse-tab"
+                      data-toggle="tab"
+                      href="#languse"
+                      role="tab"
+                      aria-controls="languse"
+                      aria-selected="true"
+                      >English (United States)</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="langar-tab"
+                      data-toggle="tab"
+                      href="#langar"
+                      role="tab"
+                      aria-controls="langar"
+                      aria-selected="false"
+                      >Arabic (Egypt)</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="languse"
+                    role="tabpanel"
+                    aria-labelledby="languse-tab"
+                  >
+                    <div class="row">
+                      <div class="col-sm-12 field">
+                        <label>Name <em>*</em></label>
+                        <input
+                          type="text"
+                          name=""
+                          class="form-control"
+                          value="Orange Carrot Juice"
+                        />
+                      </div>
+                      <div class="col-sm-12 field">
+                        <label>Slug <em>*</em></label>
+                        <input
+                          type="text"
+                          name=""
+                          class="form-control"
+                          value="Orange-and-Carrot"
+                          disabled="disabled"
+                        />
+                      </div>
+                      <!-- End field -->
+                      <div class="col-sm-12 field">
+                        <label>Description <em>*</em></label>
+                        <textarea class="text-editor"> </textarea>
+                      </div>
+                      <div class="col-sm-12 field">
+                        <label>Meta keywords <em>*</em></label>
+                        <input
+                          type="text"
+                          name=""
+                          class="form-control"
+                          value="Orange-and-Carrot"
+                        />
+                      </div>
+                      <div class="col-sm-12 field">
+                        <label>Meta description <em>*</em></label>
+                        <input
+                          type="text"
+                          name=""
+                          class="form-control"
+                          value="Orange-and-Carrot"
+                        />
+                      </div>
+                      <div class="col-sm-12 field">
+                        <label>Short description <em>*</em></label>
+                        <textarea class="form-control"> </textarea>
+                      </div>
+                    </div>
+                    <!-- End Row -->
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="langar"
+                    role="tabpanel"
+                    aria-labelledby="langar-tab"
+                  >
+                    <div class="row">
+                      <div class="col-sm-12 field">
+                        <label>Name <em>*</em></label>
+                        <input
+                          type="text"
+                          name=""
+                          class="form-control"
+                          value="Orange Carrot Juice"
+                        />
+                      </div>
+                      <div class="col-sm-12 field">
+                        <label>Slug <em>*</em></label>
+                        <input
+                          type="text"
+                          name=""
+                          class="form-control"
+                          value="Orange-and-Carrot"
+                          disabled="disabled"
+                        />
+                      </div>
+                      <!-- End field -->
+                      <div class="col-sm-12 field">
+                        <label>Description <em>*</em></label>
+                        <textarea class="text-editor2"> </textarea>
+                      </div>
+                      <div class="col-sm-12 field">
+                        <label>Meta keywords <em>*</em></label>
+                        <input
+                          type="text"
+                          name=""
+                          class="form-control"
+                          value="Orange-and-Carrot"
+                        />
+                      </div>
+                      <div class="col-sm-12 field">
+                        <label>Meta description <em>*</em></label>
+                        <input
+                          type="text"
+                          name=""
+                          class="form-control"
+                          value="Orange-and-Carrot"
+                        />
+                      </div>
+                      <div class="col-sm-12 field">
+                        <label>Short description <em>*</em></label>
+                        <textarea class="form-control"> </textarea>
+                      </div>
+                    </div>
+                    <!-- End Row -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Segment -->
+
+              <div class="segment">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="general-tab"
+                      data-toggle="tab"
+                      href="#general"
+                      role="tab"
+                      aria-controls="general"
+                      aria-selected="true"
+                      ><i class="fas fa-tools"></i> General</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="properties-tab"
+                      data-toggle="tab"
+                      href="#properties"
+                      role="tab"
+                      aria-controls="properties"
+                      aria-selected="false"
+                      ><i class="far fa-list-alt"></i> Properties</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="options-tab"
+                      data-toggle="tab"
+                      href="#options"
+                      role="tab"
+                      aria-controls="options"
+                      aria-selected="false"
+                      ><i class="fas fa-server"></i> Options</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="variants-tab"
+                      data-toggle="tab"
+                      href="#variants"
+                      role="tab"
+                      aria-controls="variants"
+                      aria-selected="false"
+                      ><i class="fas fa-th-large"></i> Variants</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="images-tab"
+                      data-toggle="tab"
+                      href="#images"
+                      role="tab"
+                      aria-controls="images"
+                      aria-selected="false"
+                      ><i class="fas fa-images"></i> Images</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="general"
+                    role="tabpanel"
+                    aria-labelledby="general-tab"
+                  >
+                    <div class="row">
+                      <div class="col-sm-12 field">
+                        <label class="w-100 mb-4">Channels <em>*</em></label>
+                        <label class="switch">
+                          <input type="checkbox" checked="" />
+                          <p class="slider round"></p>
+                        </label>
+                        <span class="text">Web</span>
+                      </div>
+                      <div class="col-sm-12 field">
+                        <label class="switch">
+                          <input type="checkbox" />
+                          <p class="slider round"></p>
+                        </label>
+                        <span class="text">App store</span>
+                      </div>
+                    </div>
+                    <!--End Row  -->
+                  </div>
+                  <div
+                    class="tab-pane fade pt-4"
+                    id="properties"
+                    role="tabpanel"
+                    aria-labelledby="properties-tab"
+                  >
+                    <div class="head mb-0 ">
+                      <h2 class="title">Properties</h2>
+                      <span class="bottom bot-st add4">
+                        <i class="fas fa-plus"></i>
+                        Add
+                      </span>
+                    </div>
+                    <!-- End head -->
+
+                    <div class="optionBox4">
+                      <div class="row">
+                        <div class="col-sm-4 block4"></div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                    <!-- End optionBox4 -->
+
+                    <button class="bottom" type="submit">
+                      <i class="fas fa-plus-circle"></i>
+                      Create
+                    </button>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="options"
+                    role="tabpanel"
+                    aria-labelledby="options-tab"
+                  >
+                    <div class="row">
+                      <div class="col-sm-4 field">
+                        <label>selected </label>
+                        <i class="fas fa-sort-down"></i>
+                        <select class="form-control" disabled="disabled"
+                          ><option value="FLAVOR" selected="selected"
+                            >Flavor:</option
+                          ><option value="SIZE">Size:</option
+                          ><option value="code">vbnmتلنن</option
+                          ><option value="colorrrrrrrr">value en</option
+                          ><option value="Color">Color</option
+                          ><option value="Pencil-Type">Pencil-Type</option
+                          ><option value="Count">Count</option
+                          ><option value="Shape">Shape</option
+                          ><option value="Weight">Weight</option></select
+                        >
+                      </div>
+                      <div class="col-sm-8 field">
+                        <label>Tags </label>
+                        <ul class="tags-box">
+                          <li>regular</li>
+                          <li>regular</li>
+                          <li>regular</li>
+                          <li>regular</li>
+                          <li>regular</li>
+                          <li>regular</li>
+                        </ul>
+                      </div>
+                      <!-- End field -->
+                    </div>
+                    <!-- End Row -->
+                    <div class="row">
+                      <div class="col-sm-4 field">
+                        <label>selected </label>
+                        <i class="fas fa-sort-down"></i>
+                        <select class="form-control" disabled="disabled"
+                          ><option value="FLAVOR" selected="selected"
+                            >Flavor:</option
+                          ><option value="SIZE">Size:</option
+                          ><option value="code">vbnmتلنن</option
+                          ><option value="colorrrrrrrr">value en</option
+                          ><option value="Color">Color</option
+                          ><option value="Pencil-Type">Pencil-Type</option
+                          ><option value="Count">Count</option
+                          ><option value="Shape">Shape</option
+                          ><option value="Weight">Weight</option></select
+                        >
+                      </div>
+                      <div class="col-sm-8 field">
+                        <label>Tags </label>
+                        <ul class="tags-box">
+                          <li>regular</li>
+                          <li>regular</li>
+                          <li>regular</li>
+                          <li>regular</li>
+                          <li>regular</li>
+                          <li>regular</li>
+                        </ul>
+                      </div>
+                      <!-- End field -->
+                    </div>
+                    <!-- End Row -->
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="variants"
+                    role="tabpanel"
+                    aria-labelledby="variants-tab"
+                  >
+                    <div class="row">
+                      <div class="col-sm-12 field">
+                        <label>Variant selection method<em>*</em></label>
+                        <i class="fas fa-sort-down"></i>
+                        <select class="form-control"
+                          ><option value="Variant choice">Variant choice</option
+                          ><option value="Options matching"
+                            >Options matching</option
+                          >
+                        </select>
+                      </div>
+                      <!-- End field -->
+                      <div class="col-sm-12 field">
+                        <button class="bottom" type="submit">
+                          Generate
+                        </button>
+                      </div>
+                      <!-- End field -->
+                    </div>
+                    <!-- End Row -->
+
+                    <div class="features revie">
+                      <ul class="tags-box">
+                        <li>REGULAR</li>
+                        <li>400ML</li>
+                      </ul>
+                      <span class="fas fa-trash-alt red"> </span>
+                      <span class="clickbot">
+                        <i class="a-minus"></i>
+                      </span>
+
+                      <div class="disbox">
+                        <div class="row">
+                          <div class="col-sm-6 field">
+                            <label class="switch">
+                              <input type="checkbox" checked="" />
+                              <p class="slider round"></p>
+                            </label>
+                            <span class="text">Enabled</span>
+                          </div>
+                          <!-- End field -->
+                          <div class="col-sm-6 field">
+                            <label class="switch">
+                              <input type="checkbox" />
+                              <p class="slider round"></p>
+                            </label>
+                            <span class="text">Tracked</span>
+                          </div>
+                          <!-- End field -->
+                        </div>
+                        <!-- End Row -->
+                        <span class="bottom bot-st add5 mt-3">
+                          <i class="fas fa-plus"></i>
+                          Add
+                        </span>
+
+                        <div class="optionBox5">
+                          <div class="row block5">
+                            <div class="col-sm-6 field">
+                              <label> Stock </label>
+                              <input
+                                type="text"
+                                name=""
+                                class="form-control"
+                                value=""
+                              />
+                            </div>
+                            <div class="col-sm-6 field">
+                              <label> Warehouse </label>
+                              <i class="fas fa-sort-down"></i>
+                              <select class="form-control"
+                                ><option value=""></option
+                                ><option value="1">Bbn</option
+                                ><option value="2">Bbn2</option
+                                ><option value="3">new</option
+                                ><option value="4">Elthawra</option></select
+                              >
+                            </div>
+                            <div class="remove5">
+                              <span class="fas fa-times"></span>
+                            </div>
+                          </div>
+                          <div class="block5"></div>
+                        </div>
+                      </div>
+                      <!-- End disbox -->
+                    </div>
+                    <!-- End features -->
+                    <div class="features revie">
+                      <ul class="tags-box">
+                        <li>REGULAR</li>
+                        <li>400ML</li>
+                      </ul>
+                      <span class="fas fa-trash-alt red"> </span>
+                      <span class="clickbot">
+                        <i class="a-minus"></i>
+                      </span>
+
+                      <div class="disbox">
+                        <div class="row">
+                          <div class="col-sm-6 field">
+                            <label class="switch">
+                              <input type="checkbox" checked="" />
+                              <p class="slider round"></p>
+                            </label>
+                            <span class="text">Enabled</span>
+                          </div>
+                          <!-- End field -->
+                          <div class="col-sm-6 field">
+                            <label class="switch">
+                              <input type="checkbox" />
+                              <p class="slider round"></p>
+                            </label>
+                            <span class="text">Tracked</span>
+                          </div>
+                          <!-- End field -->
+                        </div>
+                        <!-- End Row -->
+                        <span class="bottom bot-st add6 mt-3">
+                          <i class="fas fa-plus"></i>
+                          Add
+                        </span>
+
+                        <div class="optionBox6">
+                          <div class="row block6">
+                            <div class="col-sm-6 field">
+                              <label> Stock </label>
+                              <input
+                                type="text"
+                                name=""
+                                class="form-control"
+                                value=""
+                              />
+                            </div>
+                            <div class="col-sm-6 field">
+                              <label> Warehouse </label>
+                              <i class="fas fa-sort-down"></i>
+                              <select class="form-control"
+                                ><option value=""></option
+                                ><option value="1">Bbn</option
+                                ><option value="2">Bbn2</option
+                                ><option value="3">new</option
+                                ><option value="4">Elthawra</option></select
+                              >
+                            </div>
+                            <div class="remove6">
+                              <span class="fas fa-times"></span>
+                            </div>
+                          </div>
+                          <div class="block6"></div>
+                        </div>
+                      </div>
+                      <!-- End disbox -->
+                    </div>
+                    <!-- End features -->
+                  </div>
+
+                  <div
+                    class="tab-pane fade"
+                    id="images"
+                    role="tabpanel"
+                    aria-labelledby="images-tab"
+                  >
+                    <span class="bottom bot-st add7 mt-3">
+                      <i class="fas fa-plus"></i>
+                      Add
+                    </span>
+                    <!-- End bottom -->
+
+                    <div class="optionBox7">
+                      <div class="row">
+                        <div class="col-sm-6 block7">
+                          <div class="segment">
+                            <div class="field">
+                              <label> Product Variants </label
+                              ><i class="fas fa-sort-down"> </i>
+                              <select class="form-control">
+                                <option value="0" selected="selected">
+                                  Default </option
+                                ><option value="1">Home page banner</option>
+                                <option value="3">Collection logo</option>
+                              </select>
+                            </div>
+                            <div class="imgcent">
+                              <img
+                                class="img_prev"
+                                src="images/about-us.jpg"
+                                alt=""
+                                title=""
+                              /><label class="file-bro"
+                                >Choose file
+                                <input
+                                  type="file"
+                                  onchange="readURL(this);"
+                                  style="display: none;"
+                              /></label>
+                            </div>
+                          </div>
+                          <div class="remove7">
+                            <span class="fas fa-times"></span>
+                          </div>
+                        </div>
+                        <!-- End block7 -->
+                        <div class="col-sm-6 block7">
+                          <div class="segment">
+                            <div class="field">
+                              <label> Product Variants </label
+                              ><i class="fas fa-sort-down"> </i>
+                              <select class="form-control">
+                                <option value="0" selected="selected">
+                                  Default </option
+                                ><option value="1">Home page banner</option>
+                                <option value="3">Collection logo</option>
+                              </select>
+                            </div>
+                            <div class="imgcent">
+                              <img
+                                class="img_prev"
+                                src="images/home.png"
+                                alt=""
+                                title=""
+                              /><label class="file-bro"
+                                >Choose file
+                                <input
+                                  type="file"
+                                  onchange="readURL(this);"
+                                  style="display: none;"
+                              /></label>
+                            </div>
+                          </div>
+                          <div class="remove7">
+                            <span class="fas fa-times"></span>
+                          </div>
+                        </div>
+                        <!-- End block7 -->
+                        <div class="col-sm-6 block7"></div>
+                      </div>
+                      <!-- End Row -->
+                    </div>
+                    <!-- End optionBox -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Segment -->
+              <div class="segment">
+                <div class="head mb-0">
+                  <h2 class="title">Connected Types</h2>
+                </div>
+                <!-- End head -->
+
+                <div class="connected">
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+
+                  <div class="row">
+                    <div class="col-sm-4 field">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        value="Related products"
+                        disabled
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-8 field po-aro">
+                      <i class="fas fa-sort-down"></i>
+                      <select class="form-control"
+                        ><option value="NewsLetter" selected="Select products"
+                          >Select products</option
+                        >
+                      </select>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End Row -->
+                </div>
+                <!-- End Connected -->
+              </div>
+              <!-- End Segment -->
+            </div>
+            <!-- End wit-rspon -->
+            <div class="col-sm-4 wit-rspon">
+              <div class="segment">
+                <div class="head mb-0">
+                  <h2 class="title">Option</h2>
+                </div>
+                <!-- End Head -->
+
+                <div class="row">
+                  <div class="col-sm-12 field">
+                    <label class="switch">
+                      <input type="checkbox" checked disabled />
+                      <p class="slider round"></p>
+                    </label>
+                    <span class="text">Enabled</span>
+                  </div>
+                  <!-- End field -->
+                  <div class="col-sm-12 field">
+                    <label class="switch">
+                      <input type="checkbox" checked disabled />
+                      <p class="slider round"></p>
+                    </label>
+                    <span class="text">Featured</span>
+                  </div>
+                  <!-- End field -->
+                  <div class="col-sm-12 field">
+                    <label class="switch">
+                      <input type="checkbox" disabled />
+                      <p class="slider round"></p>
+                    </label>
+                    <span class="text">Bestseller</span>
+                  </div>
+                  <!-- End field -->
+                  <div class="col-sm-12 field">
+                    <label class="switch">
+                      <input type="checkbox" disabled />
+                      <p class="slider round"></p>
+                    </label>
+                    <span class="text">New arrival</span>
+                  </div>
+                  <!-- End field -->
+                  <div class="col-sm-12 field">
+                    <label class="switch">
+                      <input type="checkbox" checked disabled />
+                      <p class="slider round"></p>
+                    </label>
+                    <span class="text">Limited quantity</span>
+                  </div>
+                  <!-- End field -->
+                </div>
+                <!-- End Row -->
+              </div>
+              <!-- End segment -->
+              <div class="segment">
+                <div class="head mb-0">
+                  <h2 class="title">Main Image</h2>
+                </div>
+                <!-- End Head -->
+
+                <div class="up-ex up-img">
+                  <div class="custom-file">
+                    <input type="file" class="fileUpload" id="customFile" />
+                    <label class="custom-file-label" for="customFile"></label>
+                  </div>
+                  <!-- End custom-file -->
+                </div>
+
+                <!-- <input
+                  class="fileUpload"
+                  accept="image/jpeg, image/jpg"
+                  name="profilepic[]"
+                  type="file"
+                  value="Choose a file"
+                /> -->
+
+                <div class="upload-demo">
+                  <img alt="your image" class="portimg" src="#" />
+                </div>
+                <!-- End upload-demo -->
+              </div>
+              <!-- End segment -->
+              <div class="segment">
+                <div class="head mb-0">
+                  <h2 class="title">Main category</h2>
+                </div>
+                <!-- End Head -->
+                <div class="field sel-aro">
+                  <i class="fas fa-sort-down"></i>
+                  <select class="form-control"
+                    ><option value="NewsLetter" selected="Select"
+                      >Select</option
+                    >
+                  </select>
+                </div>
+                <!-- End field -->
+              </div>
+              <!-- End segment -->
+              <div class="segment">
+                <div class="head mb-0">
+                  <h2 class="title">Add more category</h2>
+                </div>
+                <!-- End Head -->
+
+                <div class="btnright mt-3">
+                  <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#export-categ"
+                    class="clear"
+                    ><i class="fas fa-folder-open"></i> Select category</a
+                  >
+                  <br />
+                  <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#ex-category"
+                    class="clear"
+                    ><i class="fas fa-plus-circle"></i> Create category</a
+                  >
+                </div>
+              </div>
+              <!-- End segment -->
+              <div class="segment">
+                <div class="head mb-0">
+                  <h2 class="title">Select vendors</h2>
+                </div>
+                <!-- End Head -->
+                <div class="field sel-aro">
+                  <i class="fas fa-sort-down"></i>
+                  <select class="form-control"
+                    ><option value="NewsLetter" selected="Select"
+                      >Select</option
+                    >
+                  </select>
+                </div>
+                <!-- End field -->
+              </div>
+              <!-- End segment -->
+            </div>
+            <!-- End wit-rspon -->
+
+            <div class="col-sm-12 mt-3">
+              <button class="bottom" type="submit">
+                <i class="fas fa-save"></i>
+                Save changes
+              </button>
+              <a href="#" class="bottom"><i class="fas fa-times"></i> Cancel</a>
+            </div>
+          </div>
+          <!-- End row -->
+        </form>
+
+        <nav class="icon-right">
+          <a
+            href="#"
+            class="fas fa-cog"
+            data-toggle="modal"
+            data-target="#ex-Modal"
+          ></a>
+          <!-- <a href="#" class="far fa-life-ring" data-toggle="modal" data-target="#ex-Modal"></a>-->
+        </nav>
+
+        <div
+          class="modal fade show"
+          id="ex-Modal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+        >
+          <div class="modal-dialog popurl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="title"></h2>
+                <span
+                  class="close de-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  ×
+                </span>
+              </div>
+              <div class="modal-body">
+                <iframe
+                  id="myFrame"
+                  src="https://zvendo.com/blog/docs/"
+                ></iframe>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End POPUP -->
+
+        <div
+          class="modal fade show"
+          id="ex-category"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+        >
+          <div class="modal-dialog popurl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="title">Create category</h2>
+                <span
+                  class="close de-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  ×
+                </span>
+              </div>
+              <form action="" method="" class="form">
+                <div class="modal-body padd">
+                  <div class="row">
+                    <div class="col-sm-8 wit-rspon">
+                      <div class="segment">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              id="lang-use-tab"
+                              data-toggle="tab"
+                              href="#lang-use"
+                              role="tab"
+                              aria-controls="lang-use"
+                              aria-selected="true"
+                              >English (United States)</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              id="lang-ar-tab"
+                              data-toggle="tab"
+                              href="#lang-ar"
+                              role="tab"
+                              aria-controls="lang-ar"
+                              aria-selected="false"
+                              >Arabic (Egypt)</a
+                            >
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                          <div
+                            class="tab-pane fade show active"
+                            id="lang-use"
+                            role="lang-use"
+                            aria-labelledby="lang-use-tab"
+                          >
+                            <div class="row">
+                              <div class="col-sm-12 field">
+                                <label>Name <em>*</em></label>
+                                <input
+                                  type="text"
+                                  name=""
+                                  class="form-control"
+                                  value="Orange Carrot Juice"
+                                />
+                              </div>
+                              <div class="col-sm-12 field">
+                                <label>Slug <em>*</em></label>
+                                <input
+                                  type="text"
+                                  name=""
+                                  class="form-control"
+                                  value="Orange-and-Carrot"
+                                />
+                              </div>
+                              <!-- End field -->
+                              <div class="col-sm-12 field">
+                                <label>Description <em>*</em></label>
+                                <textarea class="form-control"> </textarea>
+                              </div>
+                              <div class="col-sm-12 field">
+                                <label>Meta keywords <em>*</em></label>
+                                <input
+                                  type="text"
+                                  name=""
+                                  class="form-control"
+                                  value="Orange-and-Carrot"
+                                />
+                              </div>
+                              <div class="col-sm-12 field">
+                                <label>Meta description <em>*</em></label>
+                                <input
+                                  type="text"
+                                  name=""
+                                  class="form-control"
+                                  value="Orange-and-Carrot"
+                                />
+                              </div>
+                            </div>
+                            <!-- End Row -->
+                          </div>
+                          <div
+                            class="tab-pane fade"
+                            id="lang-ar"
+                            role="tabpanel"
+                            aria-labelledby="lang-ar-tab"
+                          >
+                            <div class="row">
+                              <div class="col-sm-12 field">
+                                <label>Name <em>*</em></label>
+                                <input
+                                  type="text"
+                                  name=""
+                                  class="form-control"
+                                  value="Orange Carrot Juice"
+                                />
+                              </div>
+                              <div class="col-sm-12 field">
+                                <label>Slug <em>*</em></label>
+                                <input
+                                  type="text"
+                                  name=""
+                                  class="form-control"
+                                  value="Orange-and-Carrot"
+                                />
+                              </div>
+                              <!-- End field -->
+                              <div class="col-sm-12 field">
+                                <label>Description <em>*</em></label>
+                                <textarea class="form-control"> </textarea>
+                              </div>
+                              <div class="col-sm-12 field">
+                                <label>Meta keywords <em>*</em></label>
+                                <input
+                                  type="text"
+                                  name=""
+                                  class="form-control"
+                                  value="Orange-and-Carrot"
+                                />
+                              </div>
+                              <div class="col-sm-12 field">
+                                <label>Meta description <em>*</em></label>
+                                <input
+                                  type="text"
+                                  name=""
+                                  class="form-control"
+                                  value="Orange-and-Carrot"
+                                />
+                              </div>
+                            </div>
+                            <!-- End Row -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Segment -->
+                    </div>
+                    <!-- End wit-rspon -->
+                    <div class="col-sm-4 wit-rspon">
+                      <div class="segment">
+                        <div class="head mb-0">
+                          <h2 class="title">Code</h2>
+                        </div>
+                        <!-- End Head -->
+
+                        <div class="row">
+                          <div class="col-sm-12 field">
+                            <input
+                              type="text"
+                              name=""
+                              class="form-control"
+                              value=""
+                            />
+                          </div>
+                          <!-- End field -->
+                          <div class="col-sm-12 field">
+                            <label class="switch">
+                              <input type="checkbox" />
+                              <p class="slider round"></p>
+                            </label>
+                            <span class="text">Enabled</span>
+                          </div>
+                          <!-- End field -->
+                          <div class="col-sm-12 field">
+                            <label class="switch">
+                              <input type="checkbox" />
+                              <p class="slider round"></p>
+                            </label>
+                            <span class="text">Featured</span>
+                          </div>
+                          <!-- End field -->
+                        </div>
+                        <!-- End Row -->
+                      </div>
+                      <!-- End segment -->
+                      <div class="segment">
+                        <div class="head mb-0">
+                          <h2 class="title">Countries</h2>
+                        </div>
+                        <!-- End Head -->
+                        <div class="field sel-aro">
+                          <i class="fas fa-sort-down"></i>
+                          <select class="form-control"
+                            ><option value="NewsLetter" selected="Select"
+                              >Select</option
+                            >
+                          </select>
+                        </div>
+                        <!-- End field -->
+                      </div>
+                      <!-- End segment -->
+                    </div>
+                    <!-- End wit-rspon -->
+                    <div class="col-sm-12 mt-3">
+                      <button class="bottom" type="submit">
+                        <i class="fas fa-plus-circle"></i>
+                        Create
+                      </button>
+                      <button type="button" class="bottom" data-dismiss="modal">
+                        <i class="fas fa-times"></i> Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- End POPUP -->
+        <div
+          class="modal fade show"
+          id="export-categ"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="title">Add More Category</h2>
+                <span
+                  class="close de-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  ×
+                </span>
+              </div>
+              <form action="" method="">
+                <div class="modal-body">
+                  <div class="segment in-seg">
+                    <div class="head">
+                      <h2 class="title">Meal Replacement Smoothies</h2>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6 customchick">
+                        <label class="che-box">
+                          <input type="checkbox" name="check" />
+                          <span class="label-text">kam </span>
+                        </label>
+                      </div>
+                      <!-- customchick -->
+                      <div class="col-sm-6 customchick">
+                        <label class="che-box">
+                          <input type="checkbox" name="check" />
+                          <span class="label-text">Fresh Juices</span>
+                        </label>
+                      </div>
+                      <!-- customchick -->
+                      <div class="col-sm-6 customchick">
+                        <label class="che-box">
+                          <input type="checkbox" name="check" />
+                          <span class="label-text">kam </span>
+                        </label>
+                      </div>
+                      <!-- customchick -->
+                      <div class="col-sm-6 customchick">
+                        <label class="che-box">
+                          <input type="checkbox" name="check" />
+                          <span class="label-text">Fresh Juices</span>
+                        </label>
+                      </div>
+                      <!-- customchick -->
+                    </div>
+                    <!-- End row -->
+                  </div>
+                  <!-- End segment -->
+                  <div class="segment in-seg">
+                    <div class="head">
+                      <h2 class="title">Meal Replacement Smoothies</h2>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6 customchick">
+                        <label class="che-box">
+                          <input type="checkbox" name="check" />
+                          <span class="label-text">kam </span>
+                        </label>
+                      </div>
+                      <!-- customchick -->
+                      <div class="col-sm-6 customchick">
+                        <label class="che-box">
+                          <input type="checkbox" name="check" />
+                          <span class="label-text">Fresh Juices</span>
+                        </label>
+                      </div>
+                      <!-- customchick -->
+                      <div class="col-sm-6 customchick">
+                        <label class="che-box">
+                          <input type="checkbox" name="check" />
+                          <span class="label-text">kam </span>
+                        </label>
+                      </div>
+                      <!-- customchick -->
+                      <div class="col-sm-6 customchick">
+                        <label class="che-box">
+                          <input type="checkbox" name="check" />
+                          <span class="label-text">Fresh Juices</span>
+                        </label>
+                      </div>
+                      <!-- customchick -->
+                    </div>
+                    <!-- End row -->
+                  </div>
+                  <!-- End segment -->
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="bottom">
+                    Add Category
+                  </button>
+                  <button type="button" class="bottom" data-dismiss="modal">
+                    Close
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- End PopUp -->
+      </div>
+      <!-- End Contant Inner -->
+    </div>
+    <!-- End content -->
+  </body>
+</html>

@@ -1027,6 +1027,12 @@
       color: #fff; }
     .contant-inner .bottom i {
       margin-right: 5px; }
+  .contant-inner .bot-st {
+    background: none;
+    color: #2c3e50;
+    border: 1px solid #2c3e50; }
+    .contant-inner .bot-st:hover {
+      border: 1px solid #279bc0; }
   .contant-inner .segment {
     margin-top: 15px;
     width: 100%;
@@ -1058,6 +1064,9 @@
         cursor: pointer; }
         .contant-inner .segment .title.click-filter i {
           font-size: 17px; }
+      .contant-inner .segment .title span {
+        font-size: 14px;
+        color: #279bc0; }
       @media (max-width: 450px) {
         .contant-inner .segment .title {
           font-size: 20px; } }
@@ -1126,8 +1135,8 @@
         border-radius: 60px;
         background-clip: padding-box;
         text-transform: capitalize;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         -webkit-border-radius: 3px;
         border-radius: 3px;
         background-clip: padding-box;
@@ -1171,12 +1180,6 @@
         .contant-inner .segment .table .bottom i {
           font-size: 13px;
           margin-right: 0px; }
-        .contant-inner .segment .table .bottom.witd {
-          width: 30px;
-          height: 30px; }
-          @media (max-width: 450px) {
-            .contant-inner .segment .table .bottom.witd {
-              padding: 0px; } }
         .contant-inner .segment .table .bottom.black {
           background: #000; }
         .contant-inner .segment .table .bottom.green {
@@ -1208,6 +1211,9 @@
         background: #7cc331;
         color: #fff;
         font-weight: 600;
+        outline: 0px;
+        outline-style: none;
+        border: 0px;
         -webkit-border-radius: 60px;
         border-radius: 60px;
         background-clip: padding-box; }
@@ -1217,8 +1223,15 @@
           @media (max-width: 550px) {
             .contant-inner .segment .table .secret i {
               display: none; } }
-        .contant-inner .segment .table .secret.disabled {
+        .contant-inner .segment .table .secret.disabled, .contant-inner .segment .table .secret.accept {
           background: #b5b5b5; }
+        .contant-inner .segment .table .secret.accept, .contant-inner .segment .table .secret.yellow {
+          cursor: pointer;
+          width: auto; }
+        .contant-inner .segment .table .secret.yellow, .contant-inner .segment .table .secret.yel {
+          background: #ff9500; }
+        .contant-inner .segment .table .secret.blu {
+          background: #279bc0; }
       .contant-inner .segment .table .flag {
         width: 16px;
         height: 11px;
@@ -1255,6 +1268,83 @@
           transition: all 0.5s ease-in-out 0s; }
           .contant-inner .segment .table .boxsearch .btn:hover {
             color: #279bc0; }
+      .contant-inner .segment .table span.label-text {
+        font-weight: normal !important; }
+      .contant-inner .segment .table .support_dropdown-head {
+        position: relative;
+        display: inline-block;
+        margin-right: 15px; }
+        .contant-inner .segment .table .support_dropdown-head .name-user {
+          display: flex;
+          align-items: center;
+          position: relative;
+          cursor: pointer; }
+          .contant-inner .segment .table .support_dropdown-head .name-user p {
+            color: #279bc0;
+            -moz-transition: all 0.5s ease-in-out 0s;
+            -o-transition: all 0.5s ease-in-out 0s;
+            -webkit-transition: all 0.5s ease-in-out 0s;
+            transition: all 0.5s ease-in-out 0s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          .contant-inner .segment .table .support_dropdown-head .name-user i {
+            font-size: 12px;
+            -moz-transition: all 0.5s ease-in-out 0s;
+            -o-transition: all 0.5s ease-in-out 0s;
+            -webkit-transition: all 0.5s ease-in-out 0s;
+            transition: all 0.5s ease-in-out 0s; }
+        .contant-inner .segment .table .support_dropdown-head .support_dropdown-content {
+          position: absolute;
+          top: 10px;
+          right: 0px;
+          width: 150px;
+          -webkit-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          -moz-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          -o-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          -ms-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          background-color: #fff;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          background-clip: padding-box;
+          z-index: 22;
+          height: 0px;
+          overflow: hidden;
+          -moz-transition: all 0.5s ease-in-out 0s;
+          -o-transition: all 0.5s ease-in-out 0s;
+          -webkit-transition: all 0.5s ease-in-out 0s;
+          transition: all 0.5s ease-in-out 0s; }
+          .contant-inner .segment .table .support_dropdown-head .support_dropdown-content li {
+            padding: 10px 15px 0px 15px; }
+            .contant-inner .segment .table .support_dropdown-head .support_dropdown-content li:last-child {
+              padding-bottom: 10px; }
+            .contant-inner .segment .table .support_dropdown-head .support_dropdown-content li a {
+              -moz-transition: all 0.5s ease-in-out 0s;
+              -o-transition: all 0.5s ease-in-out 0s;
+              -webkit-transition: all 0.5s ease-in-out 0s;
+              transition: all 0.5s ease-in-out 0s; }
+              .contant-inner .segment .table .support_dropdown-head .support_dropdown-content li a:hover {
+                color: #279bc0; }
+            .contant-inner .segment .table .support_dropdown-head .support_dropdown-content li i {
+              width: 15px;
+              font-size: 14px;
+              margin-right: 5px; }
+        .contant-inner .segment .table .support_dropdown-head:hover .name-user p,
+        .contant-inner .segment .table .support_dropdown-head:hover .name-user i {
+          color: #7cc331; }
+        .contant-inner .segment .table .support_dropdown-head:hover .support_dropdown-content {
+          top: 30px;
+          height: auto; }
+      .contant-inner .segment .table .img-tab {
+        max-width: 50px;
+        max-height: 50px; }
+    .contant-inner .segment .rating li {
+      display: inline-block;
+      font-size: 12px;
+      color: #b7b7b7; }
+      .contant-inner .segment .rating li.active {
+        color: #ff9500; }
     .contant-inner .segment .nav-tabs li {
       margin-right: 15px; }
       .contant-inner .segment .nav-tabs li:last-child {
@@ -1296,22 +1386,827 @@
           padding-top: 5px; }
     .contant-inner .segment .list-bill li {
       display: block; }
-  .contant-inner .optionBox {
+    .contant-inner .segment .features {
+      background: #fdfdfd;
+      margin-top: 15px;
+      padding: 15px;
+      padding-bottom: 0px;
+      position: relative;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      background-clip: padding-box;
+      border: 1px solid #f0f4f5; }
+      .contant-inner .segment .features .customchick {
+        margin: 0px;
+        margin-bottom: 15px; }
+      .contant-inner .segment .features .label-text {
+        font-size: 20px !important;
+        color: #000 !important; }
+        .contant-inner .segment .features .label-text::before {
+          font-size: 19px !important; }
+      .contant-inner .segment .features .price {
+        font-size: 18px;
+        color: #279bc0;
+        margin-left: 5px;
+        position: relative;
+        z-index: 1; }
+      .contant-inner .segment .features .package .title {
+        background: #f0f4f5;
+        font-size: 17px;
+        padding: 10px;
+        color: #2c3e50;
+        margin-bottom: 10px; }
+      .contant-inner .segment .features .package p {
+        padding: 0px 10px 10px 30px; }
+    .contant-inner .segment .ca-city {
+      background: #f0f4f5;
+      border: 0px;
+      padding: 5px 15px;
+      margin: 0px;
+      margin-bottom: 5px;
+      -webkit-border-radius: 0px;
+      border-radius: 0px;
+      background-clip: padding-box;
+      border-bottom: 1px solid #efefef; }
+      .contant-inner .segment .ca-city:last-child {
+        margin: 0px; }
+      .contant-inner .segment .ca-city .customchick {
+        margin: 0px; }
+      .contant-inner .segment .ca-city .label-text {
+        font-size: 16px !important; }
+        .contant-inner .segment .ca-city .label-text::before {
+          top: 8px !important;
+          font-size: 15px !important;
+          color: #131c21 !important; }
+        .contant-inner .segment .ca-city .label-text img {
+          width: 16px;
+          height: 11px;
+          margin: -2px 2px 0px 0px; }
+      .contant-inner .segment .ca-city input[type="checkbox"]:checked + .label-text:before {
+        color: #279bc0 !important; }
+      .contant-inner .segment .ca-city .disbox {
+        display: none;
+        padding: 10px 15px 5px 15px; }
+        .contant-inner .segment .ca-city .disbox .customchick {
+          border-bottom: 1px solid #efefef;
+          padding-bottom: 5px;
+          margin-bottom: 5px; }
+          .contant-inner .segment .ca-city .disbox .customchick:last-child {
+            padding: 0px;
+            margin: 0px;
+            border: 0px; }
+    .contant-inner .segment .box-hide {
+      display: none;
+      width: 100%; }
+    .contant-inner .segment .package {
+      margin-top: 15px; }
+    .contant-inner .segment .clickbot {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0px 15px; }
+      .contant-inner .segment .clickbot .a-minus {
+        position: relative;
+        width: 100%;
+        font-style: inherit; }
+        .contant-inner .segment .clickbot .a-minus:after {
+          content: "\f068";
+          position: absolute;
+          top: 0px;
+          right: 0;
+          -moz-transition: all 0.5s ease-in-out 0s;
+          -o-transition: all 0.5s ease-in-out 0s;
+          -webkit-transition: all 0.5s ease-in-out 0s;
+          transition: all 0.5s ease-in-out 0s;
+          font-weight: 600;
+          font-family: "Font Awesome 5 Free";
+          color: #000;
+          z-index: 1; }
+        .contant-inner .segment .clickbot .a-minus.rotate:after {
+          content: "\f067";
+          -moz-transition: all 0.5s ease-in-out 0s;
+          -o-transition: all 0.5s ease-in-out 0s;
+          -webkit-transition: all 0.5s ease-in-out 0s;
+          transition: all 0.5s ease-in-out 0s; }
+    .contant-inner .segment .revie {
+      padding: 15px; }
+      .contant-inner .segment .revie .clickbot {
+        top: 15px; }
+        .contant-inner .segment .revie .clickbot .a-minus:after {
+          content: "\f067"; }
+        .contant-inner .segment .revie .clickbot .a-minus.rotate:after {
+          content: "\f068"; }
+      .contant-inner .segment .revie .red {
+        position: absolute;
+        top: 23px;
+        right: 43px;
+        font-size: 13px;
+        color: #A90C00;
+        z-index: 10;
+        cursor: pointer;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s; }
+        .contant-inner .segment .revie .red:hover {
+          color: #7cc331; }
+      .contant-inner .segment .revie .tags-box {
+        border: 0px;
+        padding: 0px; }
+        .contant-inner .segment .revie .tags-box li {
+          margin: 0px;
+          margin-right: 5px;
+          background: #4a4a4a;
+          color: #fff; }
+      .contant-inner .segment .revie .disbox {
+        display: none; }
+      .contant-inner .segment .revie.tab-pad {
+        padding: 0px; }
+        .contant-inner .segment .revie.tab-pad .clickbot {
+          top: 0px;
+          padding: 0px;
+          height: 89px; }
+          .contant-inner .segment .revie.tab-pad .clickbot .a-minus:after {
+            top: 30px;
+            right: 15px; }
+        .contant-inner .segment .revie.tab-pad .disbox {
+          margin-top: 15px; }
+    .contant-inner .segment #chartdiv {
+      float: left;
+      width: 100%;
+      height: 300px; }
+    .contant-inner .segment .form-ac {
+      display: inline-block; }
+      .contant-inner .segment .form-ac .bottom {
+        font-size: 14px;
+        line-height: 10px; }
+    .contant-inner .segment .connected {
+      width: 100%;
+      height: 350px;
+      overflow: hidden;
+      overflow-y: scroll; }
+      .contant-inner .segment .connected .row {
+        padding-right: 15px; }
+    .contant-inner .segment .up-img {
+      margin-top: 15px;
+      width: 100%;
+      overflow: hidden; }
+      .contant-inner .segment .up-img .custom-file {
+        width: 100%; }
+        .contant-inner .segment .up-img .custom-file .custom-file-label {
+          padding: 0px; }
+          .contant-inner .segment .up-img .custom-file .custom-file-label:after {
+            -webkit-border-radius: 0px;
+            border-radius: 0px;
+            background-clip: padding-box;
+            cursor: pointer;
+            width: 100%;
+            text-align: center; }
+    .contant-inner .segment .upload-demo {
+      margin: 0px auto;
+      width: 175px;
+      position: relative; }
+      .contant-inner .segment .upload-demo img.portimg {
+        margin: 15px auto 0px auto;
+        width: 175px;
+        max-height: 175px;
+        padding: 5px;
+        border: 2px solid #279bc0;
+        position: relative;
+        display: none; }
+      .contant-inner .segment .upload-demo .removebtn {
+        position: absolute;
+        top: 6px;
+        right: -10px;
+        width: 25px;
+        height: 25px;
+        color: #fff;
+        background: #A90C00;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-clip: padding-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        padding-top: 2px;
+        cursor: pointer;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s; }
+        .contant-inner .segment .upload-demo .removebtn:hover {
+          background: #7cc331; }
+  .contant-inner .optionBox,
+  .contant-inner .optionBox2,
+  .contant-inner .optionBox3,
+  .contant-inner .optionBox4,
+  .contant-inner .optionBox5,
+  .contant-inner .optionBox6,
+  .contant-inner .optionBox7 {
     width: 100%; }
-    .contant-inner .optionBox .block {
+    .contant-inner .optionBox .block,
+    .contant-inner .optionBox .block2,
+    .contant-inner .optionBox .block3,
+    .contant-inner .optionBox .block4,
+    .contant-inner .optionBox .block5,
+    .contant-inner .optionBox .block6,
+    .contant-inner .optionBox .block7,
+    .contant-inner .optionBox2 .block,
+    .contant-inner .optionBox2 .block2,
+    .contant-inner .optionBox2 .block3,
+    .contant-inner .optionBox2 .block4,
+    .contant-inner .optionBox2 .block5,
+    .contant-inner .optionBox2 .block6,
+    .contant-inner .optionBox2 .block7,
+    .contant-inner .optionBox3 .block,
+    .contant-inner .optionBox3 .block2,
+    .contant-inner .optionBox3 .block3,
+    .contant-inner .optionBox3 .block4,
+    .contant-inner .optionBox3 .block5,
+    .contant-inner .optionBox3 .block6,
+    .contant-inner .optionBox3 .block7,
+    .contant-inner .optionBox4 .block,
+    .contant-inner .optionBox4 .block2,
+    .contant-inner .optionBox4 .block3,
+    .contant-inner .optionBox4 .block4,
+    .contant-inner .optionBox4 .block5,
+    .contant-inner .optionBox4 .block6,
+    .contant-inner .optionBox4 .block7,
+    .contant-inner .optionBox5 .block,
+    .contant-inner .optionBox5 .block2,
+    .contant-inner .optionBox5 .block3,
+    .contant-inner .optionBox5 .block4,
+    .contant-inner .optionBox5 .block5,
+    .contant-inner .optionBox5 .block6,
+    .contant-inner .optionBox5 .block7,
+    .contant-inner .optionBox6 .block,
+    .contant-inner .optionBox6 .block2,
+    .contant-inner .optionBox6 .block3,
+    .contant-inner .optionBox6 .block4,
+    .contant-inner .optionBox6 .block5,
+    .contant-inner .optionBox6 .block6,
+    .contant-inner .optionBox6 .block7,
+    .contant-inner .optionBox7 .block,
+    .contant-inner .optionBox7 .block2,
+    .contant-inner .optionBox7 .block3,
+    .contant-inner .optionBox7 .block4,
+    .contant-inner .optionBox7 .block5,
+    .contant-inner .optionBox7 .block6,
+    .contant-inner .optionBox7 .block7 {
       position: relative; }
       @media (max-width: 991px) {
-        .contant-inner .optionBox .block {
+        .contant-inner .optionBox .block,
+        .contant-inner .optionBox .block2,
+        .contant-inner .optionBox .block3,
+        .contant-inner .optionBox .block4,
+        .contant-inner .optionBox .block5,
+        .contant-inner .optionBox .block6,
+        .contant-inner .optionBox .block7,
+        .contant-inner .optionBox2 .block,
+        .contant-inner .optionBox2 .block2,
+        .contant-inner .optionBox2 .block3,
+        .contant-inner .optionBox2 .block4,
+        .contant-inner .optionBox2 .block5,
+        .contant-inner .optionBox2 .block6,
+        .contant-inner .optionBox2 .block7,
+        .contant-inner .optionBox3 .block,
+        .contant-inner .optionBox3 .block2,
+        .contant-inner .optionBox3 .block3,
+        .contant-inner .optionBox3 .block4,
+        .contant-inner .optionBox3 .block5,
+        .contant-inner .optionBox3 .block6,
+        .contant-inner .optionBox3 .block7,
+        .contant-inner .optionBox4 .block,
+        .contant-inner .optionBox4 .block2,
+        .contant-inner .optionBox4 .block3,
+        .contant-inner .optionBox4 .block4,
+        .contant-inner .optionBox4 .block5,
+        .contant-inner .optionBox4 .block6,
+        .contant-inner .optionBox4 .block7,
+        .contant-inner .optionBox5 .block,
+        .contant-inner .optionBox5 .block2,
+        .contant-inner .optionBox5 .block3,
+        .contant-inner .optionBox5 .block4,
+        .contant-inner .optionBox5 .block5,
+        .contant-inner .optionBox5 .block6,
+        .contant-inner .optionBox5 .block7,
+        .contant-inner .optionBox6 .block,
+        .contant-inner .optionBox6 .block2,
+        .contant-inner .optionBox6 .block3,
+        .contant-inner .optionBox6 .block4,
+        .contant-inner .optionBox6 .block5,
+        .contant-inner .optionBox6 .block6,
+        .contant-inner .optionBox6 .block7,
+        .contant-inner .optionBox7 .block,
+        .contant-inner .optionBox7 .block2,
+        .contant-inner .optionBox7 .block3,
+        .contant-inner .optionBox7 .block4,
+        .contant-inner .optionBox7 .block5,
+        .contant-inner .optionBox7 .block6,
+        .contant-inner .optionBox7 .block7 {
           max-width: 50%;
           flex: 50%; } }
       @media (max-width: 550px) {
-        .contant-inner .optionBox .block {
+        .contant-inner .optionBox .block,
+        .contant-inner .optionBox .block2,
+        .contant-inner .optionBox .block3,
+        .contant-inner .optionBox .block4,
+        .contant-inner .optionBox .block5,
+        .contant-inner .optionBox .block6,
+        .contant-inner .optionBox .block7,
+        .contant-inner .optionBox2 .block,
+        .contant-inner .optionBox2 .block2,
+        .contant-inner .optionBox2 .block3,
+        .contant-inner .optionBox2 .block4,
+        .contant-inner .optionBox2 .block5,
+        .contant-inner .optionBox2 .block6,
+        .contant-inner .optionBox2 .block7,
+        .contant-inner .optionBox3 .block,
+        .contant-inner .optionBox3 .block2,
+        .contant-inner .optionBox3 .block3,
+        .contant-inner .optionBox3 .block4,
+        .contant-inner .optionBox3 .block5,
+        .contant-inner .optionBox3 .block6,
+        .contant-inner .optionBox3 .block7,
+        .contant-inner .optionBox4 .block,
+        .contant-inner .optionBox4 .block2,
+        .contant-inner .optionBox4 .block3,
+        .contant-inner .optionBox4 .block4,
+        .contant-inner .optionBox4 .block5,
+        .contant-inner .optionBox4 .block6,
+        .contant-inner .optionBox4 .block7,
+        .contant-inner .optionBox5 .block,
+        .contant-inner .optionBox5 .block2,
+        .contant-inner .optionBox5 .block3,
+        .contant-inner .optionBox5 .block4,
+        .contant-inner .optionBox5 .block5,
+        .contant-inner .optionBox5 .block6,
+        .contant-inner .optionBox5 .block7,
+        .contant-inner .optionBox6 .block,
+        .contant-inner .optionBox6 .block2,
+        .contant-inner .optionBox6 .block3,
+        .contant-inner .optionBox6 .block4,
+        .contant-inner .optionBox6 .block5,
+        .contant-inner .optionBox6 .block6,
+        .contant-inner .optionBox6 .block7,
+        .contant-inner .optionBox7 .block,
+        .contant-inner .optionBox7 .block2,
+        .contant-inner .optionBox7 .block3,
+        .contant-inner .optionBox7 .block4,
+        .contant-inner .optionBox7 .block5,
+        .contant-inner .optionBox7 .block6,
+        .contant-inner .optionBox7 .block7 {
           max-width: 100%;
           flex: 100%; } }
-      .contant-inner .optionBox .block .field {
-        margin-top: 0px;
-        max-width: 100%; }
-      .contant-inner .optionBox .block .remove {
+      .contant-inner .optionBox .block .field,
+      .contant-inner .optionBox .block2 .field,
+      .contant-inner .optionBox .block3 .field,
+      .contant-inner .optionBox .block4 .field,
+      .contant-inner .optionBox .block5 .field,
+      .contant-inner .optionBox .block6 .field,
+      .contant-inner .optionBox .block7 .field,
+      .contant-inner .optionBox2 .block .field,
+      .contant-inner .optionBox2 .block2 .field,
+      .contant-inner .optionBox2 .block3 .field,
+      .contant-inner .optionBox2 .block4 .field,
+      .contant-inner .optionBox2 .block5 .field,
+      .contant-inner .optionBox2 .block6 .field,
+      .contant-inner .optionBox2 .block7 .field,
+      .contant-inner .optionBox3 .block .field,
+      .contant-inner .optionBox3 .block2 .field,
+      .contant-inner .optionBox3 .block3 .field,
+      .contant-inner .optionBox3 .block4 .field,
+      .contant-inner .optionBox3 .block5 .field,
+      .contant-inner .optionBox3 .block6 .field,
+      .contant-inner .optionBox3 .block7 .field,
+      .contant-inner .optionBox4 .block .field,
+      .contant-inner .optionBox4 .block2 .field,
+      .contant-inner .optionBox4 .block3 .field,
+      .contant-inner .optionBox4 .block4 .field,
+      .contant-inner .optionBox4 .block5 .field,
+      .contant-inner .optionBox4 .block6 .field,
+      .contant-inner .optionBox4 .block7 .field,
+      .contant-inner .optionBox5 .block .field,
+      .contant-inner .optionBox5 .block2 .field,
+      .contant-inner .optionBox5 .block3 .field,
+      .contant-inner .optionBox5 .block4 .field,
+      .contant-inner .optionBox5 .block5 .field,
+      .contant-inner .optionBox5 .block6 .field,
+      .contant-inner .optionBox5 .block7 .field,
+      .contant-inner .optionBox6 .block .field,
+      .contant-inner .optionBox6 .block2 .field,
+      .contant-inner .optionBox6 .block3 .field,
+      .contant-inner .optionBox6 .block4 .field,
+      .contant-inner .optionBox6 .block5 .field,
+      .contant-inner .optionBox6 .block6 .field,
+      .contant-inner .optionBox6 .block7 .field,
+      .contant-inner .optionBox7 .block .field,
+      .contant-inner .optionBox7 .block2 .field,
+      .contant-inner .optionBox7 .block3 .field,
+      .contant-inner .optionBox7 .block4 .field,
+      .contant-inner .optionBox7 .block5 .field,
+      .contant-inner .optionBox7 .block6 .field,
+      .contant-inner .optionBox7 .block7 .field {
+        width: 100%; }
+        .contant-inner .optionBox .block .field:first-child,
+        .contant-inner .optionBox .block2 .field:first-child,
+        .contant-inner .optionBox .block3 .field:first-child,
+        .contant-inner .optionBox .block4 .field:first-child,
+        .contant-inner .optionBox .block5 .field:first-child,
+        .contant-inner .optionBox .block6 .field:first-child,
+        .contant-inner .optionBox .block7 .field:first-child,
+        .contant-inner .optionBox2 .block .field:first-child,
+        .contant-inner .optionBox2 .block2 .field:first-child,
+        .contant-inner .optionBox2 .block3 .field:first-child,
+        .contant-inner .optionBox2 .block4 .field:first-child,
+        .contant-inner .optionBox2 .block5 .field:first-child,
+        .contant-inner .optionBox2 .block6 .field:first-child,
+        .contant-inner .optionBox2 .block7 .field:first-child,
+        .contant-inner .optionBox3 .block .field:first-child,
+        .contant-inner .optionBox3 .block2 .field:first-child,
+        .contant-inner .optionBox3 .block3 .field:first-child,
+        .contant-inner .optionBox3 .block4 .field:first-child,
+        .contant-inner .optionBox3 .block5 .field:first-child,
+        .contant-inner .optionBox3 .block6 .field:first-child,
+        .contant-inner .optionBox3 .block7 .field:first-child,
+        .contant-inner .optionBox4 .block .field:first-child,
+        .contant-inner .optionBox4 .block2 .field:first-child,
+        .contant-inner .optionBox4 .block3 .field:first-child,
+        .contant-inner .optionBox4 .block4 .field:first-child,
+        .contant-inner .optionBox4 .block5 .field:first-child,
+        .contant-inner .optionBox4 .block6 .field:first-child,
+        .contant-inner .optionBox4 .block7 .field:first-child,
+        .contant-inner .optionBox5 .block .field:first-child,
+        .contant-inner .optionBox5 .block2 .field:first-child,
+        .contant-inner .optionBox5 .block3 .field:first-child,
+        .contant-inner .optionBox5 .block4 .field:first-child,
+        .contant-inner .optionBox5 .block5 .field:first-child,
+        .contant-inner .optionBox5 .block6 .field:first-child,
+        .contant-inner .optionBox5 .block7 .field:first-child,
+        .contant-inner .optionBox6 .block .field:first-child,
+        .contant-inner .optionBox6 .block2 .field:first-child,
+        .contant-inner .optionBox6 .block3 .field:first-child,
+        .contant-inner .optionBox6 .block4 .field:first-child,
+        .contant-inner .optionBox6 .block5 .field:first-child,
+        .contant-inner .optionBox6 .block6 .field:first-child,
+        .contant-inner .optionBox6 .block7 .field:first-child,
+        .contant-inner .optionBox7 .block .field:first-child,
+        .contant-inner .optionBox7 .block2 .field:first-child,
+        .contant-inner .optionBox7 .block3 .field:first-child,
+        .contant-inner .optionBox7 .block4 .field:first-child,
+        .contant-inner .optionBox7 .block5 .field:first-child,
+        .contant-inner .optionBox7 .block6 .field:first-child,
+        .contant-inner .optionBox7 .block7 .field:first-child {
+          margin-top: 0px; }
+      .contant-inner .optionBox .block .remove,
+      .contant-inner .optionBox .block .remove2,
+      .contant-inner .optionBox .block .remove3,
+      .contant-inner .optionBox .block .remove4,
+      .contant-inner .optionBox .block .remove5,
+      .contant-inner .optionBox .block .remove6,
+      .contant-inner .optionBox .block .remove7,
+      .contant-inner .optionBox .block2 .remove,
+      .contant-inner .optionBox .block2 .remove2,
+      .contant-inner .optionBox .block2 .remove3,
+      .contant-inner .optionBox .block2 .remove4,
+      .contant-inner .optionBox .block2 .remove5,
+      .contant-inner .optionBox .block2 .remove6,
+      .contant-inner .optionBox .block2 .remove7,
+      .contant-inner .optionBox .block3 .remove,
+      .contant-inner .optionBox .block3 .remove2,
+      .contant-inner .optionBox .block3 .remove3,
+      .contant-inner .optionBox .block3 .remove4,
+      .contant-inner .optionBox .block3 .remove5,
+      .contant-inner .optionBox .block3 .remove6,
+      .contant-inner .optionBox .block3 .remove7,
+      .contant-inner .optionBox .block4 .remove,
+      .contant-inner .optionBox .block4 .remove2,
+      .contant-inner .optionBox .block4 .remove3,
+      .contant-inner .optionBox .block4 .remove4,
+      .contant-inner .optionBox .block4 .remove5,
+      .contant-inner .optionBox .block4 .remove6,
+      .contant-inner .optionBox .block4 .remove7,
+      .contant-inner .optionBox .block5 .remove,
+      .contant-inner .optionBox .block5 .remove2,
+      .contant-inner .optionBox .block5 .remove3,
+      .contant-inner .optionBox .block5 .remove4,
+      .contant-inner .optionBox .block5 .remove5,
+      .contant-inner .optionBox .block5 .remove6,
+      .contant-inner .optionBox .block5 .remove7,
+      .contant-inner .optionBox .block6 .remove,
+      .contant-inner .optionBox .block6 .remove2,
+      .contant-inner .optionBox .block6 .remove3,
+      .contant-inner .optionBox .block6 .remove4,
+      .contant-inner .optionBox .block6 .remove5,
+      .contant-inner .optionBox .block6 .remove6,
+      .contant-inner .optionBox .block6 .remove7,
+      .contant-inner .optionBox .block7 .remove,
+      .contant-inner .optionBox .block7 .remove2,
+      .contant-inner .optionBox .block7 .remove3,
+      .contant-inner .optionBox .block7 .remove4,
+      .contant-inner .optionBox .block7 .remove5,
+      .contant-inner .optionBox .block7 .remove6,
+      .contant-inner .optionBox .block7 .remove7,
+      .contant-inner .optionBox2 .block .remove,
+      .contant-inner .optionBox2 .block .remove2,
+      .contant-inner .optionBox2 .block .remove3,
+      .contant-inner .optionBox2 .block .remove4,
+      .contant-inner .optionBox2 .block .remove5,
+      .contant-inner .optionBox2 .block .remove6,
+      .contant-inner .optionBox2 .block .remove7,
+      .contant-inner .optionBox2 .block2 .remove,
+      .contant-inner .optionBox2 .block2 .remove2,
+      .contant-inner .optionBox2 .block2 .remove3,
+      .contant-inner .optionBox2 .block2 .remove4,
+      .contant-inner .optionBox2 .block2 .remove5,
+      .contant-inner .optionBox2 .block2 .remove6,
+      .contant-inner .optionBox2 .block2 .remove7,
+      .contant-inner .optionBox2 .block3 .remove,
+      .contant-inner .optionBox2 .block3 .remove2,
+      .contant-inner .optionBox2 .block3 .remove3,
+      .contant-inner .optionBox2 .block3 .remove4,
+      .contant-inner .optionBox2 .block3 .remove5,
+      .contant-inner .optionBox2 .block3 .remove6,
+      .contant-inner .optionBox2 .block3 .remove7,
+      .contant-inner .optionBox2 .block4 .remove,
+      .contant-inner .optionBox2 .block4 .remove2,
+      .contant-inner .optionBox2 .block4 .remove3,
+      .contant-inner .optionBox2 .block4 .remove4,
+      .contant-inner .optionBox2 .block4 .remove5,
+      .contant-inner .optionBox2 .block4 .remove6,
+      .contant-inner .optionBox2 .block4 .remove7,
+      .contant-inner .optionBox2 .block5 .remove,
+      .contant-inner .optionBox2 .block5 .remove2,
+      .contant-inner .optionBox2 .block5 .remove3,
+      .contant-inner .optionBox2 .block5 .remove4,
+      .contant-inner .optionBox2 .block5 .remove5,
+      .contant-inner .optionBox2 .block5 .remove6,
+      .contant-inner .optionBox2 .block5 .remove7,
+      .contant-inner .optionBox2 .block6 .remove,
+      .contant-inner .optionBox2 .block6 .remove2,
+      .contant-inner .optionBox2 .block6 .remove3,
+      .contant-inner .optionBox2 .block6 .remove4,
+      .contant-inner .optionBox2 .block6 .remove5,
+      .contant-inner .optionBox2 .block6 .remove6,
+      .contant-inner .optionBox2 .block6 .remove7,
+      .contant-inner .optionBox2 .block7 .remove,
+      .contant-inner .optionBox2 .block7 .remove2,
+      .contant-inner .optionBox2 .block7 .remove3,
+      .contant-inner .optionBox2 .block7 .remove4,
+      .contant-inner .optionBox2 .block7 .remove5,
+      .contant-inner .optionBox2 .block7 .remove6,
+      .contant-inner .optionBox2 .block7 .remove7,
+      .contant-inner .optionBox3 .block .remove,
+      .contant-inner .optionBox3 .block .remove2,
+      .contant-inner .optionBox3 .block .remove3,
+      .contant-inner .optionBox3 .block .remove4,
+      .contant-inner .optionBox3 .block .remove5,
+      .contant-inner .optionBox3 .block .remove6,
+      .contant-inner .optionBox3 .block .remove7,
+      .contant-inner .optionBox3 .block2 .remove,
+      .contant-inner .optionBox3 .block2 .remove2,
+      .contant-inner .optionBox3 .block2 .remove3,
+      .contant-inner .optionBox3 .block2 .remove4,
+      .contant-inner .optionBox3 .block2 .remove5,
+      .contant-inner .optionBox3 .block2 .remove6,
+      .contant-inner .optionBox3 .block2 .remove7,
+      .contant-inner .optionBox3 .block3 .remove,
+      .contant-inner .optionBox3 .block3 .remove2,
+      .contant-inner .optionBox3 .block3 .remove3,
+      .contant-inner .optionBox3 .block3 .remove4,
+      .contant-inner .optionBox3 .block3 .remove5,
+      .contant-inner .optionBox3 .block3 .remove6,
+      .contant-inner .optionBox3 .block3 .remove7,
+      .contant-inner .optionBox3 .block4 .remove,
+      .contant-inner .optionBox3 .block4 .remove2,
+      .contant-inner .optionBox3 .block4 .remove3,
+      .contant-inner .optionBox3 .block4 .remove4,
+      .contant-inner .optionBox3 .block4 .remove5,
+      .contant-inner .optionBox3 .block4 .remove6,
+      .contant-inner .optionBox3 .block4 .remove7,
+      .contant-inner .optionBox3 .block5 .remove,
+      .contant-inner .optionBox3 .block5 .remove2,
+      .contant-inner .optionBox3 .block5 .remove3,
+      .contant-inner .optionBox3 .block5 .remove4,
+      .contant-inner .optionBox3 .block5 .remove5,
+      .contant-inner .optionBox3 .block5 .remove6,
+      .contant-inner .optionBox3 .block5 .remove7,
+      .contant-inner .optionBox3 .block6 .remove,
+      .contant-inner .optionBox3 .block6 .remove2,
+      .contant-inner .optionBox3 .block6 .remove3,
+      .contant-inner .optionBox3 .block6 .remove4,
+      .contant-inner .optionBox3 .block6 .remove5,
+      .contant-inner .optionBox3 .block6 .remove6,
+      .contant-inner .optionBox3 .block6 .remove7,
+      .contant-inner .optionBox3 .block7 .remove,
+      .contant-inner .optionBox3 .block7 .remove2,
+      .contant-inner .optionBox3 .block7 .remove3,
+      .contant-inner .optionBox3 .block7 .remove4,
+      .contant-inner .optionBox3 .block7 .remove5,
+      .contant-inner .optionBox3 .block7 .remove6,
+      .contant-inner .optionBox3 .block7 .remove7,
+      .contant-inner .optionBox4 .block .remove,
+      .contant-inner .optionBox4 .block .remove2,
+      .contant-inner .optionBox4 .block .remove3,
+      .contant-inner .optionBox4 .block .remove4,
+      .contant-inner .optionBox4 .block .remove5,
+      .contant-inner .optionBox4 .block .remove6,
+      .contant-inner .optionBox4 .block .remove7,
+      .contant-inner .optionBox4 .block2 .remove,
+      .contant-inner .optionBox4 .block2 .remove2,
+      .contant-inner .optionBox4 .block2 .remove3,
+      .contant-inner .optionBox4 .block2 .remove4,
+      .contant-inner .optionBox4 .block2 .remove5,
+      .contant-inner .optionBox4 .block2 .remove6,
+      .contant-inner .optionBox4 .block2 .remove7,
+      .contant-inner .optionBox4 .block3 .remove,
+      .contant-inner .optionBox4 .block3 .remove2,
+      .contant-inner .optionBox4 .block3 .remove3,
+      .contant-inner .optionBox4 .block3 .remove4,
+      .contant-inner .optionBox4 .block3 .remove5,
+      .contant-inner .optionBox4 .block3 .remove6,
+      .contant-inner .optionBox4 .block3 .remove7,
+      .contant-inner .optionBox4 .block4 .remove,
+      .contant-inner .optionBox4 .block4 .remove2,
+      .contant-inner .optionBox4 .block4 .remove3,
+      .contant-inner .optionBox4 .block4 .remove4,
+      .contant-inner .optionBox4 .block4 .remove5,
+      .contant-inner .optionBox4 .block4 .remove6,
+      .contant-inner .optionBox4 .block4 .remove7,
+      .contant-inner .optionBox4 .block5 .remove,
+      .contant-inner .optionBox4 .block5 .remove2,
+      .contant-inner .optionBox4 .block5 .remove3,
+      .contant-inner .optionBox4 .block5 .remove4,
+      .contant-inner .optionBox4 .block5 .remove5,
+      .contant-inner .optionBox4 .block5 .remove6,
+      .contant-inner .optionBox4 .block5 .remove7,
+      .contant-inner .optionBox4 .block6 .remove,
+      .contant-inner .optionBox4 .block6 .remove2,
+      .contant-inner .optionBox4 .block6 .remove3,
+      .contant-inner .optionBox4 .block6 .remove4,
+      .contant-inner .optionBox4 .block6 .remove5,
+      .contant-inner .optionBox4 .block6 .remove6,
+      .contant-inner .optionBox4 .block6 .remove7,
+      .contant-inner .optionBox4 .block7 .remove,
+      .contant-inner .optionBox4 .block7 .remove2,
+      .contant-inner .optionBox4 .block7 .remove3,
+      .contant-inner .optionBox4 .block7 .remove4,
+      .contant-inner .optionBox4 .block7 .remove5,
+      .contant-inner .optionBox4 .block7 .remove6,
+      .contant-inner .optionBox4 .block7 .remove7,
+      .contant-inner .optionBox5 .block .remove,
+      .contant-inner .optionBox5 .block .remove2,
+      .contant-inner .optionBox5 .block .remove3,
+      .contant-inner .optionBox5 .block .remove4,
+      .contant-inner .optionBox5 .block .remove5,
+      .contant-inner .optionBox5 .block .remove6,
+      .contant-inner .optionBox5 .block .remove7,
+      .contant-inner .optionBox5 .block2 .remove,
+      .contant-inner .optionBox5 .block2 .remove2,
+      .contant-inner .optionBox5 .block2 .remove3,
+      .contant-inner .optionBox5 .block2 .remove4,
+      .contant-inner .optionBox5 .block2 .remove5,
+      .contant-inner .optionBox5 .block2 .remove6,
+      .contant-inner .optionBox5 .block2 .remove7,
+      .contant-inner .optionBox5 .block3 .remove,
+      .contant-inner .optionBox5 .block3 .remove2,
+      .contant-inner .optionBox5 .block3 .remove3,
+      .contant-inner .optionBox5 .block3 .remove4,
+      .contant-inner .optionBox5 .block3 .remove5,
+      .contant-inner .optionBox5 .block3 .remove6,
+      .contant-inner .optionBox5 .block3 .remove7,
+      .contant-inner .optionBox5 .block4 .remove,
+      .contant-inner .optionBox5 .block4 .remove2,
+      .contant-inner .optionBox5 .block4 .remove3,
+      .contant-inner .optionBox5 .block4 .remove4,
+      .contant-inner .optionBox5 .block4 .remove5,
+      .contant-inner .optionBox5 .block4 .remove6,
+      .contant-inner .optionBox5 .block4 .remove7,
+      .contant-inner .optionBox5 .block5 .remove,
+      .contant-inner .optionBox5 .block5 .remove2,
+      .contant-inner .optionBox5 .block5 .remove3,
+      .contant-inner .optionBox5 .block5 .remove4,
+      .contant-inner .optionBox5 .block5 .remove5,
+      .contant-inner .optionBox5 .block5 .remove6,
+      .contant-inner .optionBox5 .block5 .remove7,
+      .contant-inner .optionBox5 .block6 .remove,
+      .contant-inner .optionBox5 .block6 .remove2,
+      .contant-inner .optionBox5 .block6 .remove3,
+      .contant-inner .optionBox5 .block6 .remove4,
+      .contant-inner .optionBox5 .block6 .remove5,
+      .contant-inner .optionBox5 .block6 .remove6,
+      .contant-inner .optionBox5 .block6 .remove7,
+      .contant-inner .optionBox5 .block7 .remove,
+      .contant-inner .optionBox5 .block7 .remove2,
+      .contant-inner .optionBox5 .block7 .remove3,
+      .contant-inner .optionBox5 .block7 .remove4,
+      .contant-inner .optionBox5 .block7 .remove5,
+      .contant-inner .optionBox5 .block7 .remove6,
+      .contant-inner .optionBox5 .block7 .remove7,
+      .contant-inner .optionBox6 .block .remove,
+      .contant-inner .optionBox6 .block .remove2,
+      .contant-inner .optionBox6 .block .remove3,
+      .contant-inner .optionBox6 .block .remove4,
+      .contant-inner .optionBox6 .block .remove5,
+      .contant-inner .optionBox6 .block .remove6,
+      .contant-inner .optionBox6 .block .remove7,
+      .contant-inner .optionBox6 .block2 .remove,
+      .contant-inner .optionBox6 .block2 .remove2,
+      .contant-inner .optionBox6 .block2 .remove3,
+      .contant-inner .optionBox6 .block2 .remove4,
+      .contant-inner .optionBox6 .block2 .remove5,
+      .contant-inner .optionBox6 .block2 .remove6,
+      .contant-inner .optionBox6 .block2 .remove7,
+      .contant-inner .optionBox6 .block3 .remove,
+      .contant-inner .optionBox6 .block3 .remove2,
+      .contant-inner .optionBox6 .block3 .remove3,
+      .contant-inner .optionBox6 .block3 .remove4,
+      .contant-inner .optionBox6 .block3 .remove5,
+      .contant-inner .optionBox6 .block3 .remove6,
+      .contant-inner .optionBox6 .block3 .remove7,
+      .contant-inner .optionBox6 .block4 .remove,
+      .contant-inner .optionBox6 .block4 .remove2,
+      .contant-inner .optionBox6 .block4 .remove3,
+      .contant-inner .optionBox6 .block4 .remove4,
+      .contant-inner .optionBox6 .block4 .remove5,
+      .contant-inner .optionBox6 .block4 .remove6,
+      .contant-inner .optionBox6 .block4 .remove7,
+      .contant-inner .optionBox6 .block5 .remove,
+      .contant-inner .optionBox6 .block5 .remove2,
+      .contant-inner .optionBox6 .block5 .remove3,
+      .contant-inner .optionBox6 .block5 .remove4,
+      .contant-inner .optionBox6 .block5 .remove5,
+      .contant-inner .optionBox6 .block5 .remove6,
+      .contant-inner .optionBox6 .block5 .remove7,
+      .contant-inner .optionBox6 .block6 .remove,
+      .contant-inner .optionBox6 .block6 .remove2,
+      .contant-inner .optionBox6 .block6 .remove3,
+      .contant-inner .optionBox6 .block6 .remove4,
+      .contant-inner .optionBox6 .block6 .remove5,
+      .contant-inner .optionBox6 .block6 .remove6,
+      .contant-inner .optionBox6 .block6 .remove7,
+      .contant-inner .optionBox6 .block7 .remove,
+      .contant-inner .optionBox6 .block7 .remove2,
+      .contant-inner .optionBox6 .block7 .remove3,
+      .contant-inner .optionBox6 .block7 .remove4,
+      .contant-inner .optionBox6 .block7 .remove5,
+      .contant-inner .optionBox6 .block7 .remove6,
+      .contant-inner .optionBox6 .block7 .remove7,
+      .contant-inner .optionBox7 .block .remove,
+      .contant-inner .optionBox7 .block .remove2,
+      .contant-inner .optionBox7 .block .remove3,
+      .contant-inner .optionBox7 .block .remove4,
+      .contant-inner .optionBox7 .block .remove5,
+      .contant-inner .optionBox7 .block .remove6,
+      .contant-inner .optionBox7 .block .remove7,
+      .contant-inner .optionBox7 .block2 .remove,
+      .contant-inner .optionBox7 .block2 .remove2,
+      .contant-inner .optionBox7 .block2 .remove3,
+      .contant-inner .optionBox7 .block2 .remove4,
+      .contant-inner .optionBox7 .block2 .remove5,
+      .contant-inner .optionBox7 .block2 .remove6,
+      .contant-inner .optionBox7 .block2 .remove7,
+      .contant-inner .optionBox7 .block3 .remove,
+      .contant-inner .optionBox7 .block3 .remove2,
+      .contant-inner .optionBox7 .block3 .remove3,
+      .contant-inner .optionBox7 .block3 .remove4,
+      .contant-inner .optionBox7 .block3 .remove5,
+      .contant-inner .optionBox7 .block3 .remove6,
+      .contant-inner .optionBox7 .block3 .remove7,
+      .contant-inner .optionBox7 .block4 .remove,
+      .contant-inner .optionBox7 .block4 .remove2,
+      .contant-inner .optionBox7 .block4 .remove3,
+      .contant-inner .optionBox7 .block4 .remove4,
+      .contant-inner .optionBox7 .block4 .remove5,
+      .contant-inner .optionBox7 .block4 .remove6,
+      .contant-inner .optionBox7 .block4 .remove7,
+      .contant-inner .optionBox7 .block5 .remove,
+      .contant-inner .optionBox7 .block5 .remove2,
+      .contant-inner .optionBox7 .block5 .remove3,
+      .contant-inner .optionBox7 .block5 .remove4,
+      .contant-inner .optionBox7 .block5 .remove5,
+      .contant-inner .optionBox7 .block5 .remove6,
+      .contant-inner .optionBox7 .block5 .remove7,
+      .contant-inner .optionBox7 .block6 .remove,
+      .contant-inner .optionBox7 .block6 .remove2,
+      .contant-inner .optionBox7 .block6 .remove3,
+      .contant-inner .optionBox7 .block6 .remove4,
+      .contant-inner .optionBox7 .block6 .remove5,
+      .contant-inner .optionBox7 .block6 .remove6,
+      .contant-inner .optionBox7 .block6 .remove7,
+      .contant-inner .optionBox7 .block7 .remove,
+      .contant-inner .optionBox7 .block7 .remove2,
+      .contant-inner .optionBox7 .block7 .remove3,
+      .contant-inner .optionBox7 .block7 .remove4,
+      .contant-inner .optionBox7 .block7 .remove5,
+      .contant-inner .optionBox7 .block7 .remove6,
+      .contant-inner .optionBox7 .block7 .remove7 {
         position: absolute;
         top: 5px;
         right: 5px;
@@ -1331,8 +2226,423 @@
         -o-transition: all 0.5s ease-in-out 0s;
         -webkit-transition: all 0.5s ease-in-out 0s;
         transition: all 0.5s ease-in-out 0s; }
-        .contant-inner .optionBox .block .remove:hover {
+        .contant-inner .optionBox .block .remove:hover,
+        .contant-inner .optionBox .block .remove2:hover,
+        .contant-inner .optionBox .block .remove3:hover,
+        .contant-inner .optionBox .block .remove4:hover,
+        .contant-inner .optionBox .block .remove5:hover,
+        .contant-inner .optionBox .block .remove6:hover,
+        .contant-inner .optionBox .block .remove7:hover,
+        .contant-inner .optionBox .block2 .remove:hover,
+        .contant-inner .optionBox .block2 .remove2:hover,
+        .contant-inner .optionBox .block2 .remove3:hover,
+        .contant-inner .optionBox .block2 .remove4:hover,
+        .contant-inner .optionBox .block2 .remove5:hover,
+        .contant-inner .optionBox .block2 .remove6:hover,
+        .contant-inner .optionBox .block2 .remove7:hover,
+        .contant-inner .optionBox .block3 .remove:hover,
+        .contant-inner .optionBox .block3 .remove2:hover,
+        .contant-inner .optionBox .block3 .remove3:hover,
+        .contant-inner .optionBox .block3 .remove4:hover,
+        .contant-inner .optionBox .block3 .remove5:hover,
+        .contant-inner .optionBox .block3 .remove6:hover,
+        .contant-inner .optionBox .block3 .remove7:hover,
+        .contant-inner .optionBox .block4 .remove:hover,
+        .contant-inner .optionBox .block4 .remove2:hover,
+        .contant-inner .optionBox .block4 .remove3:hover,
+        .contant-inner .optionBox .block4 .remove4:hover,
+        .contant-inner .optionBox .block4 .remove5:hover,
+        .contant-inner .optionBox .block4 .remove6:hover,
+        .contant-inner .optionBox .block4 .remove7:hover,
+        .contant-inner .optionBox .block5 .remove:hover,
+        .contant-inner .optionBox .block5 .remove2:hover,
+        .contant-inner .optionBox .block5 .remove3:hover,
+        .contant-inner .optionBox .block5 .remove4:hover,
+        .contant-inner .optionBox .block5 .remove5:hover,
+        .contant-inner .optionBox .block5 .remove6:hover,
+        .contant-inner .optionBox .block5 .remove7:hover,
+        .contant-inner .optionBox .block6 .remove:hover,
+        .contant-inner .optionBox .block6 .remove2:hover,
+        .contant-inner .optionBox .block6 .remove3:hover,
+        .contant-inner .optionBox .block6 .remove4:hover,
+        .contant-inner .optionBox .block6 .remove5:hover,
+        .contant-inner .optionBox .block6 .remove6:hover,
+        .contant-inner .optionBox .block6 .remove7:hover,
+        .contant-inner .optionBox .block7 .remove:hover,
+        .contant-inner .optionBox .block7 .remove2:hover,
+        .contant-inner .optionBox .block7 .remove3:hover,
+        .contant-inner .optionBox .block7 .remove4:hover,
+        .contant-inner .optionBox .block7 .remove5:hover,
+        .contant-inner .optionBox .block7 .remove6:hover,
+        .contant-inner .optionBox .block7 .remove7:hover,
+        .contant-inner .optionBox2 .block .remove:hover,
+        .contant-inner .optionBox2 .block .remove2:hover,
+        .contant-inner .optionBox2 .block .remove3:hover,
+        .contant-inner .optionBox2 .block .remove4:hover,
+        .contant-inner .optionBox2 .block .remove5:hover,
+        .contant-inner .optionBox2 .block .remove6:hover,
+        .contant-inner .optionBox2 .block .remove7:hover,
+        .contant-inner .optionBox2 .block2 .remove:hover,
+        .contant-inner .optionBox2 .block2 .remove2:hover,
+        .contant-inner .optionBox2 .block2 .remove3:hover,
+        .contant-inner .optionBox2 .block2 .remove4:hover,
+        .contant-inner .optionBox2 .block2 .remove5:hover,
+        .contant-inner .optionBox2 .block2 .remove6:hover,
+        .contant-inner .optionBox2 .block2 .remove7:hover,
+        .contant-inner .optionBox2 .block3 .remove:hover,
+        .contant-inner .optionBox2 .block3 .remove2:hover,
+        .contant-inner .optionBox2 .block3 .remove3:hover,
+        .contant-inner .optionBox2 .block3 .remove4:hover,
+        .contant-inner .optionBox2 .block3 .remove5:hover,
+        .contant-inner .optionBox2 .block3 .remove6:hover,
+        .contant-inner .optionBox2 .block3 .remove7:hover,
+        .contant-inner .optionBox2 .block4 .remove:hover,
+        .contant-inner .optionBox2 .block4 .remove2:hover,
+        .contant-inner .optionBox2 .block4 .remove3:hover,
+        .contant-inner .optionBox2 .block4 .remove4:hover,
+        .contant-inner .optionBox2 .block4 .remove5:hover,
+        .contant-inner .optionBox2 .block4 .remove6:hover,
+        .contant-inner .optionBox2 .block4 .remove7:hover,
+        .contant-inner .optionBox2 .block5 .remove:hover,
+        .contant-inner .optionBox2 .block5 .remove2:hover,
+        .contant-inner .optionBox2 .block5 .remove3:hover,
+        .contant-inner .optionBox2 .block5 .remove4:hover,
+        .contant-inner .optionBox2 .block5 .remove5:hover,
+        .contant-inner .optionBox2 .block5 .remove6:hover,
+        .contant-inner .optionBox2 .block5 .remove7:hover,
+        .contant-inner .optionBox2 .block6 .remove:hover,
+        .contant-inner .optionBox2 .block6 .remove2:hover,
+        .contant-inner .optionBox2 .block6 .remove3:hover,
+        .contant-inner .optionBox2 .block6 .remove4:hover,
+        .contant-inner .optionBox2 .block6 .remove5:hover,
+        .contant-inner .optionBox2 .block6 .remove6:hover,
+        .contant-inner .optionBox2 .block6 .remove7:hover,
+        .contant-inner .optionBox2 .block7 .remove:hover,
+        .contant-inner .optionBox2 .block7 .remove2:hover,
+        .contant-inner .optionBox2 .block7 .remove3:hover,
+        .contant-inner .optionBox2 .block7 .remove4:hover,
+        .contant-inner .optionBox2 .block7 .remove5:hover,
+        .contant-inner .optionBox2 .block7 .remove6:hover,
+        .contant-inner .optionBox2 .block7 .remove7:hover,
+        .contant-inner .optionBox3 .block .remove:hover,
+        .contant-inner .optionBox3 .block .remove2:hover,
+        .contant-inner .optionBox3 .block .remove3:hover,
+        .contant-inner .optionBox3 .block .remove4:hover,
+        .contant-inner .optionBox3 .block .remove5:hover,
+        .contant-inner .optionBox3 .block .remove6:hover,
+        .contant-inner .optionBox3 .block .remove7:hover,
+        .contant-inner .optionBox3 .block2 .remove:hover,
+        .contant-inner .optionBox3 .block2 .remove2:hover,
+        .contant-inner .optionBox3 .block2 .remove3:hover,
+        .contant-inner .optionBox3 .block2 .remove4:hover,
+        .contant-inner .optionBox3 .block2 .remove5:hover,
+        .contant-inner .optionBox3 .block2 .remove6:hover,
+        .contant-inner .optionBox3 .block2 .remove7:hover,
+        .contant-inner .optionBox3 .block3 .remove:hover,
+        .contant-inner .optionBox3 .block3 .remove2:hover,
+        .contant-inner .optionBox3 .block3 .remove3:hover,
+        .contant-inner .optionBox3 .block3 .remove4:hover,
+        .contant-inner .optionBox3 .block3 .remove5:hover,
+        .contant-inner .optionBox3 .block3 .remove6:hover,
+        .contant-inner .optionBox3 .block3 .remove7:hover,
+        .contant-inner .optionBox3 .block4 .remove:hover,
+        .contant-inner .optionBox3 .block4 .remove2:hover,
+        .contant-inner .optionBox3 .block4 .remove3:hover,
+        .contant-inner .optionBox3 .block4 .remove4:hover,
+        .contant-inner .optionBox3 .block4 .remove5:hover,
+        .contant-inner .optionBox3 .block4 .remove6:hover,
+        .contant-inner .optionBox3 .block4 .remove7:hover,
+        .contant-inner .optionBox3 .block5 .remove:hover,
+        .contant-inner .optionBox3 .block5 .remove2:hover,
+        .contant-inner .optionBox3 .block5 .remove3:hover,
+        .contant-inner .optionBox3 .block5 .remove4:hover,
+        .contant-inner .optionBox3 .block5 .remove5:hover,
+        .contant-inner .optionBox3 .block5 .remove6:hover,
+        .contant-inner .optionBox3 .block5 .remove7:hover,
+        .contant-inner .optionBox3 .block6 .remove:hover,
+        .contant-inner .optionBox3 .block6 .remove2:hover,
+        .contant-inner .optionBox3 .block6 .remove3:hover,
+        .contant-inner .optionBox3 .block6 .remove4:hover,
+        .contant-inner .optionBox3 .block6 .remove5:hover,
+        .contant-inner .optionBox3 .block6 .remove6:hover,
+        .contant-inner .optionBox3 .block6 .remove7:hover,
+        .contant-inner .optionBox3 .block7 .remove:hover,
+        .contant-inner .optionBox3 .block7 .remove2:hover,
+        .contant-inner .optionBox3 .block7 .remove3:hover,
+        .contant-inner .optionBox3 .block7 .remove4:hover,
+        .contant-inner .optionBox3 .block7 .remove5:hover,
+        .contant-inner .optionBox3 .block7 .remove6:hover,
+        .contant-inner .optionBox3 .block7 .remove7:hover,
+        .contant-inner .optionBox4 .block .remove:hover,
+        .contant-inner .optionBox4 .block .remove2:hover,
+        .contant-inner .optionBox4 .block .remove3:hover,
+        .contant-inner .optionBox4 .block .remove4:hover,
+        .contant-inner .optionBox4 .block .remove5:hover,
+        .contant-inner .optionBox4 .block .remove6:hover,
+        .contant-inner .optionBox4 .block .remove7:hover,
+        .contant-inner .optionBox4 .block2 .remove:hover,
+        .contant-inner .optionBox4 .block2 .remove2:hover,
+        .contant-inner .optionBox4 .block2 .remove3:hover,
+        .contant-inner .optionBox4 .block2 .remove4:hover,
+        .contant-inner .optionBox4 .block2 .remove5:hover,
+        .contant-inner .optionBox4 .block2 .remove6:hover,
+        .contant-inner .optionBox4 .block2 .remove7:hover,
+        .contant-inner .optionBox4 .block3 .remove:hover,
+        .contant-inner .optionBox4 .block3 .remove2:hover,
+        .contant-inner .optionBox4 .block3 .remove3:hover,
+        .contant-inner .optionBox4 .block3 .remove4:hover,
+        .contant-inner .optionBox4 .block3 .remove5:hover,
+        .contant-inner .optionBox4 .block3 .remove6:hover,
+        .contant-inner .optionBox4 .block3 .remove7:hover,
+        .contant-inner .optionBox4 .block4 .remove:hover,
+        .contant-inner .optionBox4 .block4 .remove2:hover,
+        .contant-inner .optionBox4 .block4 .remove3:hover,
+        .contant-inner .optionBox4 .block4 .remove4:hover,
+        .contant-inner .optionBox4 .block4 .remove5:hover,
+        .contant-inner .optionBox4 .block4 .remove6:hover,
+        .contant-inner .optionBox4 .block4 .remove7:hover,
+        .contant-inner .optionBox4 .block5 .remove:hover,
+        .contant-inner .optionBox4 .block5 .remove2:hover,
+        .contant-inner .optionBox4 .block5 .remove3:hover,
+        .contant-inner .optionBox4 .block5 .remove4:hover,
+        .contant-inner .optionBox4 .block5 .remove5:hover,
+        .contant-inner .optionBox4 .block5 .remove6:hover,
+        .contant-inner .optionBox4 .block5 .remove7:hover,
+        .contant-inner .optionBox4 .block6 .remove:hover,
+        .contant-inner .optionBox4 .block6 .remove2:hover,
+        .contant-inner .optionBox4 .block6 .remove3:hover,
+        .contant-inner .optionBox4 .block6 .remove4:hover,
+        .contant-inner .optionBox4 .block6 .remove5:hover,
+        .contant-inner .optionBox4 .block6 .remove6:hover,
+        .contant-inner .optionBox4 .block6 .remove7:hover,
+        .contant-inner .optionBox4 .block7 .remove:hover,
+        .contant-inner .optionBox4 .block7 .remove2:hover,
+        .contant-inner .optionBox4 .block7 .remove3:hover,
+        .contant-inner .optionBox4 .block7 .remove4:hover,
+        .contant-inner .optionBox4 .block7 .remove5:hover,
+        .contant-inner .optionBox4 .block7 .remove6:hover,
+        .contant-inner .optionBox4 .block7 .remove7:hover,
+        .contant-inner .optionBox5 .block .remove:hover,
+        .contant-inner .optionBox5 .block .remove2:hover,
+        .contant-inner .optionBox5 .block .remove3:hover,
+        .contant-inner .optionBox5 .block .remove4:hover,
+        .contant-inner .optionBox5 .block .remove5:hover,
+        .contant-inner .optionBox5 .block .remove6:hover,
+        .contant-inner .optionBox5 .block .remove7:hover,
+        .contant-inner .optionBox5 .block2 .remove:hover,
+        .contant-inner .optionBox5 .block2 .remove2:hover,
+        .contant-inner .optionBox5 .block2 .remove3:hover,
+        .contant-inner .optionBox5 .block2 .remove4:hover,
+        .contant-inner .optionBox5 .block2 .remove5:hover,
+        .contant-inner .optionBox5 .block2 .remove6:hover,
+        .contant-inner .optionBox5 .block2 .remove7:hover,
+        .contant-inner .optionBox5 .block3 .remove:hover,
+        .contant-inner .optionBox5 .block3 .remove2:hover,
+        .contant-inner .optionBox5 .block3 .remove3:hover,
+        .contant-inner .optionBox5 .block3 .remove4:hover,
+        .contant-inner .optionBox5 .block3 .remove5:hover,
+        .contant-inner .optionBox5 .block3 .remove6:hover,
+        .contant-inner .optionBox5 .block3 .remove7:hover,
+        .contant-inner .optionBox5 .block4 .remove:hover,
+        .contant-inner .optionBox5 .block4 .remove2:hover,
+        .contant-inner .optionBox5 .block4 .remove3:hover,
+        .contant-inner .optionBox5 .block4 .remove4:hover,
+        .contant-inner .optionBox5 .block4 .remove5:hover,
+        .contant-inner .optionBox5 .block4 .remove6:hover,
+        .contant-inner .optionBox5 .block4 .remove7:hover,
+        .contant-inner .optionBox5 .block5 .remove:hover,
+        .contant-inner .optionBox5 .block5 .remove2:hover,
+        .contant-inner .optionBox5 .block5 .remove3:hover,
+        .contant-inner .optionBox5 .block5 .remove4:hover,
+        .contant-inner .optionBox5 .block5 .remove5:hover,
+        .contant-inner .optionBox5 .block5 .remove6:hover,
+        .contant-inner .optionBox5 .block5 .remove7:hover,
+        .contant-inner .optionBox5 .block6 .remove:hover,
+        .contant-inner .optionBox5 .block6 .remove2:hover,
+        .contant-inner .optionBox5 .block6 .remove3:hover,
+        .contant-inner .optionBox5 .block6 .remove4:hover,
+        .contant-inner .optionBox5 .block6 .remove5:hover,
+        .contant-inner .optionBox5 .block6 .remove6:hover,
+        .contant-inner .optionBox5 .block6 .remove7:hover,
+        .contant-inner .optionBox5 .block7 .remove:hover,
+        .contant-inner .optionBox5 .block7 .remove2:hover,
+        .contant-inner .optionBox5 .block7 .remove3:hover,
+        .contant-inner .optionBox5 .block7 .remove4:hover,
+        .contant-inner .optionBox5 .block7 .remove5:hover,
+        .contant-inner .optionBox5 .block7 .remove6:hover,
+        .contant-inner .optionBox5 .block7 .remove7:hover,
+        .contant-inner .optionBox6 .block .remove:hover,
+        .contant-inner .optionBox6 .block .remove2:hover,
+        .contant-inner .optionBox6 .block .remove3:hover,
+        .contant-inner .optionBox6 .block .remove4:hover,
+        .contant-inner .optionBox6 .block .remove5:hover,
+        .contant-inner .optionBox6 .block .remove6:hover,
+        .contant-inner .optionBox6 .block .remove7:hover,
+        .contant-inner .optionBox6 .block2 .remove:hover,
+        .contant-inner .optionBox6 .block2 .remove2:hover,
+        .contant-inner .optionBox6 .block2 .remove3:hover,
+        .contant-inner .optionBox6 .block2 .remove4:hover,
+        .contant-inner .optionBox6 .block2 .remove5:hover,
+        .contant-inner .optionBox6 .block2 .remove6:hover,
+        .contant-inner .optionBox6 .block2 .remove7:hover,
+        .contant-inner .optionBox6 .block3 .remove:hover,
+        .contant-inner .optionBox6 .block3 .remove2:hover,
+        .contant-inner .optionBox6 .block3 .remove3:hover,
+        .contant-inner .optionBox6 .block3 .remove4:hover,
+        .contant-inner .optionBox6 .block3 .remove5:hover,
+        .contant-inner .optionBox6 .block3 .remove6:hover,
+        .contant-inner .optionBox6 .block3 .remove7:hover,
+        .contant-inner .optionBox6 .block4 .remove:hover,
+        .contant-inner .optionBox6 .block4 .remove2:hover,
+        .contant-inner .optionBox6 .block4 .remove3:hover,
+        .contant-inner .optionBox6 .block4 .remove4:hover,
+        .contant-inner .optionBox6 .block4 .remove5:hover,
+        .contant-inner .optionBox6 .block4 .remove6:hover,
+        .contant-inner .optionBox6 .block4 .remove7:hover,
+        .contant-inner .optionBox6 .block5 .remove:hover,
+        .contant-inner .optionBox6 .block5 .remove2:hover,
+        .contant-inner .optionBox6 .block5 .remove3:hover,
+        .contant-inner .optionBox6 .block5 .remove4:hover,
+        .contant-inner .optionBox6 .block5 .remove5:hover,
+        .contant-inner .optionBox6 .block5 .remove6:hover,
+        .contant-inner .optionBox6 .block5 .remove7:hover,
+        .contant-inner .optionBox6 .block6 .remove:hover,
+        .contant-inner .optionBox6 .block6 .remove2:hover,
+        .contant-inner .optionBox6 .block6 .remove3:hover,
+        .contant-inner .optionBox6 .block6 .remove4:hover,
+        .contant-inner .optionBox6 .block6 .remove5:hover,
+        .contant-inner .optionBox6 .block6 .remove6:hover,
+        .contant-inner .optionBox6 .block6 .remove7:hover,
+        .contant-inner .optionBox6 .block7 .remove:hover,
+        .contant-inner .optionBox6 .block7 .remove2:hover,
+        .contant-inner .optionBox6 .block7 .remove3:hover,
+        .contant-inner .optionBox6 .block7 .remove4:hover,
+        .contant-inner .optionBox6 .block7 .remove5:hover,
+        .contant-inner .optionBox6 .block7 .remove6:hover,
+        .contant-inner .optionBox6 .block7 .remove7:hover,
+        .contant-inner .optionBox7 .block .remove:hover,
+        .contant-inner .optionBox7 .block .remove2:hover,
+        .contant-inner .optionBox7 .block .remove3:hover,
+        .contant-inner .optionBox7 .block .remove4:hover,
+        .contant-inner .optionBox7 .block .remove5:hover,
+        .contant-inner .optionBox7 .block .remove6:hover,
+        .contant-inner .optionBox7 .block .remove7:hover,
+        .contant-inner .optionBox7 .block2 .remove:hover,
+        .contant-inner .optionBox7 .block2 .remove2:hover,
+        .contant-inner .optionBox7 .block2 .remove3:hover,
+        .contant-inner .optionBox7 .block2 .remove4:hover,
+        .contant-inner .optionBox7 .block2 .remove5:hover,
+        .contant-inner .optionBox7 .block2 .remove6:hover,
+        .contant-inner .optionBox7 .block2 .remove7:hover,
+        .contant-inner .optionBox7 .block3 .remove:hover,
+        .contant-inner .optionBox7 .block3 .remove2:hover,
+        .contant-inner .optionBox7 .block3 .remove3:hover,
+        .contant-inner .optionBox7 .block3 .remove4:hover,
+        .contant-inner .optionBox7 .block3 .remove5:hover,
+        .contant-inner .optionBox7 .block3 .remove6:hover,
+        .contant-inner .optionBox7 .block3 .remove7:hover,
+        .contant-inner .optionBox7 .block4 .remove:hover,
+        .contant-inner .optionBox7 .block4 .remove2:hover,
+        .contant-inner .optionBox7 .block4 .remove3:hover,
+        .contant-inner .optionBox7 .block4 .remove4:hover,
+        .contant-inner .optionBox7 .block4 .remove5:hover,
+        .contant-inner .optionBox7 .block4 .remove6:hover,
+        .contant-inner .optionBox7 .block4 .remove7:hover,
+        .contant-inner .optionBox7 .block5 .remove:hover,
+        .contant-inner .optionBox7 .block5 .remove2:hover,
+        .contant-inner .optionBox7 .block5 .remove3:hover,
+        .contant-inner .optionBox7 .block5 .remove4:hover,
+        .contant-inner .optionBox7 .block5 .remove5:hover,
+        .contant-inner .optionBox7 .block5 .remove6:hover,
+        .contant-inner .optionBox7 .block5 .remove7:hover,
+        .contant-inner .optionBox7 .block6 .remove:hover,
+        .contant-inner .optionBox7 .block6 .remove2:hover,
+        .contant-inner .optionBox7 .block6 .remove3:hover,
+        .contant-inner .optionBox7 .block6 .remove4:hover,
+        .contant-inner .optionBox7 .block6 .remove5:hover,
+        .contant-inner .optionBox7 .block6 .remove6:hover,
+        .contant-inner .optionBox7 .block6 .remove7:hover,
+        .contant-inner .optionBox7 .block7 .remove:hover,
+        .contant-inner .optionBox7 .block7 .remove2:hover,
+        .contant-inner .optionBox7 .block7 .remove3:hover,
+        .contant-inner .optionBox7 .block7 .remove4:hover,
+        .contant-inner .optionBox7 .block7 .remove5:hover,
+        .contant-inner .optionBox7 .block7 .remove6:hover,
+        .contant-inner .optionBox7 .block7 .remove7:hover {
           background: #7cc331; }
+    .contant-inner .optionBox .block4,
+    .contant-inner .optionBox2 .block4,
+    .contant-inner .optionBox3 .block4,
+    .contant-inner .optionBox4 .block4,
+    .contant-inner .optionBox5 .block4,
+    .contant-inner .optionBox6 .block4,
+    .contant-inner .optionBox7 .block4 {
+      margin-top: 15px;
+      width: 100%; }
+      .contant-inner .optionBox .block4 .field,
+      .contant-inner .optionBox2 .block4 .field,
+      .contant-inner .optionBox3 .block4 .field,
+      .contant-inner .optionBox4 .block4 .field,
+      .contant-inner .optionBox5 .block4 .field,
+      .contant-inner .optionBox6 .block4 .field,
+      .contant-inner .optionBox7 .block4 .field {
+        padding-right: 50px; }
+        .contant-inner .optionBox .block4 .field i,
+        .contant-inner .optionBox2 .block4 .field i,
+        .contant-inner .optionBox3 .block4 .field i,
+        .contant-inner .optionBox4 .block4 .field i,
+        .contant-inner .optionBox5 .block4 .field i,
+        .contant-inner .optionBox6 .block4 .field i,
+        .contant-inner .optionBox7 .block4 .field i {
+          right: 65px;
+          top: 15px; }
+      .contant-inner .optionBox .block4 .remove4,
+      .contant-inner .optionBox2 .block4 .remove4,
+      .contant-inner .optionBox3 .block4 .remove4,
+      .contant-inner .optionBox4 .block4 .remove4,
+      .contant-inner .optionBox5 .block4 .remove4,
+      .contant-inner .optionBox6 .block4 .remove4,
+      .contant-inner .optionBox7 .block4 .remove4 {
+        -webkit-border-radius: 0px 4px 4px 0px;
+        border-radius: 0px 4px 4px 0px;
+        background-clip: padding-box;
+        right: 15px;
+        top: 0px;
+        width: 51px;
+        height: 50px; }
+    .contant-inner .optionBox .block5,
+    .contant-inner .optionBox2 .block5,
+    .contant-inner .optionBox3 .block5,
+    .contant-inner .optionBox4 .block5,
+    .contant-inner .optionBox5 .block5,
+    .contant-inner .optionBox6 .block5,
+    .contant-inner .optionBox7 .block5 {
+      padding-right: 40px; }
+      .contant-inner .optionBox .block5 .field,
+      .contant-inner .optionBox .block5 .field:first-child,
+      .contant-inner .optionBox2 .block5 .field,
+      .contant-inner .optionBox2 .block5 .field:first-child,
+      .contant-inner .optionBox3 .block5 .field,
+      .contant-inner .optionBox3 .block5 .field:first-child,
+      .contant-inner .optionBox4 .block5 .field,
+      .contant-inner .optionBox4 .block5 .field:first-child,
+      .contant-inner .optionBox5 .block5 .field,
+      .contant-inner .optionBox5 .block5 .field:first-child,
+      .contant-inner .optionBox6 .block5 .field,
+      .contant-inner .optionBox6 .block5 .field:first-child,
+      .contant-inner .optionBox7 .block5 .field,
+      .contant-inner .optionBox7 .block5 .field:first-child {
+        margin-top: 15px; }
+      .contant-inner .optionBox .block5 .remove5,
+      .contant-inner .optionBox2 .block5 .remove5,
+      .contant-inner .optionBox3 .block5 .remove5,
+      .contant-inner .optionBox4 .block5 .remove5,
+      .contant-inner .optionBox5 .block5 .remove5,
+      .contant-inner .optionBox6 .block5 .remove5,
+      .contant-inner .optionBox7 .block5 .remove5 {
+        top: auto;
+        bottom: 14px;
+        right: 15px; }
   .contant-inner .imgcent {
     margin: 15px auto 0px auto;
     width: 175px;
@@ -1369,14 +2679,61 @@
       .contant-inner .imgcent .file-bro:hover {
         background: #279bc0;
         color: #fff; }
+  .contant-inner .pagination {
+    margin-top: 15px;
+    padding: 0px !important; }
+    .contant-inner .pagination li {
+      display: inline-block;
+      margin: 0px 10px 0px 0px; }
+      .contant-inner .pagination li a,
+      .contant-inner .pagination li span {
+        display: block;
+        padding-top: 12px;
+        text-align: center;
+        color: #000;
+        -webkit-border-radius: 5px !important;
+        border-radius: 5px !important;
+        background-clip: padding-box;
+        width: 40px;
+        height: 40px;
+        display: block;
+        border: 0px;
+        background: #fff;
+        -webkit-box-shadow: 0px 0px 4px #d4d4d4;
+        -moz-box-shadow: 0px 0px 4px #d4d4d4;
+        -o-box-shadow: 0px 0px 4px #d4d4d4;
+        -ms-box-shadow: 0px 0px 4px #d4d4d4;
+        box-shadow: 0px 0px 4px #d4d4d4;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s; }
+    .contant-inner .pagination .page-link.active,
+    .contant-inner .pagination .page-link:hover {
+      background: #2c3e50 !important;
+      color: #fff !important; }
+  .contant-inner .tags-box {
+    padding: 10px;
+    border: 1px solid #efefef;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-clip: padding-box; }
+    .contant-inner .tags-box li {
+      display: inline-block;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      background-clip: padding-box;
+      margin: 2px;
+      background: #f0f4f5;
+      padding: 0px 13px; }
   .contant-inner .customchick {
     position: relative;
-    width: 100%;
     margin-top: 10px; }
     .contant-inner .customchick .che-box {
       position: relative;
       padding-left: 20px;
-      margin: 0px; }
+      margin: 0px;
+      z-index: 1; }
       .contant-inner .customchick .che-box.hide {
         opacity: .5; }
       .contant-inner .customchick .che-box input[type="checkbox"],
@@ -1424,7 +2781,6 @@
   100% {
     transform: scale(1); } }
   .contant-inner .btnright a {
-    margin-left: 5px;
     -moz-transition: all 0.5s ease-in-out 0s;
     -o-transition: all 0.5s ease-in-out 0s;
     -webkit-transition: all 0.5s ease-in-out 0s;
@@ -1437,6 +2793,13 @@
   .contant-inner .form .field {
     position: relative;
     margin-top: 15px; }
+    @media (max-width: 767px) {
+      .contant-inner .form .field .field-tow {
+        max-width: 100%;
+        flex: 100%;
+        margin-bottom: 15px; }
+        .contant-inner .form .field .field-tow:last-child {
+          margin: 0px; } }
     .contant-inner .form .field.pad {
       padding: 0px 60px; }
       @media (max-width: 550px) {
@@ -1486,6 +2849,64 @@
     .contant-inner .form .field .text {
       font-weight: 600;
       margin-left: 5px; }
+    .contant-inner .form .field .input-group-addon {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      background: #f0f4f5;
+      width: 50px;
+      height: 48px;
+      -webkit-border-radius: 0 0.25rem 0.25rem 0;
+      border-radius: 0 0.25rem 0.25rem 0;
+      background-clip: padding-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      border-left: 1px solid #efefef; }
+      .contant-inner .form .field .input-group-addon i {
+        top: auto;
+        right: auto;
+        position: relative;
+        width: 20px;
+        height: 20px; }
+    .contant-inner .form .field .rev-sbans {
+      width: 100%;
+      margin-top: 10px; }
+      .contant-inner .form .field .rev-sbans .btnrating {
+        position: relative;
+        border: 0px;
+        background: none;
+        outline: 0px;
+        outline-style: none;
+        padding: 0px;
+        font-size: 20px;
+        width: 25px;
+        box-shadow: none !important;
+        color: #b7b7b7;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+        cursor: pointer; }
+        .contant-inner .form .field .rev-sbans .btnrating i {
+          position: static;
+          top: auto;
+          left: auto;
+          right: auto; }
+        .contant-inner .form .field .rev-sbans .btnrating:hover, .contant-inner .form .field .rev-sbans .btnrating.btn-warning {
+          color: #ff9500; }
+    .contant-inner .form .field.po-aro i {
+      top: 17px;
+      right: 30px; }
+    .contant-inner .form .field.sel-aro i {
+      top: 17px;
+      right: 15px; }
+  .contant-inner .form .block .field i,
+  .contant-inner .form .block2 .field i,
+  .contant-inner .form .block3 .field i,
+  .contant-inner .form .block7 .field i {
+    right: 15px; }
   .contant-inner .form .switch {
     position: relative;
     display: inline-block;
@@ -1537,6 +2958,13 @@
   .contant-inner .form .disabled .switch,
   .contant-inner .form .disabled .text {
     opacity: .5; }
+  .contant-inner .form .show-num {
+    margin: 0px;
+    margin-bottom: 15px;
+    width: 150px; }
+    .contant-inner .form .show-num i {
+      top: 17px;
+      right: 15px; }
   .contant-inner .spinner {
     position: absolute;
     top: 0;
@@ -1844,7 +3272,7 @@
 .alert:last-of-type {
   margin-bottom: 0px; }
 
-.login {
+.login, .error {
   position: relative;
   height: 100vh;
   padding: 15px;
@@ -1852,10 +3280,10 @@
   align-items: center;
   justify-content: center; }
   @media (max-width: 991px) {
-    .login {
+    .login, .error {
       display: block;
       padding: 0px 15px; } }
-  .login .login-form {
+  .login .login-form, .error .login-form {
     margin: 0px auto;
     width: 450px;
     background: #2c3e50;
@@ -1870,56 +3298,63 @@
     background-clip: padding-box;
     padding: 30px; }
     @media (max-width: 991px) {
-      .login .login-form {
+      .login .login-form, .error .login-form {
         margin: 30px auto;
         padding: 30px 15px; } }
     @media (max-width: 500px) {
-      .login .login-form {
+      .login .login-form, .error .login-form {
         width: 100%; } }
-    .login .login-form .logo-login {
+    .login .login-form .logo-login, .error .login-form .logo-login {
       text-align: center; }
-      .login .login-form .logo-login img {
+      .login .login-form .logo-login img, .error .login-form .logo-login img {
         max-width: 180px; }
         @media (max-width: 450px) {
-          .login .login-form .logo-login img {
+          .login .login-form .logo-login img, .error .login-form .logo-login img {
             max-width: 140px; } }
-    .login .login-form .form .field {
+    .login .login-form .form .field, .error .login-form .form .field {
       position: relative;
       margin-top: 15px; }
-      .login .login-form .form .field.pad {
+      @media (max-width: 767px) {
+        .login .login-form .form .field .field-tow, .error .login-form .form .field .field-tow {
+          max-width: 100%;
+          flex: 100%;
+          margin-bottom: 15px; }
+          .login .login-form .form .field .field-tow:last-child, .error .login-form .form .field .field-tow:last-child {
+            margin: 0px; } }
+      .login .login-form .form .field.pad, .error .login-form .form .field.pad {
         padding: 0px 60px; }
         @media (max-width: 550px) {
-          .login .login-form .form .field.pad {
+          .login .login-form .form .field.pad, .error .login-form .form .field.pad {
             padding: 0px; } }
       @media (max-width: 991px) {
-        .login .login-form .form .field {
+        .login .login-form .form .field, .error .login-form .form .field {
           max-width: 100%;
           flex: 100%; } }
-      .login .login-form .form .field label {
+      .login .login-form .form .field label, .error .login-form .form .field label {
         font-weight: bold;
         margin: 0px; }
-        .login .login-form .form .field label em {
+        .login .login-form .form .field label em, .error .login-form .form .field label em {
           color: #A90C00;
           font-style: normal; }
-      .login .login-form .form .field .form-control {
+      .login .login-form .form .field .form-control, .error .login-form .form .field .form-control {
         height: 50px;
         text-transform: none;
         border: 1px solid #efefef; }
-      .login .login-form .form .field select.form-control {
+      .login .login-form .form .field select.form-control, .error .login-form .form .field select.form-control {
         -webkit-appearance: none; }
-      .login .login-form .form .field textarea.form-control {
+      .login .login-form .form .field textarea.form-control, .error .login-form .form .field textarea.form-control {
         height: 160px;
         resize: none; }
-      .login .login-form .form .field i {
+      .login .login-form .form .field i, .error .login-form .form .field i {
         position: absolute;
         top: 43px;
         right: 30px;
         z-index: 10; }
-      .login .login-form .form .field .disabled {
+      .login .login-form .form .field .disabled, .error .login-form .form .field .disabled {
         opacity: .5; }
-      .login .login-form .form .field .labeled {
+      .login .login-form .form .field .labeled, .error .login-form .form .field .labeled {
         position: relative; }
-        .login .login-form .form .field .labeled .descr {
+        .login .login-form .form .field .labeled .descr, .error .login-form .form .field .labeled .descr {
           position: absolute;
           top: 1px;
           left: 1px;
@@ -1930,22 +3365,83 @@
           display: flex;
           align-items: center;
           justify-content: center; }
-        .login .login-form .form .field .labeled .form-control {
+        .login .login-form .form .field .labeled .form-control, .error .login-form .form .field .labeled .form-control {
           padding-left: 65px; }
-      .login .login-form .form .field .text {
+      .login .login-form .form .field .text, .error .login-form .form .field .text {
         font-weight: 600;
         margin-left: 5px; }
-    .login .login-form .form .switch {
+      .login .login-form .form .field .input-group-addon, .error .login-form .form .field .input-group-addon {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        background: #f0f4f5;
+        width: 50px;
+        height: 48px;
+        -webkit-border-radius: 0 0.25rem 0.25rem 0;
+        border-radius: 0 0.25rem 0.25rem 0;
+        background-clip: padding-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        border-left: 1px solid #efefef; }
+        .login .login-form .form .field .input-group-addon i, .error .login-form .form .field .input-group-addon i {
+          top: auto;
+          right: auto;
+          position: relative;
+          width: 20px;
+          height: 20px; }
+      .login .login-form .form .field .rev-sbans, .error .login-form .form .field .rev-sbans {
+        width: 100%;
+        margin-top: 10px; }
+        .login .login-form .form .field .rev-sbans .btnrating, .error .login-form .form .field .rev-sbans .btnrating {
+          position: relative;
+          border: 0px;
+          background: none;
+          outline: 0px;
+          outline-style: none;
+          padding: 0px;
+          font-size: 20px;
+          width: 25px;
+          box-shadow: none !important;
+          color: #b7b7b7;
+          -moz-transition: all 0.5s ease-in-out 0s;
+          -o-transition: all 0.5s ease-in-out 0s;
+          -webkit-transition: all 0.5s ease-in-out 0s;
+          transition: all 0.5s ease-in-out 0s;
+          cursor: pointer; }
+          .login .login-form .form .field .rev-sbans .btnrating i, .error .login-form .form .field .rev-sbans .btnrating i {
+            position: static;
+            top: auto;
+            left: auto;
+            right: auto; }
+          .login .login-form .form .field .rev-sbans .btnrating:hover, .error .login-form .form .field .rev-sbans .btnrating:hover, .login .login-form .form .field .rev-sbans .btnrating.btn-warning, .error .login-form .form .field .rev-sbans .btnrating.btn-warning {
+            color: #ff9500; }
+      .login .login-form .form .field.po-aro i, .error .login-form .form .field.po-aro i {
+        top: 17px;
+        right: 30px; }
+      .login .login-form .form .field.sel-aro i, .error .login-form .form .field.sel-aro i {
+        top: 17px;
+        right: 15px; }
+    .login .login-form .form .block .field i, .error .login-form .form .block .field i,
+    .login .login-form .form .block2 .field i,
+    .error .login-form .form .block2 .field i,
+    .login .login-form .form .block3 .field i,
+    .error .login-form .form .block3 .field i,
+    .login .login-form .form .block7 .field i,
+    .error .login-form .form .block7 .field i {
+      right: 15px; }
+    .login .login-form .form .switch, .error .login-form .form .switch {
       position: relative;
       display: inline-block;
       width: 55px;
       height: 25px;
       /* Rounded sliders */ }
-      .login .login-form .form .switch input {
+      .login .login-form .form .switch input, .error .login-form .form .switch input {
         opacity: 0;
         width: 0px;
         height: 0px; }
-      .login .login-form .form .switch .slider {
+      .login .login-form .form .switch .slider, .error .login-form .form .switch .slider {
         position: absolute;
         top: 0;
         right: 0;
@@ -1957,7 +3453,7 @@
         -o-transition: all 0.5s ease-in-out 0s;
         -webkit-transition: all 0.5s ease-in-out 0s;
         transition: all 0.5s ease-in-out 0s; }
-        .login .login-form .form .switch .slider:before {
+        .login .login-form .form .switch .slider:before, .error .login-form .form .switch .slider:before {
           content: "";
           position: absolute;
           bottom: 3px;
@@ -1969,38 +3465,41 @@
           -o-transition: all 0.5s ease-in-out 0s;
           -webkit-transition: all 0.5s ease-in-out 0s;
           transition: all 0.5s ease-in-out 0s; }
-      .login .login-form .form .switch input:checked + .slider {
+      .login .login-form .form .switch input:checked + .slider, .error .login-form .form .switch input:checked + .slider {
         background: #7cc331; }
-      .login .login-form .form .switch input:checked + .slider:before {
+      .login .login-form .form .switch input:checked + .slider:before, .error .login-form .form .switch input:checked + .slider:before {
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
         transform: translateX(26px); }
-      .login .login-form .form .switch .slider.round {
+      .login .login-form .form .switch .slider.round, .error .login-form .form .switch .slider.round {
         -webkit-border-radius: 60px;
         border-radius: 60px;
         background-clip: padding-box; }
-        .login .login-form .form .switch .slider.round:before {
+        .login .login-form .form .switch .slider.round:before, .error .login-form .form .switch .slider.round:before {
           -webkit-border-radius: 50%;
           border-radius: 50%;
           background-clip: padding-box; }
-    .login .login-form .form .disabled .switch,
-    .login .login-form .form .disabled .text {
+    .login .login-form .form .disabled .switch, .error .login-form .form .disabled .switch,
+    .login .login-form .form .disabled .text,
+    .error .login-form .form .disabled .text {
       opacity: .5; }
-    .login .login-form .form .field {
-      position: relative;
-      width: 100%; }
-      .login .login-form .form .field .che-box {
+    .login .login-form .form .field, .error .login-form .form .field {
+      position: relative; }
+      .login .login-form .form .field .che-box, .error .login-form .form .field .che-box {
         position: relative;
         padding-left: 20px;
-        margin: 0px; }
-        .login .login-form .form .field .che-box.hide {
+        margin: 0px;
+        z-index: 1; }
+        .login .login-form .form .field .che-box.hide, .error .login-form .form .field .che-box.hide {
           opacity: .5; }
-        .login .login-form .form .field .che-box input[type="checkbox"],
-        .login .login-form .form .field .che-box input[type="radio"] {
+        .login .login-form .form .field .che-box input[type="checkbox"], .error .login-form .form .field .che-box input[type="checkbox"],
+        .login .login-form .form .field .che-box input[type="radio"],
+        .error .login-form .form .field .che-box input[type="radio"] {
           position: absolute;
           right: 9000px; }
-        .login .login-form .form .field .che-box input[type="checkbox"] + .label-text:before,
-        .login .login-form .form .field .che-box input[type="radio"] + .label-text:before {
+        .login .login-form .form .field .che-box input[type="checkbox"] + .label-text:before, .error .login-form .form .field .che-box input[type="checkbox"] + .label-text:before,
+        .login .login-form .form .field .che-box input[type="radio"] + .label-text:before,
+        .error .login-form .form .field .che-box input[type="radio"] + .label-text:before {
           position: absolute;
           top: 5px;
           left: 0;
@@ -2013,20 +3512,20 @@
           display: inline-block;
           font-style: initial;
           color: #e2e2e2; }
-        .login .login-form .form .field .che-box input[type="radio"] + .label-text:before {
+        .login .login-form .form .field .che-box input[type="radio"] + .label-text:before, .error .login-form .form .field .che-box input[type="radio"] + .label-text:before {
           content: "\f192";
           color: #dadada;
           font-weight: 900;
           font-style: initial; }
-        .login .login-form .form .field .che-box input[type="checkbox"]:checked + .label-text:before {
+        .login .login-form .form .field .che-box input[type="checkbox"]:checked + .label-text:before, .error .login-form .form .field .che-box input[type="checkbox"]:checked + .label-text:before {
           content: "\f14a";
           color: #279bc0;
           font-weight: 600;
           animation: effect 250ms ease-in; }
-        .login .login-form .form .field .che-box input[type="radio"]:checked + .label-text:before {
+        .login .login-form .form .field .che-box input[type="radio"]:checked + .label-text:before, .error .login-form .form .field .che-box input[type="radio"]:checked + .label-text:before {
           color: #279bc0;
           animation: effect 250ms ease-in; }
-        .login .login-form .form .field .che-box span.label-text {
+        .login .login-form .form .field .che-box span.label-text, .error .login-form .form .field .che-box span.label-text {
           color: #000;
           font-size: 16px;
           cursor: pointer; }
@@ -2040,31 +3539,31 @@
   100% {
     transform: scale(1); } }
       @media (max-width: 991px) {
-        .login .login-form .form .field {
+        .login .login-form .form .field, .error .login-form .form .field {
           max-width: 100%;
           flex: 100%; }
-          .login .login-form .form .field:nth-child(3) {
+          .login .login-form .form .field:nth-child(3), .error .login-form .form .field:nth-child(3) {
             max-width: 40%;
             flex: 40%; }
-          .login .login-form .form .field:nth-child(4) {
+          .login .login-form .form .field:nth-child(4), .error .login-form .form .field:nth-child(4) {
             max-width: 60%;
             flex: 60%; } }
-      .login .login-form .form .field .label-text {
+      .login .login-form .form .field .label-text, .error .login-form .form .field .label-text {
         font-weight: normal;
         color: #fff !important; }
-      .login .login-form .form .field .che-box input[type="checkbox"] + .label-text:before {
+      .login .login-form .form .field .che-box input[type="checkbox"] + .label-text:before, .error .login-form .form .field .che-box input[type="checkbox"] + .label-text:before {
         color: #fff; }
-      .login .login-form .form .field .form-control {
+      .login .login-form .form .field .form-control, .error .login-form .form .field .form-control {
         padding-left: 40px;
         border: 0px; }
-      .login .login-form .form .field i {
+      .login .login-form .form .field i, .error .login-form .form .field i {
         position: absolute;
         top: 15px;
         left: 30px;
         font-size: 20px;
         width: 18px;
         color: #2c3e50; }
-      .login .login-form .form .field .bottom {
+      .login .login-form .form .field .bottom, .error .login-form .form .field .bottom {
         position: relative;
         padding: 5px 30px;
         -webkit-transform: perspective(1px) translateZ(0);
@@ -2092,9 +3591,9 @@
         height: 50px;
         background: #279bc0; }
         @media (max-width: 450px) {
-          .login .login-form .form .field .bottom {
+          .login .login-form .form .field .bottom, .error .login-form .form .field .bottom {
             padding: 3px 20px; } }
-        .login .login-form .form .field .bottom:before {
+        .login .login-form .form .field .bottom:before, .error .login-form .form .field .bottom:before {
           content: "";
           position: absolute;
           top: 0;
@@ -2116,19 +3615,19 @@
           transition-property: transform;
           -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out; }
-        .login .login-form .form .field .bottom:hover:before {
+        .login .login-form .form .field .bottom:hover:before, .error .login-form .form .field .bottom:hover:before {
           -webkit-transform: scale(2);
           -moz-transform: scale(2);
           -ms-transform: scale(2);
           -o-transform: scale(2);
           transform: scale(2); }
-        .login .login-form .form .field .bottom:hover {
+        .login .login-form .form .field .bottom:hover, .error .login-form .form .field .bottom:hover {
           color: #fff; }
-        .login .login-form .form .field .bottom i {
+        .login .login-form .form .field .bottom i, .error .login-form .form .field .bottom i {
           margin-right: 5px; }
-        .login .login-form .form .field .bottom:before {
+        .login .login-form .form .field .bottom:before, .error .login-form .form .field .bottom:before {
           background: rgba(255, 255, 255, 0.12); }
-    .login .login-form .form .forget {
+    .login .login-form .form .forget, .error .login-form .form .forget {
       display: block;
       width: 100%;
       text-align: right;
@@ -2138,9 +3637,9 @@
       -o-transition: all 0.5s ease-in-out 0s;
       -webkit-transition: all 0.5s ease-in-out 0s;
       transition: all 0.5s ease-in-out 0s; }
-      .login .login-form .form .forget:hover {
+      .login .login-form .form .forget:hover, .error .login-form .form .forget:hover {
         color: #279bc0; }
-    .login .login-form .title {
+    .login .login-form .title, .error .login-form .title {
       color: #000;
       font-size: 30px;
       font-weight: 600;
@@ -2153,8 +3652,88 @@
       text-align: center;
       color: #fff; }
       @media (max-width: 991px) {
-        .login .login-form .title {
+        .login .login-form .title, .error .login-form .title {
           font-size: 25px; } }
+
+@media (max-width: 991px) {
+  .error {
+    display: flex;
+    align-items: center; } }
+.error .des-error {
+  text-align: center; }
+  .error .des-error i {
+    font-size: 80px;
+    color: #A90C00; }
+  .error .des-error .title {
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    font-size: 25px !important;
+    margin: 15px 0px; }
+    @media (max-width: 991px) {
+      .error .des-error .title {
+        font-size: 25px; } }
+  .error .des-error .bottom {
+    position: relative;
+    padding: 5px 30px;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    overflow: hidden;
+    color: #fff;
+    outline: none;
+    outline-style: none;
+    border: 0px;
+    background: #2c3e50;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    cursor: pointer;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+    background-clip: padding-box;
+    text-transform: capitalize; }
+    @media (max-width: 450px) {
+      .error .des-error .bottom {
+        padding: 3px 20px; } }
+    .error .des-error .bottom:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background: #279bc0;
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      -moz-transition: all 0.5s ease-in-out 0s;
+      -o-transition: all 0.5s ease-in-out 0s;
+      -webkit-transition: all 0.5s ease-in-out 0s;
+      transition: all 0.5s ease-in-out 0s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out; }
+    .error .des-error .bottom:hover:before {
+      -webkit-transform: scale(2);
+      -moz-transform: scale(2);
+      -ms-transform: scale(2);
+      -o-transform: scale(2);
+      transform: scale(2); }
+    .error .des-error .bottom:hover {
+      color: #fff; }
+    .error .des-error .bottom i {
+      margin-right: 5px; }
 
 /* Start PopUp */
 .icon-right {
@@ -2202,6 +3781,15 @@
     .modal .modal-dialog.popurl .modal-body {
       padding: 0px;
       background: #f0f4f5; }
+      .modal .modal-dialog.popurl .modal-body.padd {
+        padding: 15px;
+        padding-top: 0px; }
+  .modal .modal-dialog.witcard {
+    max-width: 650px; }
+    .modal .modal-dialog.witcard .modal-body {
+      padding: 15px; }
+  .modal .modal-header img {
+    max-width: 100px; }
   .modal .modal-header .title {
     color: #000;
     font-size: 30px;
@@ -2213,10 +3801,13 @@
       .modal .modal-header .title {
         font-size: 25px; } }
   .modal .modal-dialog {
-    margin: 0px auto; }
+    margin: 0px auto;
+    max-width: 530px; }
   .modal .close.de-close {
     margin: 0px;
-    padding: 0px; }
+    padding: 0px;
+    color: #A90C00;
+    opacity: 1; }
   .modal .in-seg {
     margin: 0px;
     margin-bottom: 15px; }
@@ -2292,6 +3883,13 @@
   .modal .form .field {
     position: relative;
     margin-top: 15px; }
+    @media (max-width: 767px) {
+      .modal .form .field .field-tow {
+        max-width: 100%;
+        flex: 100%;
+        margin-bottom: 15px; }
+        .modal .form .field .field-tow:last-child {
+          margin: 0px; } }
     .modal .form .field.pad {
       padding: 0px 60px; }
       @media (max-width: 550px) {
@@ -2341,6 +3939,64 @@
     .modal .form .field .text {
       font-weight: 600;
       margin-left: 5px; }
+    .modal .form .field .input-group-addon {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      background: #f0f4f5;
+      width: 50px;
+      height: 48px;
+      -webkit-border-radius: 0 0.25rem 0.25rem 0;
+      border-radius: 0 0.25rem 0.25rem 0;
+      background-clip: padding-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      border-left: 1px solid #efefef; }
+      .modal .form .field .input-group-addon i {
+        top: auto;
+        right: auto;
+        position: relative;
+        width: 20px;
+        height: 20px; }
+    .modal .form .field .rev-sbans {
+      width: 100%;
+      margin-top: 10px; }
+      .modal .form .field .rev-sbans .btnrating {
+        position: relative;
+        border: 0px;
+        background: none;
+        outline: 0px;
+        outline-style: none;
+        padding: 0px;
+        font-size: 20px;
+        width: 25px;
+        box-shadow: none !important;
+        color: #b7b7b7;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+        cursor: pointer; }
+        .modal .form .field .rev-sbans .btnrating i {
+          position: static;
+          top: auto;
+          left: auto;
+          right: auto; }
+        .modal .form .field .rev-sbans .btnrating:hover, .modal .form .field .rev-sbans .btnrating.btn-warning {
+          color: #ff9500; }
+    .modal .form .field.po-aro i {
+      top: 17px;
+      right: 30px; }
+    .modal .form .field.sel-aro i {
+      top: 17px;
+      right: 15px; }
+  .modal .form .block .field i,
+  .modal .form .block2 .field i,
+  .modal .form .block3 .field i,
+  .modal .form .block7 .field i {
+    right: 15px; }
   .modal .form .switch {
     position: relative;
     display: inline-block;
@@ -2407,6 +4063,16 @@
       background: #7cc331; }
     .modal .dis-center .bottom.red {
       background: #A90C00; }
+  .modal .modal-footer .imgpord {
+    width: 50%;
+    text-align: center; }
+    .modal .modal-footer .imgpord img {
+      max-width: 185px; }
+      @media (max-width: 667px) {
+        .modal .modal-footer .imgpord img {
+          max-width: 85px; } }
+    .modal .modal-footer .imgpord p {
+      color: #000; }
 
 /* End PopUp */
 .themeslider {
@@ -2580,13 +4246,13 @@
     margin-bottom: 0px; }
   .vertical .question:before {
     position: absolute;
-    top: 10;
+    top: 10px;
     right: 15px;
     content: '';
     display: inline-block;
-    border-top: 7px solid #000;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
+    border-top: 5px solid #000;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -2610,7 +4276,7 @@
       -ms-transform: rotate(-180deg);
       -o-transform: rotate(-180deg);
       transform: rotate(-180deg);
-      border-top: 7px solid #fff; }
+      border-top: 5px solid #fff; }
   .vertical .question.not-active:before {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -2630,6 +4296,18 @@
   margin-bottom: 15px; }
   .vertical .answer:last-of-type {
     margin-bottom: 0px; }
+
+.box-footer {
+  margin-top: 15px;
+  padding: 15px;
+  text-align: center;
+  background: #f0f4f5; }
+  .box-footer .description-text,
+  .box-footer .text-yellow {
+    font-weight: 600;
+    font-size: 17px; }
+  .box-footer .text-yellow {
+    color: #279bc0; }
 
 html,
 body,

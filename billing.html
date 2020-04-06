@@ -10,11 +10,13 @@
     <title>Zvendo</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/chosen.min.css" />
+    <link rel="stylesheet" href="css/richtext.min.css" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&amp;display=swap&amp;subset=arabic,latin-ext"
@@ -33,6 +35,8 @@
     <script src="js/slick.min.js"></script>
     <script src="js/bootstrap-colorpicker.js"></script>
     <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery.richtext.min.js"></script>
+    <script src="js/Chart.min.js"></script>
     <script src="js/plugin.js"></script>
   </head>
   <body>
@@ -352,7 +356,6 @@
             <li>
               <a
                 href="custom-theme.html"
-                class="toggle"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
               >
@@ -728,11 +731,11 @@
                       </td>
 
                       <td>
-                        <a class="bottom witd black" href="#" title="Print">
-                          <i class="fas fa-print"></i>
-                        </a>
-                        <a class="bottom witd green" href="#" title="View">
+                        <a class="bottom" href="#" title="View">
                           <i class="far fa-eye"></i>
+                        </a>
+                        <a class="bottom green" href="#" title="Print">
+                          <i class="fas fa-print"></i>
                         </a>
                       </td>
                     </tr>
@@ -748,74 +751,11 @@
                       </td>
 
                       <td>
-                        <a class="bottom witd black" href="#" title="Print">
-                          <i class="fas fa-print"></i>
-                        </a>
-                        <a class="bottom witd green" href="#" title="View">
+                        <a class="bottom" href="#" title="View">
                           <i class="far fa-eye"></i>
                         </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>13 January 2020</td>
-                      <td>"EGP" <span class="order_money"> 110.00</span></td>
-                      <td>--</td>
-                      <td>
-                        <span class="secret disabled">
-                          Not paid
-                        </span>
-                        <a href="#" class="blue mer"> Pay now</a>
-                      </td>
-
-                      <td>
-                        <a class="bottom witd black" href="#" title="Print">
+                        <a class="bottom green" href="#" title="Print">
                           <i class="fas fa-print"></i>
-                        </a>
-                        <a class="bottom witd green" href="#" title="View">
-                          <i class="far fa-eye"></i>
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>13 January 2020</td>
-                      <td>"EGP" <span class="order_money"> 110.00</span></td>
-                      <td>--</td>
-                      <td>
-                        <span class="secret disabled">
-                          Not paid
-                        </span>
-                        <a href="#" class="blue mer"> Pay now</a>
-                      </td>
-
-                      <td>
-                        <a class="bottom witd black" href="#" title="Print">
-                          <i class="fas fa-print"></i>
-                        </a>
-                        <a class="bottom witd green" href="#" title="View">
-                          <i class="far fa-eye"></i>
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>13 January 2020</td>
-                      <td>"EGP" <span class="order_money"> 110.00</span></td>
-                      <td>--</td>
-                      <td>
-                        <span class="secret disabled">
-                          Not paid
-                        </span>
-                        <a href="#" class="blue mer"> Pay now</a>
-                      </td>
-
-                      <td>
-                        <a class="bottom witd black" href="#" title="Print">
-                          <i class="fas fa-print"></i>
-                        </a>
-                        <a class="bottom witd green" href="#" title="View">
-                          <i class="far fa-eye"></i>
                         </a>
                       </td>
                     </tr>
@@ -831,11 +771,71 @@
                       </td>
 
                       <td>
-                        <a class="bottom witd black" href="#" title="Print">
+                        <a class="bottom" href="#" title="View">
+                          <i class="far fa-eye"></i>
+                        </a>
+                        <a class="bottom green" href="#" title="Print">
                           <i class="fas fa-print"></i>
                         </a>
-                        <a class="bottom witd green" href="#" title="View">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>13 January 2020</td>
+                      <td>"EGP" <span class="order_money"> 110.00</span></td>
+                      <td>--</td>
+                      <td>
+                        <span class="secret disabled">
+                          Not paid
+                        </span>
+                        <a href="#" class="blue mer"> Pay now</a>
+                      </td>
+
+                      <td>
+                        <a class="bottom" href="#" title="View">
                           <i class="far fa-eye"></i>
+                        </a>
+                        <a class="bottom green" href="#" title="Print">
+                          <i class="fas fa-print"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>13 January 2020</td>
+                      <td>"EGP" <span class="order_money"> 110.00</span></td>
+                      <td>--</td>
+                      <td>
+                        <span class="secret disabled">
+                          Not paid
+                        </span>
+                        <a href="#" class="blue mer"> Pay now</a>
+                      </td>
+
+                      <td>
+                        <a class="bottom" href="#" title="View">
+                          <i class="far fa-eye"></i>
+                        </a>
+                        <a class="bottom green" href="#" title="Print">
+                          <i class="fas fa-print"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>13 January 2020</td>
+                      <td>"EGP" <span class="order_money"> 110.00</span></td>
+                      <td>--</td>
+                      <td>
+                        <span class="secret disabled">
+                          Not paid
+                        </span>
+                        <a href="#" class="blue mer"> Pay now</a>
+                      </td>
+
+                      <td>
+                        <a class="bottom" href="#" title="View">
+                          <i class="far fa-eye"></i>
+                        </a>
+                        <a class="bottom green" href="#" title="Print">
+                          <i class="fas fa-print"></i>
                         </a>
                       </td>
                     </tr>
@@ -872,10 +872,13 @@
               <div class="head">
                 <h2 class="title">Payment methods</h2>
                 <div class="btnright">
-                  <a href="#" class="clear">Manage</a>
+                  <a href="methods.html" class="clear">Manage</a>
                 </div>
               </div>
               <!-- End Head -->
+              <ul class="list-bill">
+                <li>xxxx-xxxx-xxxx-8769</li>
+              </ul>
             </div>
             <!-- segment -->
           </div>

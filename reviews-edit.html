@@ -654,7 +654,7 @@
       <!-- End Header -->
 
       <div class="contant-inner">
-        <!-- <div class="alert alert-danger">
+        <div class="alert alert-danger">
           <i class="fas fa-times"></i>
 
           <strong> Error</strong>
@@ -680,18 +680,18 @@
           >
             <span aria-hidden="true">&times;</span>
           </button>
-        </div> -->
+        </div>
         <!-- End  alert -->
 
         <div class="new_wizard">
-          <h1 class="title">store lock</h1>
+          <h1 class="title">Edit</h1>
         </div>
         <!-- End  Wizard -->
 
         <div class="wizard">
           <ul class="link-wizard">
             <li>
-              store lock
+              Reviews
               <span
                 data-toggle="tooltip"
                 class="toolink"
@@ -701,58 +701,126 @@
               >
             </li>
             <li><a href="index.html">Administration</a></li>
-            <li>store lock</li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li>Edit</li>
           </ul>
         </div>
         <!--End wizard -->
         <form action="" method="" class="form">
           <div class="row">
-            <div class="col-sm-12 wit-rspon">
+            <div class="col-sm-8 wit-rspon">
               <div class="segment">
                 <div class="head mb-0">
-                  <h2 class="title">store lock</h2>
+                  <h2 class="title">Edit product review</h2>
                 </div>
                 <!-- End Head -->
                 <div class="row">
-                  <div class="col-sm-12 customchick">
-                    <label class="che-box">
-                      <input type="radio" name="check" />
-                      <span class="label-text">Enable</span>
-                    </label>
-                  </div>
-                  <div class="col-sm-12 customchick">
-                    <label class="che-box">
-                      <input type="radio" name="check" />
-                      <span class="label-text">Lock With Password</span>
-                    </label>
+                  <div class="col-sm-12 field">
+                    <label>Title <em>*</em></label>
+                    <input type="text" name="" class="form-control" />
                   </div>
                   <div class="col-sm-12 field">
-                    <p class="text">
-                      Add Password to make the site visible to specific people.
-                    </p>
+                    <label>Comment <em>*</em></label>
+                    <textarea name="textarea" class="form-control"></textarea>
                   </div>
+                  <div class="col-sm-12 field">
+                    <label>Rating <em>*</em></label>
 
-                  <div class="col-sm-12 field">
-                    <label>Password to view store</label>
-                    <input
-                      type="password"
-                      name=""
-                      class="form-control"
-                      value=""
-                    />
+                    <div class="rev-sbans" id="rating-ability-wrapper">
+                      <label class="control-label" for="rating">
+                        <input
+                          type="hidden"
+                          id="selected_rating"
+                          name="selected_rating"
+                          value=""
+                          required="required"
+                        />
+                      </label>
+                      <button
+                        class="btnrating"
+                        type="button"
+                        data-attr="1"
+                        id="rating-star-1"
+                      >
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </button>
+                      <button
+                        class="btnrating"
+                        type="button"
+                        data-attr="2"
+                        id="rating-star-2"
+                      >
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </button>
+                      <button
+                        class="btnrating"
+                        type="button"
+                        data-attr="3"
+                        id="rating-star-3"
+                      >
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </button>
+                      <button
+                        class="btnrating"
+                        type="button"
+                        data-attr="4"
+                        id="rating-star-4"
+                      >
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </button>
+                      <button
+                        class="btnrating"
+                        type="button"
+                        data-attr="5"
+                        id="rating-star-5"
+                      >
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <!-- End Row -->
               </div>
+              <!-- End Segment -->
             </div>
             <!-- End wit-rspon -->
-
+            <div class="col-sm-4 wit-rspon">
+              <div class="segment">
+                <div class="head">
+                  <h2 class="title">product</h2>
+                </div>
+                <!-- End Head -->
+                <div class="btnright">
+                  <a href="reviews-edit2.html" class="clear"
+                    >Orange Carrot Juice</a
+                  >
+                </div>
+              </div>
+              <!-- End Segment -->
+              <div class="segment">
+                <div class="btnright">
+                  <a href="#" class="title clear">mohamed ahmed</a>
+                  <br />
+                  <span>Customer since Jul 8, 2019.</span>
+                  <br />
+                  <a href="mailTo:" class="clear">
+                    <i class="far fa-envelope"></i> rashaelguindy@gmail.com</a
+                  >
+                  <br />
+                  <a href="Tel:" class="clear"
+                    ><i class="fas fa-phone-volume"></i> 01010000635</a
+                  >
+                </div>
+              </div>
+              <!-- End Segment -->
+            </div>
+            <!-- End wit-rspon -->
             <div class="col-sm-12 mt-3">
               <button class="bottom" type="submit">
                 <i class="fas fa-save"></i>
                 Save changes
               </button>
-              <!-- <a href="#" class="bottom"><i class="fas fa-times"></i> Cancel</a> -->
+              <a href="#" class="bottom"><i class="fas fa-times"></i> Cancel</a>
             </div>
           </div>
           <!-- End row -->

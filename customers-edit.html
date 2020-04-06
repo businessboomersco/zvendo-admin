@@ -654,7 +654,7 @@
       <!-- End Header -->
 
       <div class="contant-inner">
-        <!-- <div class="alert alert-danger">
+        <div class="alert alert-danger">
           <i class="fas fa-times"></i>
 
           <strong> Error</strong>
@@ -680,18 +680,18 @@
           >
             <span aria-hidden="true">&times;</span>
           </button>
-        </div> -->
+        </div>
         <!-- End  alert -->
 
         <div class="new_wizard">
-          <h1 class="title">store lock</h1>
+          <h1 class="title">customers edit</h1>
         </div>
         <!-- End  Wizard -->
 
         <div class="wizard">
           <ul class="link-wizard">
             <li>
-              store lock
+              customers
               <span
                 data-toggle="tooltip"
                 class="toolink"
@@ -701,46 +701,130 @@
               >
             </li>
             <li><a href="index.html">Administration</a></li>
-            <li>store lock</li>
+            <li>edit</li>
           </ul>
         </div>
         <!--End wizard -->
         <form action="" method="" class="form">
           <div class="row">
-            <div class="col-sm-12 wit-rspon">
+            <div class="col-sm-6 wit-rspon">
               <div class="segment">
                 <div class="head mb-0">
-                  <h2 class="title">store lock</h2>
+                  <h2 class="title">Customer details</h2>
                 </div>
                 <!-- End Head -->
                 <div class="row">
-                  <div class="col-sm-12 customchick">
-                    <label class="che-box">
-                      <input type="radio" name="check" />
-                      <span class="label-text">Enable</span>
-                    </label>
+                  <div class="col-sm-6 field">
+                    <label>First name <em>*</em></label>
+                    <input type="text" name="" class="form-control" value="" />
                   </div>
-                  <div class="col-sm-12 customchick">
-                    <label class="che-box">
-                      <input type="radio" name="check" />
-                      <span class="label-text">Lock With Password</span>
-                    </label>
+                  <div class="col-sm-6 field">
+                    <label>Last name <em>*</em></label>
+                    <input type="text" name="" class="form-control" value="" />
                   </div>
-                  <div class="col-sm-12 field">
-                    <p class="text">
-                      Add Password to make the site visible to specific people.
-                    </p>
+                  <div class="col-sm-6 field">
+                    <label>email<em>*</em></label>
+                    <input type="text" name="" class="form-control" value="" />
+                  </div>
+                  <div class="col-sm-6 field">
+                    <label>Group <em>*</em></label>
+                    <i class="fas fa-sort-down"></i>
+                    <select class="form-control"
+                      ><option value="NewsLetter" selected="NewsLetter"
+                        >NewsLetter</option
+                      >
+                    </select>
+                  </div>
+                </div>
+                <!-- End Row -->
+              </div>
+              <!-- End segment -->
+              <div class="segment">
+                <div class="head mb-0">
+                  <h2 class="title">Extra information</h2>
+                </div>
+                <!-- End Head -->
+                <div class="row">
+                  <div class="col-sm-6 field">
+                    <label>Gender <em>*</em></label>
+                    <i class="fas fa-sort-down"></i>
+                    <select class="form-control">
+                      <option value="u" selected="selected">Unknown</option
+                      ><option value="m">Male</option
+                      ><option value="f">Female</option></select
+                    >
                   </div>
 
-                  <div class="col-sm-12 field">
-                    <label>Password to view store</label>
+                  <div class="col-sm-6 field">
+                    <label>Phone number <em>*</em></label>
                     <input
-                      type="password"
+                      type="text"
                       name=""
                       class="form-control"
+                      placeholder="Ex: 0234567891"
                       value=""
                     />
                   </div>
+                  <div class="col-sm-12 field">
+                    <label>Birthday<em>*</em></label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      name="sylius_customer[birthday]"
+                      max="2020-03-26"
+                      min="1900-01-01"
+                    />
+                  </div>
+
+                  <div class="col-sm-12 field">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <p class="slider round"></p>
+                    </label>
+                    <span class="text">Subscribe to the newsletter</span>
+                  </div>
+                </div>
+                <!-- End Row -->
+              </div>
+              <!-- End segment -->
+            </div>
+            <!-- End wit-rspon -->
+            <div class="col-sm-6 wit-rspon">
+              <div class="segment">
+                <div class="head mb-0">
+                  <h2 class="title">Account credentials</h2>
+                </div>
+                <!-- End Head -->
+                <div class="row">
+                  <div class="col-sm-12 field">
+                    <label class="switch click-chec">
+                      <input type="checkbox" />
+                      <p class="slider round"></p>
+                    </label>
+                    <span class="text">Customer can login to the store?</span>
+                  </div>
+                  <!-- End field -->
+                  <div class="box-hide">
+                    <div class="col-sm-12 field">
+                      <label>Password <em>*</em></label>
+                      <input
+                        type="password"
+                        name=""
+                        class="form-control"
+                        value=""
+                      />
+                    </div>
+                    <!-- End field -->
+                    <div class="col-sm-12 field">
+                      <label class="switch">
+                        <input type="checkbox" />
+                        <p class="slider round"></p>
+                      </label>
+                      <span class="text">Enabled</span>
+                    </div>
+                    <!-- End field -->
+                  </div>
+                  <!-- End box-hide -->
                 </div>
                 <!-- End Row -->
               </div>
@@ -752,7 +836,7 @@
                 <i class="fas fa-save"></i>
                 Save changes
               </button>
-              <!-- <a href="#" class="bottom"><i class="fas fa-times"></i> Cancel</a> -->
+              <a href="#" class="bottom"><i class="fas fa-times"></i> Cancel</a>
             </div>
           </div>
           <!-- End row -->

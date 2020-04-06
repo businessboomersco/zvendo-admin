@@ -248,6 +248,18 @@
         position: relative;
         margin-top: $minmargin;
 
+        .field-tow {
+            @media (max-width:767px) {
+                max-width: $fullwidth;
+                flex: $fullwidth;
+                margin-bottom: $minmargin;
+
+                &:last-child {
+                    margin: $zero;
+                }
+            }
+        }
+
         &.pad {
             padding: $zero $maxmargin+$maxmargin;
 
@@ -318,6 +330,86 @@
         .text {
             font-weight: 600;
             margin-left: 5px;
+        }
+
+        .input-group-addon {
+            @include position(absolute, $top:1px, $right:1px);
+            background: $ofwhite;
+            width: 50px;
+            height: 48px;
+            @include border-radius(0 .25rem .25rem 0);
+            @include flex;
+            justify-content: $center;
+            z-index: 10;
+            border-left: 1px solid #efefef;
+
+            i {
+                top: $auto;
+                right: $auto;
+                position: relative;
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .rev-sbans {
+            width: $fullwidth;
+            margin-top: 10px;
+
+            .btnrating {
+                position: relative;
+                border: $zero;
+                background: $none;
+                outline: $zero;
+                outline-style: $none;
+                padding: $zero;
+                font-size: 20px;
+                width: 25px;
+                box-shadow: $none !important;
+                color: #b7b7b7;
+                @include transition(all 0.5s ease-in-out 0s);
+                cursor: pointer;
+
+
+                i {
+                    position: static;
+                    top: $auto;
+                    left: $auto;
+                    right: $auto;
+                }
+
+                &:hover,
+                &.btn-warning {
+                    color: $yellow;
+                }
+            }
+        }
+
+        &.po-aro {
+            i {
+                top: 17px;
+                right: 30px;
+            }
+        }
+
+        &.sel-aro {
+            i {
+                top: 17px;
+                right: $minmargin;
+            }
+        }
+    }
+
+
+
+    .block,
+    .block2,
+    .block3,
+    .block7 {
+        .field {
+            i {
+                right: $minmargin;
+            }
         }
     }
 
@@ -658,12 +750,12 @@
 
 @mixin check-box {
     position: relative;
-    width: $fullwidth;
 
     .che-box {
         position: relative;
         padding-left: 20px;
         margin: $zero;
+        z-index: 1;
 
         &.hide {
             opacity: .5;
@@ -758,12 +850,12 @@
         }
 
         &:before {
-            @include position(absolute, $top: 10, $right:15px);
+            @include position(absolute, $top: 10px, $right:15px);
             content: '';
             display: inline-block;
-            border-top: 7px solid $blak;
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
+            border-top: 5px solid $blak;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
             @include rotate(0deg);
             margin-top: 10px;
             @include transition(all 0.5s ease-in-out 0s);
@@ -777,7 +869,7 @@
 
             &::before {
                 @include rotate(-180deg);
-                border-top: 7px solid $white;
+                border-top: 5px solid $white;
             }
         }
 
