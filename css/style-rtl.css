@@ -1,62 +1,473 @@
-/*
-Error: File to import not found or unreadable: layout/slider.
-       Load path: C:/Users/mohamed/Desktop/admin-new/sass
-        on line 4 of C:/Users/mohamed/Desktop/admin-new/sass/style-rtl.scss
+.header {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  padding-left: 260px;
+  -webkit-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+  -moz-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+  -o-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+  -ms-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+  box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+  background: #fff;
+  width: 100%;
+  z-index: 1000;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s; }
+  @media (max-width: 991px) {
+    .header {
+      padding-left: 0px; } }
+  .header .logo-rspon {
+    width: 100%;
+    height: 60px;
+    background: #2c3e50;
+    display: none;
+    padding: 8px 0px;
+    text-align: center;
+    overflow: hidden;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+    @media (max-width: 991px) {
+      .header .logo-rspon {
+        display: block; } }
+  .header.sticky {
+    position: fixed; }
+    .header.sticky .min-header {
+      height: 0px;
+      padding: 0px 15px;
+      overflow: hidden; }
+      @media (max-width: 991px) {
+        .header.sticky .min-header {
+          height: auto;
+          padding: 15px;
+          overflow: visible; } }
+    .header.sticky .header-menu {
+      border: 0px;
+      justify-content: space-between; }
+      .header.sticky .header-menu .sidebarCollapse {
+        display: block;
+        color: #2c3e50;
+        cursor: pointer;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s; }
+        .header.sticky .header-menu .sidebarCollapse:hover {
+          color: #279bc0; }
+      .header.sticky .header-menu .boxsearch {
+        display: block; }
+      .header.sticky .header-menu .textmenu {
+        margin-left: 50px; }
+        @media (max-width: 1250px) {
+          .header.sticky .header-menu .textmenu {
+            margin-left: 0px; } }
+        @media (max-width: 1199px) {
+          .header.sticky .header-menu .textmenu a {
+            margin-right: 15px; } }
+        .header.sticky .header-menu .textmenu a:hover:before, .header.sticky .header-menu .textmenu a.active:before {
+          bottom: -12px; }
+    .header.sticky .logo-rspon {
+      height: 0px;
+      padding: 0px; }
+  .header .min-header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+    .header .min-header .link_store .sidebarCollapse {
+      color: #2c3e50;
+      cursor: pointer;
+      -moz-transition: all 0.5s ease-in-out 0s;
+      -o-transition: all 0.5s ease-in-out 0s;
+      -webkit-transition: all 0.5s ease-in-out 0s;
+      transition: all 0.5s ease-in-out 0s; }
+      .header .min-header .link_store .sidebarCollapse:hover {
+        color: #279bc0; }
+    .header .min-header .link_store a {
+      -moz-transition: all 0.5s ease-in-out 0s;
+      -o-transition: all 0.5s ease-in-out 0s;
+      -webkit-transition: all 0.5s ease-in-out 0s;
+      transition: all 0.5s ease-in-out 0s;
+      margin-left: 15px;
+      font-weight: 600; }
+      @media (max-width: 991px) {
+        .header .min-header .link_store a {
+          display: none; } }
+      .header .min-header .link_store a:hover {
+        color: #279bc0; }
+    .header .min-header .boxsearch {
+      position: relative;
+      width: 300px; }
+      @media (max-width: 1200px) {
+        .header .min-header .boxsearch {
+          width: 200px; } }
+      @media (max-width: 991px) {
+        .header .min-header .boxsearch {
+          width: auto;
+          position: absolute;
+          right: 165px; }
+          .header .min-header .boxsearch .onclick-bot {
+            margin: 0px !important; } }
+      .header .min-header .boxsearch .onclick-bot {
+        display: none;
+        cursor: pointer; }
+        @media (max-width: 991px) {
+          .header .min-header .boxsearch .onclick-bot {
+            display: block;
+            font-size: 14px;
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background-clip: padding-box;
+            width: 30px;
+            height: 30px;
+            background: #f0f4f5;
+            justify-content: center;
+            text-align: center; } }
+        .header .min-header .boxsearch .onclick-bot i {
+          width: 30px;
+          height: 30px;
+          padding: 8px 0px; }
+        .header .min-header .boxsearch .onclick-bot i.fas.fa-times.cancel {
+          color: #A90C00;
+          display: none; }
+      @media (max-width: 991px) {
+        .header .min-header .boxsearch .formsearch {
+          display: none;
+          width: 200px;
+          position: absolute;
+          top: 46px;
+          left: -20px;
+          -webkit-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          -moz-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          -o-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          -ms-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          background-color: #fff;
+          z-index: 22;
+          padding: 10px; } }
+      .header .min-header .boxsearch .form-control {
+        width: 100%;
+        height: 35px;
+        border: 0px;
+        box-shadow: none;
+        outline: none;
+        background: #f0f4f5;
+        text-transform: none;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+        background-clip: padding-box;
+        padding: 5px 35px 5px 15px; }
+      .header .min-header .boxsearch .btn {
+        position: absolute;
+        top: 11px;
+        right: 13px;
+        color: #2c3e50;
+        padding: 0px;
+        background: none;
+        border: 0px;
+        outline: 0px;
+        outline-style: none;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s; }
+        @media (max-width: 991px) {
+          .header .min-header .boxsearch .btn {
+            top: 20px;
+            right: 20px; } }
+        .header .min-header .boxsearch .btn:hover {
+          color: #279bc0; }
+    .header .min-header .text-dropdown {
+      display: flex;
+      align-items: center; }
+      .header .min-header .text-dropdown .language {
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+        margin-left: 15px; }
+        @media (max-width: 991px) {
+          .header .min-header .text-dropdown .language {
+            margin-left: 5px; } }
+        .header .min-header .text-dropdown .language:hover {
+          color: #279bc0; }
+      .header .min-header .text-dropdown .support_dropdown-head {
+        position: relative;
+        margin-left: 30px; }
+        @media (max-width: 1200px) {
+          .header .min-header .text-dropdown .support_dropdown-head {
+            margin-left: 10px; } }
+        @media (max-width: 991px) {
+          .header .min-header .text-dropdown .support_dropdown-head {
+            margin-left: 5px; } }
+        .header .min-header .text-dropdown .support_dropdown-head .name-user {
+          display: flex;
+          align-items: center;
+          position: relative;
+          cursor: pointer; }
+          .header .min-header .text-dropdown .support_dropdown-head .name-user p {
+            -moz-transition: all 0.5s ease-in-out 0s;
+            -o-transition: all 0.5s ease-in-out 0s;
+            -webkit-transition: all 0.5s ease-in-out 0s;
+            transition: all 0.5s ease-in-out 0s;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-left: 5px;
+            text-overflow: ellipsis; }
+            @media (max-width: 991px) {
+              .header .min-header .text-dropdown .support_dropdown-head .name-user p {
+                display: none; } }
+            .header .min-header .text-dropdown .support_dropdown-head .name-user p:hover {
+              color: #279bc0; }
+          .header .min-header .text-dropdown .support_dropdown-head .name-user i {
+            font-size: 14px;
+            -moz-transition: all 0.5s ease-in-out 0s;
+            -o-transition: all 0.5s ease-in-out 0s;
+            -webkit-transition: all 0.5s ease-in-out 0s;
+            transition: all 0.5s ease-in-out 0s; }
+            @media (max-width: 991px) {
+              .header .min-header .text-dropdown .support_dropdown-head .name-user i {
+                display: flex;
+                align-items: center;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                background-clip: padding-box;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #f0f4f5;
+                justify-content: center; } }
+            .header .min-header .text-dropdown .support_dropdown-head .name-user i.icon-mar {
+              margin: 0px;
+              font-size: 12px;
+              margin-left: 2px; }
+              @media (max-width: 991px) {
+                .header .min-header .text-dropdown .support_dropdown-head .name-user i.icon-mar {
+                  display: none; } }
+          .header .min-header .text-dropdown .support_dropdown-head .name-user .number {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #A90C00;
+            width: 18px;
+            height: 18px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background-clip: padding-box;
+            color: #fff;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+          .header .min-header .text-dropdown .support_dropdown-head .name-user:hover p,
+          .header .min-header .text-dropdown .support_dropdown-head .name-user:hover i {
+            color: #279bc0; }
+        .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content {
+          position: absolute;
+          top: 30px;
+          right: 0px;
+          width: 150px;
+          -webkit-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          -moz-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          -o-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          -ms-box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          box-shadow: 0 1px 5px rgba(4, 6, 8, 0.21);
+          background-color: #fff;
+          z-index: 22;
+          opacity: 0;
+          visibility: hidden;
+          -moz-transition: all 0.3s ease-in-out 0s;
+          -o-transition: all 0.3s ease-in-out 0s;
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+          padding: 15px; }
+          .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content li a {
+            -moz-transition: all 0.5s ease-in-out 0s;
+            -o-transition: all 0.5s ease-in-out 0s;
+            -webkit-transition: all 0.5s ease-in-out 0s;
+            transition: all 0.5s ease-in-out 0s; }
+            .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content li a:hover {
+              color: #279bc0; }
+          .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content li i {
+            width: 15px;
+            font-size: 14px;
+            margin-right: 5px; }
+          .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell {
+            width: 250px;
+            height: 250px;
+            border-bottom: 1px solid #f0f4f5;
+            overflow: hidden;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            scroll-behavior: smooth; }
+            @media (max-width: 400px) {
+              .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell {
+                right: -85px; } }
+            .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell .warning {
+              display: inline-block;
+              width: 100%;
+              color: #A90C00;
+              text-align: center; }
+            .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell .dropdown-bell {
+              display: inline-block;
+              position: relative;
+              width: 100%;
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+              -moz-transition: all 0.5s ease-in-out 0s;
+              -o-transition: all 0.5s ease-in-out 0s;
+              -webkit-transition: all 0.5s ease-in-out 0s;
+              transition: all 0.5s ease-in-out 0s;
+              border-bottom: 1px solid #f0f4f5; }
+              .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell .dropdown-bell:last-child {
+                border: 0px;
+                padding: 0px;
+                margin-bottom: 0px; }
+              .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell .dropdown-bell i {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                background-clip: padding-box;
+                color: #279bc0;
+                background: #f0f4f5;
+                -moz-transition: all 0.5s ease-in-out 0s;
+                -o-transition: all 0.5s ease-in-out 0s;
+                -webkit-transition: all 0.5s ease-in-out 0s;
+                transition: all 0.5s ease-in-out 0s; }
+              .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell .dropdown-bell .details {
+                padding-left: 45px; }
+                .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell .dropdown-bell .details h4 {
+                  color: #000;
+                  -moz-transition: all 0.5s ease-in-out 0s;
+                  -o-transition: all 0.5s ease-in-out 0s;
+                  -webkit-transition: all 0.5s ease-in-out 0s;
+                  transition: all 0.5s ease-in-out 0s;
+                  font-size: 18px; }
+                .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell .dropdown-bell .details p {
+                  line-height: 22px; }
+              .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell .dropdown-bell:hover i {
+                color: #f0f4f5;
+                background: #279bc0; }
+              .header .min-header .text-dropdown .support_dropdown-head .support_dropdown-content.bell .dropdown-bell:hover .details h4 {
+                color: #279bc0; }
+        .header .min-header .text-dropdown .support_dropdown-head:hover .name-user p,
+        .header .min-header .text-dropdown .support_dropdown-head:hover .name-user i {
+          color: #279bc0; }
+        .header .min-header .text-dropdown .support_dropdown-head:hover .support_dropdown-content {
+          top: 47px;
+          opacity: 1;
+          visibility: visible; }
+          .header .min-header .text-dropdown .support_dropdown-head:hover .support_dropdown-content.bell {
+            top: 40px; }
+            @media (max-width: 991px) {
+              .header .min-header .text-dropdown .support_dropdown-head:hover .support_dropdown-content.bell {
+                top: 46px; } }
+  .header .header-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 58px;
+    padding: 15px;
+    border-top: 1px solid #efefef; }
+    @media (max-width: 991px) {
+      .header .header-menu {
+        display: none; } }
+    .header .header-menu .boxsearch {
+      position: relative;
+      width: 300px; }
+      @media (max-width: 1200px) {
+        .header .header-menu .boxsearch {
+          width: 200px; } }
+      .header .header-menu .boxsearch .form-control {
+        width: 100%;
+        height: 35px;
+        border: 0px;
+        box-shadow: none;
+        outline: none;
+        background: #f0f4f5;
+        text-transform: none;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+        background-clip: padding-box;
+        padding: 5px 35px 5px 15px; }
+      .header .header-menu .boxsearch .btn {
+        position: absolute;
+        top: 11px;
+        right: 13px;
+        color: #2c3e50;
+        padding: 0px;
+        background: none;
+        border: 0px;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s; }
+        .header .header-menu .boxsearch .btn:hover {
+          color: #279bc0; }
+    .header .header-menu .textmenu a {
+      font-size: 20px;
+      color: #2c3e50;
+      font-weight: 600;
+      position: relative;
+      margin-right: 50px; }
+      .header .header-menu .textmenu a:before {
+        content: "";
+        position: absolute;
+        right: 0px;
+        bottom: 30px;
+        left: 0px;
+        background: #2c3e50;
+        height: 5px;
+        width: 5px;
+        opacity: 0;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-clip: padding-box;
+        -webkit-transition: opacity 0.5s ease 0s, bottom 0s ease 0.5s, height 0s ease 0.5s, width 0s ease 0.5s, border-radius 0s ease 0.5s, left 0s ease 0.5s;
+        -o-transition: opacity 0.5s ease 0s, bottom 0s ease 0.5s, height 0s ease 0.5s, width 0s ease 0.5s, border-radius 0s ease 0.5s, left 0s ease 0.5s;
+        transition: opacity 0.5s ease 0s, bottom 0s ease 0.5s, height 0s ease 0.5s, width 0s ease 0.5s, border-radius 0s ease 0.5s, left 0s ease 0.5s;
+        margin: 0px auto; }
+      .header .header-menu .textmenu a img {
+        max-width: 17px;
+        margin-top: -5px; }
+      .header .header-menu .textmenu a:hover:before, .header .header-menu .textmenu a.active:before {
+        height: 2px;
+        width: 100%;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background-clip: padding-box;
+        bottom: -11px;
+        opacity: 1;
+        text-align: center;
+        -webkit-transition: opacity 0s ease 0s, bottom 0.3s ease 0s, height 0.3s ease 0.3s, width 0.3s ease 0.3s, border-radius 0.3s ease 0.3s, left 0.3s ease 0.3s;
+        -o-transition: opacity 0s ease 0s, bottom 0.3s ease 0s, height 0.3s ease 0.3s, width 0.3s ease 0.3s, border-radius 0.3s ease 0.3s, left 0.3s ease 0.3s;
+        transition: opacity 0s ease 0s, bottom 0.3s ease 0s, height 0.3s ease 0.3s, width 0.3s ease 0.3s, border-radius 0.3s ease 0.3s, left 0.3s ease 0.3s; }
+    .header .header-menu .sidebarCollapse,
+    .header .header-menu .boxsearch {
+      display: none;
+      margin-top: 0px; }
 
-1: @import 'helpers/mixins';
-2: @import 'helpers/variables';
-3: @import 'layout/header';
-4: @import 'layout/slider';
-5:  
-6: 
-7: 
-8: $direction:ltr;
-9: $right:left;
+/* End Style Header*/
+body {
+  direction: ltr;
+  text-align: left;
+  text-transform: capitalize; }
 
-Backtrace:
-C:/Users/mohamed/Desktop/admin-new/sass/style-rtl.scss:4
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: layout/slider.\A        Load path: C:/Users/mohamed/Desktop/admin-new/sass\A         on line 4 of C:/Users/mohamed/Desktop/admin-new/sass/style-rtl.scss\A \A 1: @import 'helpers/mixins';\A 2: @import 'helpers/variables';\A 3: @import 'layout/header';\A 4: @import 'layout/slider';\A 5:  \A 6: \A 7: \A 8: $direction:ltr;\A 9: $right:left;"; }
+/*# sourceMappingURL=style-rtl.css.map */

@@ -130,7 +130,11 @@
 
             @media (max-width: 991px) {
                 width: $auto;
-                @include position(absolute, $right: 180px);
+                @include position(absolute, $right: 165px);
+
+                .onclick-bot {
+                    margin: $zero !important;
+                }
             }
 
             .onclick-bot {
@@ -167,7 +171,7 @@
                 @media (max-width: 991px) {
                     display: $none;
                     width: 200px;
-                    @include position(absolute, $top: 46px, $left:0px);
+                    @include position(absolute, $top: 46px, $left:-20px);
                     @include prefixer (box-shadow, 0 1px 5px rgba(4, 6, 8, 0.21), webkit moz o ms);
                     background-color: $white;
                     z-index: 22;
@@ -193,6 +197,8 @@
                 padding: $zero;
                 background: $none;
                 border: $zero;
+                outline: $zero;
+                outline-style: $none;
                 @include transition(all 0.5s ease-in-out 0s);
 
                 @media (max-width: 991px) {

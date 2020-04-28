@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Zvendo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/chosen.min.css" />
+    <link rel="stylesheet" href="css/richtext.min.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&amp;display=swap&amp;subset=arabic,latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/bootstrap-colorpicker.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery.richtext.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/plugin.js"></script>
+  </head>
+  <body>
+    <div class="vertical-nav" id="sidebar">
+      <span class="fas fa-times removal"> </span>
+      <div class="logo">
+        <a href="index.html" title="Zvendo"
+          ><img src="images/logo.png" alt="Zvendo"
+        /></a>
+      </div>
+      <!-- End Logo -->
+      <div class="username">
+        <div class="imguser"><img src="images/photo.jpg" alt="" /></div>
+        <h3 class="title">Mohamed Ahmed</h3>
+        <a href="profile.html" class="linkaccount">My account</a>
+      </div>
+      <!-- End username -->
+      <ul class="accordion">
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-box-open"></i> Product catalog</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="categories.html"
+                data-toggle="tooltip"
+                title="You can create a product category, and add then add products to this category."
+                >Categories</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="products.html"
+                data-toggle="tooltip"
+                title="You can create products; simple products, or products with several variants."
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="attributes.html"
+                data-toggle="tooltip"
+                title="You can create special product attributes as material type."
+                >Attributes</a
+              >
+            </li>
+            <li>
+              <a
+                href="options.html"
+                data-toggle="tooltip"
+                title="You can create a product option to classify its variants, as different sizes or colors."
+                >Options</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="connected-types.html"
+                data-toggle="tooltip"
+                title="You can connect related products to show them as related products to your customers."
+                >Connected types</a
+              >
+            </li>
+            <li>
+              <a
+                href="inventory.html"
+                data-toggle="tooltip"
+                title="You can add your products’ stock to your warehouse to track inventory."
+                >Inventory</a
+              >
+            </li>
+            <li>
+              <a
+                href="warehouse.html"
+                data-toggle="tooltip"
+                title="You can create a warehouse which you can add your products inventory to, so you can track your inventory."
+                >Warehouse</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="vendors.html"
+                data-toggle="tooltip"
+                title="You can create a warehouse which you can add your products inventory to, so you can track your inventory."
+                >Vendors</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a>
+        </li>
+
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-users"></i> Customers</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="customers.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Customers</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="groups.html"
+                data-toggle="tooltip"
+                title="You can put your customers into group."
+                >Groups</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-mail-bulk"></i> Marketing</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="promotions.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Promotions</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="reviews.html"
+                data-toggle="tooltip"
+                title="You can put your customers into group."
+                >Reviews</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-cogs"></i> Store configuration</a
+          >
+          <ul class="inner towlist">
+            <li>
+              <a href="javascript:void(0);" class="toggle child-lin"
+                >Store settings</a
+              >
+              <ul class="inner act-link">
+                <li>
+                  <a
+                    href="channels.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Channels</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="countries.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Countries</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="currencies.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Currencies</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="javascript:void(0);" class="toggle child-lin"
+                >Shipping</a
+              >
+              <ul class="inner act-link">
+                <li>
+                  <a
+                    href="shipping-methods.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                  >
+                    Shipping methods</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="shipping-categories.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                  >
+                    Shipping categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="zones.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Zones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="cities.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Cities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="time-slots.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Time Slots</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="javascript:void(0);" class="toggle child-lin">Payment</a>
+              <ul class="inner act-link">
+                <li>
+                  <a
+                    href="payment-methods.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                  >
+                    Payment methods</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="tax-categories.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                  >
+                    Tax categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="tax-rates.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Tax rates</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="administrators.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Administrators</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="contacts.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Contacts</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="messages.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Messages</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="emails.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Emails</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="store-identity.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Store Identity</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="custom-theme.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                Custom theme</a
+              >
+            </li>
+
+            <li>
+              <a href="javascript:void(0);" class="toggle child-lin"
+                >Content manager</a
+              >
+              <ul class="inner act-link">
+                <li>
+                  <a
+                    href="languages.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Languages</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="main-menu.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Main menu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="image-slider.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Image slider</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="pages.html"
+                    data-toggle="tooltip"
+                    title="you can see all your customers and see their orders."
+                    >Pages</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="media-gallery.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                Media gallery</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="store-lock.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                Store Lock</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="domains.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                Domains</a
+              >
+            </li>
+            <li>
+              <a
+                href="notifications.html"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="you can see all your customers and see their orders."
+              >
+                Notifications</a
+              >
+            </li>
+            <li>
+              <a
+                href="reset-store.html"
+                class="red"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+              >
+                reset store</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="far fa-lightbulb"></i> Insights</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="sales.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Sales</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="toggle navicon" href="javascript:void(0);"
+            ><i class="fas fa-chart-line"></i> My plan</a
+          >
+          <ul class="inner act-link">
+            <li>
+              <a
+                href="start-trial.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Start Your Free Trial</a
+              >
+            </li>
+            <li>
+              <a
+                href="billing.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >Billing</a
+              >
+            </li>
+            <li>
+              <a
+                href="my-features.html"
+                data-toggle="tooltip"
+                title="you can see all your customers and see their orders."
+                >My features</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="tutorials.html"
+            ><i class="far fa-play-circle"></i> Tutorials</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- Vertical navbar -->
+    <div class="page-content" id="content">
+      <header class="header">
+        <div class="logo-rspon">
+          <a href="index.html" title="Zvendo"
+            ><img src="images/logo-rspon.png" alt="Zvendo"
+          /></a>
+        </div>
+        <!-- End Logo Rspon-->
+
+        <div class="min-header">
+          <div class="link_store">
+            <span class="fa fa-bars sidebarCollapse"></span>
+            <a href="#" target="_blank">View your store</a>
+          </div>
+          <!-- End link_store -->
+
+          <div class="boxsearch">
+            <span class="onclick-bot">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-times cancel"></i>
+            </span>
+            <!-- onclick-bot -->
+            <form class="formsearch" action="#" method="">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Search products..."
+              />
+              <button class=" fas fa-search btn" type="submit"></button>
+            </form>
+          </div>
+          <!-- End showboxsearch -->
+
+          <div class="text-dropdown">
+            <div class="support_dropdown-head">
+              <div class="name-user">
+                <i class="fas fa-bell"></i>
+                <!-- <span class="number">52</span> -->
+              </div>
+
+              <div class="support_dropdown-content bell">
+                <!-- <span class="warning"> No new notifications</span> -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
+              </div>
+              <!-- End support_dropdown-content -->
+            </div>
+            <!-- End support_dropdown-head -->
+
+            <div class="support_dropdown-head">
+              <div class="name-user">
+                <i class="far fa-life-ring"></i>
+                <p>
+                  get support
+                  <i class="fas fa-chevron-down icon-mar"></i>
+                </p>
+              </div>
+
+              <ul class="support_dropdown-content">
+                <li>
+                  <i class="fas fa-book"> </i>
+                  <a href="#" target="_blank">help center</a>
+                </li>
+
+                <li>
+                  <i class="fab fa-blogger-b"></i>
+                  <a href="#" target="_blank">blog</a>
+                </li>
+
+                <li>
+                  <i class="fab fa-youtube"></i>
+                  <a href="#" target="_blank"> youtube </a>
+                </li>
+
+                <li>
+                  <i class="fas fa-mobile-alt"></i>
+                  <a href="tel:01021108336">01021108336</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End support_dropdown-head -->
+            <div class="support_dropdown-head">
+              <div class="name-user">
+                <i class="far fa-user"> </i>
+                <p>
+                  Mohamed ahmed
+                  <i class="fas fa-chevron-down icon-mar"></i>
+                </p>
+              </div>
+
+              <ul class="support_dropdown-content">
+                <li>
+                  <i class="fas fa-user"> </i>
+                  <a href="profile.html">My account</a>
+                </li>
+
+                <li>
+                  <i class="fas fa-file-alt"></i>
+                  <a href="profile-log.html"> Log </a>
+                </li>
+
+                <li>
+                  <i class="fas fa-sign-out-alt"></i>
+                  <a href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End support_dropdown-head -->
+            <a href="#" class="language">العربية</a>
+          </div>
+          <!-- End Text Dropdown -->
+        </div>
+        <!-- End Min-Header -->
+        <div class="header-menu">
+          <span class="fa fa-bars sidebarCollapse"></span>
+          <nav class="textmenu">
+            <a class="active" href="index.html">
+              <img src="images/home.svg" /> Home</a
+            >
+            <a href="products.html">
+              <img src="images/products.svg" /> Products</a
+            >
+            <a href="orders.html"> <img src="images/orders.svg" /> Orders </a>
+            <a href="customers.html">
+              <img src="images/customers.svg" /> Customers
+            </a>
+          </nav>
+          <div class="boxsearch">
+            <form class="formsearch" action="#" method="">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Search products..."
+              />
+              <button class=" fas fa-search btn" type="submit"></button>
+            </form>
+          </div>
+          <!-- End showboxsearch -->
+        </div>
+
+        <!-- End Menu-Header -->
+      </header>
+      <!-- End Header -->
+
+      <div class="contant-inner">
+        <!-- <div class="alert alert-danger">
+          <i class="fas fa-times"></i>
+
+          <strong> Error</strong>
+          Please upload a valid CSV file.
+
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="alert alert-success" role="alert">
+          <i class="fas fa-check"></i>
+          sent succesfully
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <!-- End  alert -->
+
+        <div class="new_wizard">
+          <h1 class="title">zones</h1>
+        </div>
+        <!-- End  Wizard -->
+
+        <div class="wizard">
+          <ul class="link-wizard">
+            <li>
+              zones
+              <span
+                data-toggle="tooltip"
+                class="toolink"
+                title="You can see all administrators’ Emails, edit them, or create new ones.
+      You can Edit store Admin panel language."
+                >!</span
+              >
+            </li>
+            <li><a href="index.html">Administration</a></li>
+            <li>zones</li>
+          </ul>
+          <div class="support_dropdown-head">
+            <a href="#" class="bottom"><i class="fas fa-plus"></i> Create</a>
+
+            <ul class="support_dropdown-content">
+              <li>
+                <a href="zones-edit.html"> Zone consisting of countries</a>
+              </li>
+              <li>
+                <a href="zones-edit.html"> Zone consisting of cities </a>
+              </li>
+
+              <li>
+                <a href="zones-edit.html"> Zone consisting of Areas</a>
+              </li>
+              <li>
+                <a href="zones-edit.html"> Zone consisting of other zones </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--End wizard -->
+
+        <div class="segment">
+          <div class="filter">
+            <h2 class="title"><i class="fas fa-filter"></i> Filters</h2>
+            <span class="clickbot">
+              <i class="a-minus rotate"></i>
+            </span>
+            <div class="disbox">
+              <form action="" method="" class="form">
+                <div class="row">
+                  <div class="col-sm-3 field">
+                    <label>Name </label>
+                    <i class="fas fa-sort-down"></i>
+                    <select class="form-control"
+                      ><option value="contains">Contains</option
+                      ><option value="not_contains">Not contains</option
+                      ><option value="equal">Equal</option
+                      ><option value="not_equal">Not equal</option
+                      ><option value="empty">Empty</option
+                      ><option value="not_empty">Not empty</option
+                      ><option value="starts_with">Starts with</option
+                      ><option value="ends_with">Ends with</option
+                      ><option value="in">In</option
+                      ><option value="not_in">Not in</option></select
+                    >
+                  </div>
+                  <div class="col-sm-3 field">
+                    <label> value </label
+                    ><input type="text" name="" class="form-control" />
+                  </div>
+                  <div class="col-sm-3 field">
+                    <label>Code </label>
+                    <i class="fas fa-sort-down"></i>
+                    <select class="form-control"
+                      ><option value="contains">Contains</option
+                      ><option value="not_contains">Not contains</option
+                      ><option value="equal">Equal</option
+                      ><option value="not_equal">Not equal</option
+                      ><option value="empty">Empty</option
+                      ><option value="not_empty">Not empty</option
+                      ><option value="starts_with">Starts with</option
+                      ><option value="ends_with">Ends with</option
+                      ><option value="in">In</option
+                      ><option value="not_in">Not in</option></select
+                    >
+                  </div>
+                  <div class="col-sm-3 field">
+                    <label> value </label
+                    ><input type="text" name="" class="form-control" />
+                  </div>
+                  <!-- End field -->
+                  <div class="col-sm-12 bot field">
+                    <button class="bottom clear" type="reset">
+                      Clear all
+                    </button>
+                    <button class="bottom" type="submit">
+                      Filter
+                    </button>
+                  </div>
+                  <!-- End field -->
+                </div>
+                <!-- End Row -->
+              </form>
+            </div>
+            <!-- End disbox -->
+            <!-- <div class="spinner ">
+              <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+              </div>
+            </div> -->
+            <!-- End spinner  -->
+          </div>
+          <!-- Ene filter -->
+        </div>
+        <!-- Ene segment -->
+
+        <div class="segment">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th>code</th>
+                  <th>name</th>
+                  <th>Type</th>
+                  <th>Actions</th>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>ahmed</td>
+                  <td>Country</td>
+                  <td>
+                    <a class="bottom green" href="zones-edit.html" title="Edit">
+                      <i class="far fa-edit"></i>
+                    </a>
+                    <a
+                      class="bottom red"
+                      href="#"
+                      title="Delete"
+                      data-toggle="modal"
+                      data-target="#delete-item"
+                    >
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>ahmed</td>
+                  <td>Country</td>
+                  <td>
+                    <a class="bottom green" href="zones-edit.html" title="Edit">
+                      <i class="far fa-edit"></i>
+                    </a>
+                    <a
+                      class="bottom red"
+                      href="#"
+                      title="Delete"
+                      data-toggle="modal"
+                      data-target="#delete-item"
+                    >
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>ahmed</td>
+                  <td>Country</td>
+                  <td>
+                    <a class="bottom green" href="zones-edit.html" title="Edit">
+                      <i class="far fa-edit"></i>
+                    </a>
+                    <a
+                      class="bottom red"
+                      href="#"
+                      title="Delete"
+                      data-toggle="modal"
+                      data-target="#delete-item"
+                    >
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>ahmed</td>
+                  <td>Country</td>
+                  <td>
+                    <a class="bottom green" href="zones-edit.html" title="Edit">
+                      <i class="far fa-edit"></i>
+                    </a>
+                    <a
+                      class="bottom red"
+                      href="#"
+                      title="Delete"
+                      data-toggle="modal"
+                      data-target="#delete-item"
+                    >
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- segment -->
+
+        <nav class="icon-right">
+          <a
+            href="#"
+            class="fas fa-cog"
+            data-toggle="modal"
+            data-target="#ex-Modal"
+          ></a>
+          <!-- <a href="#" class="far fa-life-ring" data-toggle="modal" data-target="#ex-Modal"></a>-->
+        </nav>
+
+        <div
+          class="modal fade show"
+          id="ex-Modal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+        >
+          <div class="modal-dialog popurl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="title"></h2>
+                <span
+                  class="close de-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  ×
+                </span>
+              </div>
+              <div class="modal-body">
+                <iframe
+                  id="myFrame"
+                  src="https://zvendo.com/blog/docs/"
+                ></iframe>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End POPUP -->
+        <div
+          class="modal fade show"
+          id="delete-item"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <!-- <div class="modal-header">
+                <h2 class="title"></h2>
+                <span
+                  class="close de-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  ×
+                </span>
+              </div> -->
+              <div class="modal-body">
+                <div class="warning">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <h3 class="title">Confirm your action</h3>
+                  <p>Are you sure you want to perform this action?</p>
+                </div>
+              </div>
+              <div class="modal-footer dis-center">
+                <a href="#" class="bottom green"
+                  ><i class="fas fa-check"></i> Yas</a
+                >
+                <a href="#" class="bottom red" data-dismiss="modal"
+                  ><i class="fas fa-times"></i> No</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End POPUP -->
+      </div>
+      <!-- End Contant Inner -->
+    </div>
+    <!-- End content -->
+  </body>
+</html>

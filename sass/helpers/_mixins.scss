@@ -31,7 +31,7 @@
     padding: $minmargin;
     background: $white;
     @include border-radius(5px);
-    @include prefixer (box-shadow, 0px 0px 4px #d4d4d4, webkit moz o ms);
+    @include prefixer(box-shadow, 0px 0px 4px #d4d4d4, webkit moz o ms);
     @include position(relative);
 }
 
@@ -90,9 +90,7 @@
     @include border-radius(60px);
     text-transform: capitalize;
 
-    @media (max-width:450px) {
-        padding: 3px 20px;
-    }
+
 
     &:before {
         content: "";
@@ -117,6 +115,7 @@
 
     i {
         margin-right: 5px;
+        font-size: 12px;
     }
 }
 
@@ -177,79 +176,13 @@
     }
 }
 
-@mixin banner {
-    @include section;
-    height: 450px;
-    padding: $zero;
-    background: $white url(../images/slides/img1.jpg) no-repeat fixed center center/cover;
-    @include flex;
-
-    @media (max-width: 991px) {
-        height: 250px;
-        margin-top: -30px;
-    }
-
-    .container {
-        margin-top: 115px;
-
-        @media (max-width: 991px) {
-            margin-top: $zero;
-        }
-    }
-
-    .title {
-        @include title;
-        color: $white;
-        padding: $zero;
-        margin-top: $zero;
-        text-align: $right;
-
-        &:before {
-            display: $none;
-        }
-    }
-
-    .maplink {
-        @include section;
-        padding: $zero !important;
-        margin-top: $minmargin;
-
-        li {
-            display: $inline;
-            color: $red;
-
-            a {
-                color: $white;
-                position: relative;
-                padding-left: $minmargin;
-                @include transition(all 0.5s ease-in-out 0s);
-
-                &:hover {
-                    color: $red;
-                }
-
-                i {
-                    font-size: 12px;
-                }
-
-                &:before {
-                    @include position(absolute, $top: 1px, $left: 2px);
-                    content: "/";
-                    display: $inline;
-                    color: $white;
-                }
-            }
-        }
-    }
-}
-
 @mixin form {
     .field {
         position: relative;
         margin-top: $minmargin;
 
         .field-tow {
-            @media (max-width:767px) {
+            @media (max-width: 767px) {
                 max-width: $fullwidth;
                 flex: $fullwidth;
                 margin-bottom: $minmargin;
@@ -261,19 +194,19 @@
         }
 
         &.pad {
-            padding: $zero $maxmargin+$maxmargin;
+            padding: $zero $maxmargin + $maxmargin;
 
-            @media (max-width:550px) {
+            @media (max-width: 550px) {
                 padding: $zero;
             }
         }
 
-        @media (max-width:991px) {
+        @media (max-width: 991px) {
             max-width: $fullwidth;
             flex: $fullwidth;
         }
 
-        @media (max-width:550px) {}
+        @media (max-width: 550px) {}
 
         label {
             font-weight: bold;
@@ -301,19 +234,19 @@
         }
 
         i {
-            @include position(absolute, $top:43px, $right:30px);
+            @include position(absolute, $top: 43px, $right: 30px);
             z-index: 10;
         }
 
         .disabled {
-            opacity: .5;
+            opacity: 0.5;
         }
 
         .labeled {
             position: relative;
 
             .descr {
-                @include position(absolute, $top:1px, $left:1px);
+                @include position(absolute, $top: 1px, $left: 1px);
                 background: $ofwhite;
                 height: 48px;
                 padding: $zero 10px;
@@ -327,17 +260,35 @@
             }
         }
 
+        .amount {
+            position: relative;
+
+            .descr {
+                @include position(absolute, $top: 1px, $right: 1px);
+                background: $ofwhite;
+                height: 48px;
+                padding: $zero 20px;
+                color: $blak;
+                @include flex;
+                justify-content: $center;
+            }
+
+            .form-control {
+                padding-right: 60px;
+            }
+        }
+
         .text {
             font-weight: 600;
             margin-left: 5px;
         }
 
         .input-group-addon {
-            @include position(absolute, $top:1px, $right:1px);
+            @include position(absolute, $top: 1px, $right: 1px);
             background: $ofwhite;
             width: 50px;
             height: 48px;
-            @include border-radius(0 .25rem .25rem 0);
+            @include border-radius(0 0.25rem 0.25rem 0);
             @include flex;
             justify-content: $center;
             z-index: 10;
@@ -370,7 +321,6 @@
                 @include transition(all 0.5s ease-in-out 0s);
                 cursor: pointer;
 
-
                 i {
                     position: static;
                     top: $auto;
@@ -398,14 +348,76 @@
                 right: $minmargin;
             }
         }
+
+        &.social {
+            .form-control {
+                padding-left: $maxmargin * 2;
+            }
+
+            .icons-link {
+                @include position(absolute, $top: 0px, $left: 16px);
+                @include flex;
+                justify-content: $center;
+                height: 50px;
+                width: 50px;
+                color: $white;
+                @include border-radius(0.25rem 0px 0px 0.25rem);
+
+                &.facebook {
+                    background: $facebook;
+                }
+
+                &.twitter {
+                    background: $twitter;
+                }
+
+                &.instagram {
+                    background: $instagram;
+                }
+
+                &.linkedin {
+                    background: $linkedin;
+                }
+
+                &.youtube {
+                    background: $youtube;
+                }
+            }
+        }
+
+        &.select {
+            input.form-control {
+                padding-right: 100px !important;
+            }
+
+            .select-inner {
+                @include position(absolute, $top: 28px, $right: 15px);
+                padding-right: $minmargin;
+
+                select.form-control {
+                    border: $zero;
+                    @include border-radius(0px);
+                    background: $none;
+
+                    &:focus {
+                        box-shadow: $none;
+                    }
+                }
+
+                i {
+                    top: $minmargin !important;
+                    right: $minmargin !important;
+                }
+            }
+        }
     }
-
-
 
     .block,
     .block2,
     .block3,
-    .block7 {
+    .block7,
+    .block8,
+    .block9 {
         .field {
             i {
                 right: $minmargin;
@@ -426,14 +438,14 @@
         }
 
         .slider {
-            @include position(absolute, $top: 0, $left: 0, $right:0, $bottom:0);
+            @include position(absolute, $top: 0, $left: 0, $right: 0, $bottom: 0);
             cursor: pointer;
             background: #ccc;
             @include transition(all 0.5s ease-in-out 0s);
 
             &:before {
                 content: "";
-                @include position(absolute, $left:6px, $bottom:3px);
+                @include position(absolute, $left: 6px, $bottom: 3px);
                 height: 19px;
                 width: 19px;
                 background-color: $white;
@@ -444,7 +456,6 @@
         input:checked+.slider {
             background: $green;
         }
-
 
         input:checked+.slider:before {
             -webkit-transform: translateX(26px);
@@ -460,17 +471,15 @@
                 @include border-radius(50%);
             }
         }
-
     }
 
     .disabled {
 
         .switch,
         .text {
-            opacity: .5;
+            opacity: 0.5;
         }
     }
-
 }
 
 @mixin spinner {
@@ -493,17 +502,17 @@
         @include position(absolute, $top: 0, $left: 0);
         width: $fullwidth;
         height: $fullwidth;
-        animation: sk-chase-dot 2.0s infinite ease-in-out both;
+        animation: sk-chase-dot 2s infinite ease-in-out both;
     }
 
     .sk-chase-dot:before {
-        content: '';
+        content: "";
         display: block;
         width: 25%;
         height: 25%;
         background-color: $blue;
         border-radius: 100%;
-        animation: sk-chase-dot-before 2.0s infinite ease-in-out both;
+        animation: sk-chase-dot-before 2s infinite ease-in-out both;
     }
 
     .sk-chase-dot:nth-child(1) {
@@ -511,7 +520,7 @@
     }
 
     .sk-chase-dot:nth-child(2) {
-        animation-delay: -1.0s;
+        animation-delay: -1s;
     }
 
     .sk-chase-dot:nth-child(3) {
@@ -535,7 +544,7 @@
     }
 
     .sk-chase-dot:nth-child(2):before {
-        animation-delay: -1.0s;
+        animation-delay: -1s;
     }
 
     .sk-chase-dot:nth-child(3):before {
@@ -575,21 +584,19 @@
 
         100%,
         0% {
-            transform: scale(1.0);
+            transform: scale(1);
         }
     }
 }
 
-
 @mixin arrow {
-    @include position(absolute, $top:3px, $right:-20px);
+    @include position(absolute, $top: 3px, $right: -20px);
     font-family: "Font Awesome 5 Free";
     content: "\f105";
     display: $inline;
     font-weight: 900;
     font-size: 13px;
 }
-
 
 @mixin dropdown {
     position: relative;
@@ -599,7 +606,7 @@
         margin-left: 10px;
     }
 
-    @media (max-width:991px) {
+    @media (max-width: 991px) {
         margin-left: 5px;
     }
 
@@ -612,9 +619,10 @@
             @include transition(all 0.5s ease-in-out 0s);
             white-space: nowrap;
             overflow: hidden;
+            margin-left: 5px;
             text-overflow: ellipsis;
 
-            @media (max-width:991px) {
+            @media (max-width: 991px) {
                 display: $none;
             }
 
@@ -625,10 +633,10 @@
 
         i {
             font-size: 14px;
-            margin-right: 5px;
+
             @include transition(all 0.5s ease-in-out 0s);
 
-            @media (max-width:991px) {
+            @media (max-width: 991px) {
                 @include flex;
                 @include border-radius(50%);
                 width: 30px;
@@ -643,13 +651,11 @@
                 font-size: 12px;
                 margin-left: 2px;
 
-                @media (max-width:991px) {
+                @media (max-width: 991px) {
                     display: $none;
                 }
-
             }
         }
-
 
         .number {
             @include position(absolute, $top: -10px, $right: -10px);
@@ -669,19 +675,20 @@
             i {
                 color: $ofblue;
             }
-
         }
     }
 
     .support_dropdown-content {
-        @include position(absolute, $top: 30px, $right:0px);
+        @include position(absolute, $top: 30px, $right: 0px);
         width: 150px;
-        @include prefixer (box-shadow, 0 1px 5px rgba(4, 6, 8, 0.21), webkit moz o ms);
+        @include prefixer(box-shadow,
+            0 1px 5px rgba(4, 6, 8, 0.21),
+            webkit moz o ms);
         background-color: $white;
         z-index: 22;
         opacity: 0;
         visibility: hidden;
-        @include transition(all 0.5s ease-in-out 0s);
+        @include transition(all 0.3s ease-in-out 0s);
         padding: $minmargin;
 
         li {
@@ -701,13 +708,17 @@
         }
 
         &.bell {
-            width: 170px;
+            width: 250px;
+            height: 250px;
+            border-bottom: 1px solid $ofwhite;
+            overflow: hidden;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            scroll-behavior: smooth;
 
-            @media (max-width:991px) {
-                right: $auto;
-                left: $zero;
+            @media (max-width: 400px) {
+                right: -85px;
             }
-
 
             .warning {
                 display: $inline;
@@ -715,10 +726,63 @@
                 color: $red;
                 text-align: $center;
             }
+
+            .dropdown-bell {
+                display: $inline;
+                position: relative;
+                width: $fullwidth;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                @include transition(all 0.5s ease-in-out 0s);
+                border-bottom: 1px solid $ofwhite;
+
+                &:last-child {
+                    border: $zero;
+                    padding: $zero;
+                    margin-bottom: $zero;
+                }
+
+                i {
+                    @include position(absolute, $top: 0px, $left: 0px);
+                    @include flex;
+                    justify-content: $center;
+                    width: 30px;
+                    height: 30px;
+                    @include border-radius(50%);
+                    color: $ofblue;
+                    background: $ofwhite;
+                    @include transition(all 0.5s ease-in-out 0s);
+                }
+
+                .details {
+                    padding-left: 45px;
+
+                    h4 {
+                        color: $blak;
+                        @include transition(all 0.5s ease-in-out 0s);
+                        font-size: 18px;
+                    }
+
+                    p {
+                        line-height: 22px;
+                    }
+                }
+
+                &:hover {
+                    i {
+                        color: $ofwhite;
+                        background: $ofblue;
+                    }
+
+                    .details {
+                        h4 {
+                            color: $ofblue;
+                        }
+                    }
+                }
+            }
         }
-
     }
-
 
     &:hover {
         .name-user {
@@ -727,7 +791,6 @@
             i {
                 color: $ofblue;
             }
-
         }
 
         .support_dropdown-content {
@@ -738,14 +801,12 @@
             &.bell {
                 top: 40px;
 
-                @media (max-width:991px) {
+                @media (max-width: 991px) {
                     top: 46px;
                 }
-
             }
         }
     }
-
 }
 
 @mixin check-box {
@@ -758,12 +819,12 @@
         z-index: 1;
 
         &.hide {
-            opacity: .5;
+            opacity: 0.5;
         }
 
         input[type="checkbox"],
         input[type="radio"] {
-            @include position(absolute, $right:9000px);
+            @include position(absolute, $right: 9000px);
         }
 
         input[type="checkbox"]+.label-text:before,
@@ -777,7 +838,7 @@
             font-size: 17px;
             display: $inline;
             font-style: initial;
-            color: #e2e2e2;
+            color: #b1b1b1;
         }
 
         input[type="radio"]+.label-text:before {
@@ -823,8 +884,6 @@
             }
         }
     }
-
-
 }
 
 @mixin divider {
@@ -850,8 +909,8 @@
         }
 
         &:before {
-            @include position(absolute, $top: 10px, $right:15px);
-            content: '';
+            @include position(absolute, $top: 10px, $right: 15px);
+            content: "";
             display: inline-block;
             border-top: 5px solid $blak;
             border-left: 5px solid transparent;
@@ -894,19 +953,16 @@
             margin-bottom: $zero;
         }
     }
-
 }
-
 
 @mixin styleslider {
     width: $fullwidth;
     @include position(relative);
     margin-top: $maxmargin;
 
-    @media (max-width:991px) {
+    @media (max-width: 991px) {
         margin-top: $zero;
     }
-
 
     .slick-list {
         @include position(relative);
@@ -916,14 +972,18 @@
         margin: $zero -15px;
 
         .slick-track {
-            @include position(relative, $top: 0, $left:auto, $right:auto, $bottom:auto);
+            @include position(relative,
+                $top: 0,
+                $left: auto,
+                $right: auto,
+                $bottom: auto);
             display: $block;
             overflow: hidden;
 
             &:after,
             &:before {
                 display: table;
-                content: '';
+                content: "";
             }
         }
 
@@ -933,7 +993,7 @@
     /// End .Slick-list
     .slick-prev,
     .slick-next {
-        @include position(absolute, $top:-50px, $right:0px);
+        @include position(absolute, $top: -50px, $right: 0px);
         width: 35px;
         height: 35px;
         cursor: pointer;
@@ -944,7 +1004,7 @@
         @include transition(all 0.5s ease-in-out 0s);
         background: $blue url(../images/right-arrow.png) no-repeat center center;
 
-        @media (max-width:991px) {
+        @media (max-width: 991px) {
             display: $none !important;
         }
 
@@ -964,7 +1024,7 @@
         text-align: $center;
         display: $none !important;
 
-        @media (max-width:991px) {
+        @media (max-width: 991px) {
             display: $block !important;
         }
 

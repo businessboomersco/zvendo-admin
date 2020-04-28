@@ -51,7 +51,7 @@
       <div class="username">
         <div class="imguser"><img src="images/photo.jpg" alt="" /></div>
         <h3 class="title">Mohamed Ahmed</h3>
-        <a href="#" class="linkaccount">My account</a>
+        <a href="profile.html" class="linkaccount">My account</a>
       </div>
       <!-- End username -->
       <ul class="accordion">
@@ -306,7 +306,6 @@
             <li>
               <a
                 href="administrators.html"
-                class="toggle"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
                 >Administrators</a
@@ -316,7 +315,6 @@
             <li>
               <a
                 href="contacts.html"
-                class="toggle"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
                 >Contacts</a
@@ -326,7 +324,6 @@
             <li>
               <a
                 href="messages.html"
-                class="toggle"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
                 >Messages</a
@@ -336,7 +333,6 @@
             <li>
               <a
                 href="emails.html"
-                class="toggle"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
                 >Emails</a
@@ -346,7 +342,6 @@
             <li>
               <a
                 href="store-identity.html"
-                class="toggle"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
                 >Store Identity</a
@@ -406,7 +401,6 @@
             <li>
               <a
                 href="media-gallery.html"
-                class="toggle"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
               >
@@ -417,7 +411,6 @@
             <li>
               <a
                 href="store-lock.html"
-                class="toggle"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
               >
@@ -428,7 +421,6 @@
             <li>
               <a
                 href="domains.html"
-                class="toggle"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
               >
@@ -438,9 +430,9 @@
             <li>
               <a
                 href="notifications.html"
-                class="toggle"
                 data-toggle="tooltip"
-                title="you can see all your customers and see their orders."
+                title=""
+                data-original-title="you can see all your customers and see their orders."
               >
                 Notifications</a
               >
@@ -448,7 +440,7 @@
             <li>
               <a
                 href="reset-store.html"
-                class="toggle red"
+                class="red"
                 data-toggle="tooltip"
                 title="you can see all your customers and see their orders."
               >
@@ -553,8 +545,54 @@
               </div>
 
               <div class="support_dropdown-content bell">
-                <span class="warning"> No new notifications</span>
+                <!-- <span class="warning"> No new notifications</span> -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
+                <a href="#" class="dropdown-bell">
+                  <i class="fas fa-bell"></i>
+
+                  <div class="details">
+                    <h4>new order</h4>
+                    <p>Mohamed emad has placed an oreder no 3520!</p>
+                  </div>
+                </a>
+                <!-- End dropdown-bell -->
               </div>
+              <!-- End support_dropdown-content -->
             </div>
             <!-- End support_dropdown-head -->
 
@@ -602,17 +640,17 @@
               <ul class="support_dropdown-content">
                 <li>
                   <i class="fas fa-user"> </i>
-                  <a href="#">My account</a>
+                  <a href="profile.html">My account</a>
+                </li>
+
+                <li>
+                  <i class="fas fa-file-alt"></i>
+                  <a href="profile-log.html"> Log </a>
                 </li>
 
                 <li>
                   <i class="fas fa-sign-out-alt"></i>
                   <a href="#">Logout</a>
-                </li>
-
-                <li>
-                  <i class="fas fa-file-alt"></i>
-                  <a href="#"> Log </a>
                 </li>
               </ul>
             </div>
@@ -704,9 +742,7 @@
             <li>customers</li>
           </ul>
           <nav>
-            <a href="#" class="bottom">
-              <i class="fas fa-plus-circle"></i> Create
-            </a>
+            <a href="#" class="bottom"> <i class="fas fa-plus"></i> Create </a>
             <a
               href="#"
               class="bottom"
@@ -718,555 +754,586 @@
         </div>
         <!--End wizard -->
 
-        <div class="row">
-          <div class="col-sm-12 wit-rspon">
-            <div class="segment">
-              <div class="head mb-0">
-                <h2 class="title click-filter">
-                  <i class="fas fa-filter"></i> Filters
-                </h2>
-                <div class="btnright">
-                  <button class="bottom" type="submit">
-                    Filter
-                  </button>
-                  <a href="#" class="clear">Clear all</a>
-                </div>
-              </div>
-              <!-- End Head -->
-              <div class="field-filter slidedwn-filter">
-                <form action="" method="" class="form">
-                  <div class="row">
-                    <div class="col-sm-6 field">
-                      <label>Search </label>
-                      <i class="fas fa-sort-down"></i>
-                      <select class="form-control"
-                        ><option value="contains">Contains</option
-                        ><option value="not_contains">Not contains</option
-                        ><option value="equal">Equal</option
-                        ><option value="not_equal">Not equal</option
-                        ><option value="empty">Empty</option
-                        ><option value="not_empty">Not empty</option
-                        ><option value="starts_with">Starts with</option
-                        ><option value="ends_with">Ends with</option
-                        ><option value="in">In</option
-                        ><option value="not_in">Not in</option></select
-                      >
-                    </div>
-                    <div class="col-sm-6 field">
-                      <label>Value</label
-                      ><input type="text" name="" class="form-control" />
-                    </div>
+        <div class="segment">
+          <div class="filter">
+            <h2 class="title"><i class="fas fa-filter"></i> Filters</h2>
+            <span class="clickbot">
+              <i class="a-minus rotate"></i>
+            </span>
+            <div class="disbox">
+              <form action="" method="" class="form">
+                <div class="row">
+                  <div class="col-sm-6 field">
+                    <label>Search </label>
+                    <i class="fas fa-sort-down"></i>
+                    <select class="form-control"
+                      ><option value="contains">Contains</option
+                      ><option value="not_contains">Not contains</option
+                      ><option value="equal">Equal</option
+                      ><option value="not_equal">Not equal</option
+                      ><option value="empty">Empty</option
+                      ><option value="not_empty">Not empty</option
+                      ><option value="starts_with">Starts with</option
+                      ><option value="ends_with">Ends with</option
+                      ><option value="in">In</option
+                      ><option value="not_in">Not in</option></select
+                    >
                   </div>
-                  <!-- End Row -->
-                </form>
-              </div>
-              <!-- End field-filter -->
-              <!-- <div class="spinner ">
-                <div class="sk-chase">
-                  <div class="sk-chase-dot"></div>
-                  <div class="sk-chase-dot"></div>
-                  <div class="sk-chase-dot"></div>
-                  <div class="sk-chase-dot"></div>
-                  <div class="sk-chase-dot"></div>
-                  <div class="sk-chase-dot"></div>
+                  <div class="col-sm-6 field">
+                    <label>Value</label
+                    ><input type="text" name="" class="form-control" />
+                  </div>
+                  <!-- End field -->
+                  <div class="col-sm-12 bot field">
+                    <button class="bottom clear" type="reset">
+                      Clear all
+                    </button>
+                    <button class="bottom" type="submit">
+                      Filter
+                    </button>
+                  </div>
+                  <!-- End field -->
                 </div>
-              </div> -->
-              <!-- End spinner  -->
+                <!-- End Row -->
+              </form>
             </div>
+            <!-- End disbox -->
+            <!-- <div class="spinner ">
+              <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+              </div>
+            </div> -->
+            <!-- End spinner  -->
           </div>
-          <!-- End wit-rspon -->
-
-          <div class="col-sm-12 wit-rspon">
-            <div class="segment">
-              <form method="" action="#" class="form">
-                <div class="field show-num">
+          <!-- Ene filter -->
+        </div>
+        <!-- Ene segment -->
+        <form method="" action="#" class="form">
+          <div class="segment">
+            <div class="head">
+              <div class="show-num">
+                <p>Show</p>
+                <div class="field">
                   <i class="fas fa-sort-down"></i>
                   <select class="form-control">
-                    <option value="">Show 10</option>
+                    <option value=""> 10</option>
                     <option value="">25</option>
                     <option value="">50</option>
                   </select>
                 </div>
                 <!-- End field -->
-
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                    <tbody>
-                      <tr>
-                        <th>select</th>
-                        <th>
-                          <a href="#" class="name-so"
-                            >First name <i class="fas fa-sort"></i
-                          ></a>
-                        </th>
-                        <th>
-                          <a href="#" class="name-so"
-                            >Last name <i class="fas fa-sort"></i
-                          ></a>
-                        </th>
-                        <th>
-                          <a href="#" class="name-so"
-                            >email <i class="fas fa-sort"></i
-                          ></a>
-                        </th>
-                        <th>
-                          <a href="#" class="name-so"
-                            >Registration date <i class="fas fa-sort"></i
-                          ></a>
-                        </th>
-                        <th>Enabled</th>
-                        <th>Verified</th>
-                        <th>Actions</th>
-                      </tr>
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret disabled">
-                            <i class="fas fa-user-secret"></i> Guest
-                          </span>
-                        </td>
-                        <td>no</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret disabled">
-                            <i class="fas fa-user-secret"></i> Guest
-                          </span>
-                        </td>
-                        <td>no</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret disabled">
-                            <i class="fas fa-user-secret"></i> Guest
-                          </span>
-                        </td>
-                        <td>no</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret disabled">
-                            <i class="fas fa-user-secret"></i> Guest
-                          </span>
-                        </td>
-                        <td>no</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret disabled">
-                            <i class="fas fa-user-secret"></i> Guest
-                          </span>
-                        </td>
-                        <td>no</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret disabled">
-                            <i class="fas fa-user-secret"></i> Guest
-                          </span>
-                        </td>
-                        <td>no</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret disabled">
-                            <i class="fas fa-user-secret"></i> Guest
-                          </span>
-                        </td>
-                        <td>no</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret disabled">
-                            <i class="fas fa-user-secret"></i> Guest
-                          </span>
-                        </td>
-                        <td>no</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret disabled">
-                            <i class="fas fa-user-secret"></i> Guest
-                          </span>
-                        </td>
-                        <td>no</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="customchick">
-                          <label class="che-box">
-                            <input type="checkbox" name="check" />
-                            <span class="label-text">check</span>
-                          </label>
-                          <!-- customchick -->
-                        </td>
-                        <td>Vsdfsd</td>
-                        <td>Sdfsd</td>
-                        <td>
-                          <a href="mailTo:sdf@gmail.com" class="blue"
-                            >sdf@gmail.com</a
-                          >
-                        </td>
-                        <td>26-03-2020 00:37</td>
-                        <td>
-                          <span class="secret">
-                            <i class="fas fa-check"></i> Enabled
-                          </span>
-                        </td>
-                        <td>yas</td>
-
-                        <td>
-                          <a class="blue" href="#">
-                            Show orders
-                          </a>
-                          <a
-                            class="bottom"
-                            href="categories-create.html"
-                            title="Create"
-                          >
-                            <i class="far fa-eye"></i>
-                          </a>
-                          <a
-                            class="bottom  green"
-                            href="customers-edit.html"
-                            title="Edit"
-                          >
-                            <i class="far fa-edit"></i>
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </form>
+                <p>Entries</p>
+              </div>
+              <!-- End show-num -->
             </div>
-            <!-- segment -->
-          </div>
-          <!-- End wit-rspon -->
-        </div>
-        <!-- End row -->
+            <!-- End head -->
 
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <th>select</th>
+                    <th>
+                      <a href="#" class="name-so"
+                        >First name <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#" class="name-so"
+                        >Last name <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#" class="name-so"
+                        >email <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#" class="name-so"
+                        >Registration date <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>Enabled</th>
+                    <th>Verified</th>
+                    <th>Actions</th>
+                  </tr>
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span>
+                    </td>
+                    <td>no</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span>
+                    </td>
+                    <td>no</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span>
+                    </td>
+                    <td>no</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span>
+                    </td>
+                    <td>no</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span>
+                    </td>
+                    <td>no</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span>
+                    </td>
+                    <td>no</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span>
+                    </td>
+                    <td>no</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span>
+                    </td>
+                    <td>no</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span>
+                    </td>
+                    <td>no</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check" />
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+                    <td>Vsdfsd</td>
+                    <td>Sdfsd</td>
+                    <td>
+                      <a href="mailTo:sdf@gmail.com" class="blue"
+                        >sdf@gmail.com</a
+                      >
+                    </td>
+                    <td>26-03-2020 00:37</td>
+                    <td>
+                      <span class="secret">
+                        <i class="fas fa-check"></i> Enabled
+                      </span>
+                    </td>
+                    <td>yas</td>
+
+                    <td>
+                      <a class="blue" href="orders.html">
+                        Show orders
+                      </a>
+                      <a
+                        class="bottom"
+                        href="categories-create.html"
+                        title="Create"
+                      >
+                        <i class="far fa-eye"></i>
+                      </a>
+                      <a
+                        class="bottom  green"
+                        href="customers-edit.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- segment -->
+          <div class="pager">
+            <p>
+              showing <span>1</span> to <span>10</span> of
+              <span> 350</span> entries
+            </p>
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#"
+                  ><i class="fas fa-chevron-left"></i>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link active" href="#">1 </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#"
+                  ><i class="fas fa-chevron-right"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <!-- End pager -->
+        </form>
         <nav class="icon-right">
           <a
             href="#"
