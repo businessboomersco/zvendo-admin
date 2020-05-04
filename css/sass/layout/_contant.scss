@@ -236,15 +236,34 @@
     .head {
       @include flex;
       justify-content: space-between;
+      width: $fullwidth;
       margin-bottom: $minmargin;
+      position: relative;
 
       &:last-child {
         margin-bottom: $zero;
       }
 
-      @media (max-width:767px) {
-        .hide {
-          display: $none;
+
+      .show-num {
+        @include flex;
+        justify-content: space-between;
+        width: 140px;
+
+        .field {
+          margin: $zero;
+          width: 50px !important;
+          max-width: 50px !important;
+
+          .form-control {
+            height: 40px;
+            font-weight: 600;
+          }
+
+          i {
+            top: 10px;
+            right: 7px;
+          }
         }
       }
 
@@ -277,7 +296,11 @@
     }
 
     .title {
-      font-size: 23px;
+      font-size: 22px;
+
+      @media (max-width:991px) {
+        font-size: 20px;
+      }
 
       span {
         font-size: 15px;
@@ -309,6 +332,8 @@
         height: 58px;
 
         .a-minus {
+          height: 58px;
+
           &:after {
             content: "\f054" !important;
             @include rotate(90deg);
@@ -693,6 +718,7 @@
       .img-tab {
         max-width: 50px;
         max-height: 50px;
+        border: 1px solid $border;
       }
 
       &.tabstyle {
@@ -737,8 +763,11 @@
         }
 
         .nav-link {
+          width: $fullwidth;
           font-size: 16px;
           font-weight: 600;
+          @include flex;
+          justify-content: space-between;
           @include transition(all 0.5s ease-in-out 0s);
 
 
@@ -909,7 +938,6 @@
       @include position(absolute, $top:0px, $right:0px);
       cursor: pointer;
       width: $fullwidth;
-      height: $fullwidth;
       display: flex;
       justify-content: flex-end;
       padding: $zero $minmargin;
@@ -917,6 +945,7 @@
       .a-minus {
         position: relative;
         width: $fullwidth;
+        height: 30px;
         font-style: inherit;
 
         &:after {
@@ -998,6 +1027,7 @@
 
         .disbox {
           margin-top: $minmargin;
+          position: relative;
         }
       }
     }
@@ -1036,15 +1066,42 @@
 
       .custom-file {
         width: $fullwidth;
+        height: 150px;
+
+        .fileUpload {
+          display: $none;
+        }
 
         .custom-file-label {
           padding: $zero;
+          height: 150px;
 
-          &:after {
-            @include border-radius(0px);
-            cursor: pointer;
+          &::before {
+            @include position(absolute, $top:20px);
+            content: "\f382";
+            font-weight: 600;
+            font-family: "Font Awesome 5 Free";
+            font-size: 40px;
+            color: $bc-gary;
+            z-index: 10;
             width: $fullwidth;
             text-align: $center;
+          }
+
+          &:after {
+            content: "drog and drop click here";
+            @include border-radius(0px);
+            cursor: pointer;
+            @include flex;
+            justify-content: $center;
+            width: $fullwidth;
+            height: $fullwidth;
+            text-align: $center;
+            @include border-radius(5px);
+            background: $ofwhite;
+            padding: $zero;
+            padding-top: $maxmargin+$minmargin;
+            border: 1px dashed #d6d6d6;
           }
         }
       }
@@ -1147,7 +1204,7 @@
           padding: 10px;
 
           .title {
-            font-size: 17px;
+            font-size: 16px;
           }
 
           .clickbot {
@@ -1843,6 +1900,7 @@
               border: $zero;
               padding: .5rem $zero !important;
               border-bottom: 2px solid transparent;
+              justify-content: $center;
             }
 
             .nav-link.active,
@@ -1850,6 +1908,88 @@
               border: $zero;
               border-bottom: 2px solid $ofblue;
             }
+          }
+        }
+      }
+    }
+
+    .tab-prod {
+      @media (max-width: 991px) {
+        max-width: $fullwidth;
+        flex: $fullwidth;
+        margin-top: $minmargin;
+
+        .boxflex {
+          margin-top: $zero;
+        }
+      }
+
+      &.bor-pad {
+        padding-right: $zero;
+        border-right: 1px solid $border;
+        margin-top: $minmargin;
+
+        @media (max-width: 991px) {
+          padding-right: $minmargin;
+          border: $zero;
+        }
+      }
+
+      .nav-tabs {
+        border: $zero;
+        margin: $zero;
+
+        li {
+          margin: $zero;
+          width: $fullwidth;
+
+          @media (max-width: 991px) {
+            width: $auto;
+            margin: $zero 1px 1px $zero;
+
+            &:last-child {
+              margin: $zero;
+            }
+          }
+
+          .nav-link {
+            border: $zero;
+            @include border-radius(0px);
+
+            @media (max-width: 991px) {
+              width: $auto;
+              @include border-radius(4px);
+              background: $ofwhite;
+
+              .toolink {
+                margin-left: 5px;
+              }
+            }
+
+            &.active,
+            &:hover {
+              color: $ofblue;
+              background: $ofwhite;
+
+              @media (max-width: 991px) {
+                color: $white;
+                background: $ofblue;
+              }
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        border: $zero;
+        padding: $zero;
+
+        td {
+          vertical-align: top;
+          white-space: inherit;
+
+          &:last-child {
+            white-space: nowrap;
           }
         }
       }
@@ -1925,6 +2065,8 @@
         }
       }
     }
+
+
 
     .block4 {
       margin-top: $minmargin;
@@ -2183,28 +2325,6 @@
 
   .form {
     @include form;
-
-    .show-num {
-      @include flex;
-      justify-content: space-between;
-      width: 140px;
-
-      .field {
-        margin: $zero;
-        width: 50px !important;
-        max-width: 50px !important;
-
-        .form-control {
-          height: 40px;
-          font-weight: 600;
-        }
-
-        i {
-          top: 10px;
-          right: 7px;
-        }
-      }
-    }
   }
 
   .spinner {
@@ -2219,13 +2339,13 @@
       width: $fullwidth;
     }
 
-
     .custom-file {
       width: $auto;
 
       @media (max-width:767px) {
-        width: $fullwidth;
+        width: 175px;
       }
+
 
       .custom-file-input {
         cursor: pointer;
@@ -2249,7 +2369,6 @@
           left: $zero;
           content: "Choose file";
           border: $zero;
-          color: $blak;
           height: 36px;
           padding: 7px $minmargin;
           font-weight: 600;
@@ -2261,6 +2380,7 @@
     .bottom {
       margin-left: $minmargin;
       background: $none;
+      padding: 5px 20px;
       border: 1px solid $blue;
       color: $blue;
 
@@ -2269,7 +2389,7 @@
         border: 1px solid $ofblue;
       }
 
-      @media (max-width:767px) {
+      @media (max-width:820px) {
         margin: $minmargin 10px $zero $zero;
 
         &:last-child {
@@ -2298,9 +2418,7 @@
         display: $inline;
         padding: 5px $minmargin;
         font-weight: 600;
-        color: $blak;
         font-size: 16px;
-
 
         &:first-child {
           background: $white;
@@ -2705,12 +2823,21 @@
       max-width: 100px;
     }
 
+    .toolink {
+      display: $inline;
+      color: $yellow;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
     .title {
       @include title;
       margin: $zero;
-      font-size: 23px;
+      font-size: 22px;
     }
   }
+
+
 
   .modal-dialog {
     margin: $zero $auto;
@@ -2724,7 +2851,8 @@
     opacity: 1;
   }
 
-  .in-seg {
+  .in-seg,
+  .op-item {
     margin: $zero;
     margin-bottom: $minmargin;
 
@@ -2737,6 +2865,120 @@
 
       .title {
         font-size: 20px;
+      }
+    }
+  }
+
+  .op-item {
+    box-shadow: $none;
+    padding: $zero;
+    margin-top: -10px;
+
+    .text {
+      color: $ofblue;
+      cursor: pointer;
+
+      i {
+        font-size: 12px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .block10 {
+      .col-sm-2.field {
+        @media (max-width: 991px) {
+          max-width: 20%;
+        }
+
+        @media (max-width: 550px) {
+          max-width: $fullwidth;
+          @include flex;
+          justify-content: $center;
+        }
+      }
+
+      .col-sm-4.field {
+        @media (max-width: 991px) {
+          max-width: 30%;
+        }
+
+        @media (max-width: 550px) {
+          max-width: 50%;
+        }
+      }
+
+
+    }
+
+    .remove10 {
+      color: $red;
+      position: relative;
+      @include flex;
+      justify-content: start;
+      cursor: pointer;
+      @include transition(all 0.5s ease-in-out 0s);
+
+      span {
+
+        color: $white;
+        background: $red;
+        @include border-radius(50%);
+        text-align: $center;
+        font-size: 12px;
+        padding: 6px 7px 4px 7px;
+        margin-right: 5px;
+        cursor: pointer;
+        @include transition(all 0.5s ease-in-out 0s);
+      }
+
+      &:hover {
+        color: $green;
+
+        span {
+          background: $green;
+        }
+
+      }
+    }
+
+    .wrap-custom-file {
+      width: $fullwidth;
+      height: 50px;
+      background: $ofwhite url(../images/add.jpg) no-repeat center center;
+      border: 1px solid $border;
+      position: relative;
+      @include border-radius(.25rem);
+
+      img {
+        width: $fullwidth;
+      }
+
+      input[type="file"] {
+        @include position(absolute, $top: 0, $left: 0);
+        width: 2px;
+        height: 2px;
+        overflow: hidden;
+        opacity: 0;
+      }
+
+      label {
+        z-index: 1;
+        width: $fullwidth;
+        overflow: hidden;
+        cursor: pointer;
+        margin: $zero;
+        position: relative;
+
+
+        &.file-ok {
+          min-height: 50px;
+          background-size: contain;
+          background-position: $center $center;
+          background-repeat: no-repeat;
+        }
       }
     }
   }
@@ -2795,6 +3037,24 @@
       p {
         color: $blak;
       }
+    }
+  }
+
+  .inner-prod {
+    width: $fullwidth;
+    background: $ofwhite;
+    @include border-radius(5px);
+    border: 1px dashed $border;
+    min-height: 130px;
+    @include flex;
+    font-size: 18px;
+    justify-content: $center;
+    text-align: $center;
+    @include transition(all 0.5s ease-in-out 0s);
+
+    &:hover {
+      background: $ofblue;
+      color: $white;
     }
   }
 }

@@ -95,6 +95,11 @@
 
 
         .link_store {
+            @media (max-width:1199px) {
+                height: 26px;
+                overflow: hidden;
+            }
+
             .sidebarCollapse {
                 color: $blue;
                 cursor: pointer;

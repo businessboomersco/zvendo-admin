@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $(".toggle").click(function(e) {
+$(document).ready(function () {
+  $(".toggle").click(function (e) {
     e.preventDefault();
     var $this = $(this);
 
@@ -23,19 +23,19 @@ $(document).ready(function() {
     }
   });
 
-  $(".navicon").click(function() {
+  $(".navicon").click(function () {
     $(".navicon")
       .not(this)
       .removeClass("active");
     $(this).toggleClass("active");
   });
 
-  $(".act-link li a").click(function() {
+  $(".act-link li a").click(function () {
     $(".act-link li a").removeClass("active");
     $(this).addClass("active");
   });
 
-  $(".child-lin").click(function() {
+  $(".child-lin").click(function () {
     $(".child-lin")
       .not(this)
       .removeClass("active");
@@ -44,22 +44,22 @@ $(document).ready(function() {
 
   $('[data-toggle="tooltip"]').tooltip();
 
-  $(function() {
+  $(function () {
     // Sidebar toggle behavior
-    $(".sidebarCollapse").on("click", function() {
+    $(".sidebarCollapse").on("click", function () {
       $("#sidebar, #content").toggleClass("active");
     });
     // Sidebar resize
-    $(".removal").on("click", function() {
+    $(".removal").on("click", function () {
       $("#sidebar").toggleClass("active");
     });
   });
 
-  $(".accordion").click(function() {
+  $(".accordion").click(function () {
     $("#sidebar, #content").removeClass("active");
   });
 
-  $(".accordion").click(function() {
+  $(".accordion").click(function () {
     var w = $(window).width();
     if (w < 991) {
       $("#sidebar, #content").addClass("active");
@@ -68,7 +68,7 @@ $(document).ready(function() {
 
   //End Header Menu SideBar
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 1) {
       $(".header").addClass("sticky");
     } else {
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
   //End Header Sticky
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 1) {
       $(".contant-inner").addClass("mar-padd");
     } else {
@@ -92,13 +92,13 @@ $(document).ready(function() {
 
   //Start Item Search Icon
 
-  $(".onclick-bot .fas.fa-search").click(function() {
+  $(".onclick-bot .fas.fa-search").click(function () {
     $(".formsearch").slideDown("");
     $(".onclick-bot .fas.fa-search").hide("fast");
     $(".onclick-bot .fas.fa-times.cancel").show("fast");
   });
 
-  $(".onclick-bot .fas.fa-times.cancel").click(function() {
+  $(".onclick-bot .fas.fa-times.cancel").click(function () {
     $(".formsearch").slideUp();
     $(".onclick-bot .fas.fa-search").show("");
     $(".onclick-bot .fas.fa-times.cancel").hide("");
@@ -106,21 +106,22 @@ $(document).ready(function() {
 
   //End Item Search Icon
 
-  $(".click_icon").click(function() {
+  $(".click_icon").click(function () {
     $(".navlist").slideToggle();
   });
 
-  $(".close_wizard").click(function() {
+  $(".close_wizard").click(function () {
     $(".navlist").slideToggle("");
   });
 
   //End Item Close Wizard Icon
 
-  $(".custom-file-input").on("change", function() {
+  $(".custom-file-input").on("change", function () {
     var fileName = $(this)
       .val()
       .split("\\")
       .pop();
+
     $(this)
       .siblings(".custom-file-label")
       .addClass("selected")
@@ -129,7 +130,7 @@ $(document).ready(function() {
 
   //End Item Uplode File
 
-  $(".vertical").on("click", ".question", function() {
+  $(".vertical").on("click", ".question", function () {
     $(this)
       .toggleClass("active")
       .next()
@@ -144,107 +145,119 @@ $(document).ready(function() {
 
   //End Item PopUp Language
 
-  $(".add").click(function() {
+  $(".add").click(function () {
     $(".col-sm-4.block:last").before(
       '<div class="col-sm-4 block"> <div class="segment">   <div class="field"><label> Type <em>*</em> </label><i class="fas fa-sort-down" > </i> <select class = "form-control"> <option value="0" selected="selected" > Default </option><option value="1">Home page banner</option > < option value = "2" > Collection page banner </option><option value="3">Collection logo</option > </select></div>  <div class="imgcent"><img class="img_prev" src="images/photo.jpg" alt="" title=""/><label class="file-bro">Choose file <input type="file" onchange="readURL(this);" style="display: none;"/></label></div></div><div class="remove"><span class="fas fa-times"></span></div></div> '
     );
   });
-  $(".optionBox").on("click", ".remove", function() {
+  $(".optionBox").on("click", ".remove", function () {
     $(this)
       .parent()
       .remove();
   });
-  $(".add2").click(function() {
+  $(".add2").click(function () {
     $(".col-sm-4.block2:last").before(
       '<div class="col-sm-4 block2"> <div class= "segment"><div class="field"><label> Type <em>*</em> </label><i class="fas fa-sort-down"></i><select class="form-control"> <option value="cart_quantity" selected="selected">Cart quantity</option><option value="customer_group">Customer group</option><option value="nth_order">Nth order</option><option value="shipping_country">Shipping country</option><option value="has_taxon">Has at least one from taxons</option><option value="total_of_items_from_taxon">Total price of items from taxon</option><option value="contains_product">Contains product</option><option value="item_total">Item total</option></select></div> <div class= "field" > <label> Count <em>*</em> </label><input type="number" class="form-control" name="" required="required"></div></div> <div class="remove2"><span class="fas fa-times"></span></div></div> '
     );
   });
-  $(".optionBox2").on("click", ".remove2", function() {
+  $(".optionBox2").on("click", ".remove2", function () {
     $(this)
       .parent()
       .remove();
   });
 
-  $(".add3").click(function() {
+  $(".add3").click(function () {
     $(".col-sm-4.block3:last").before(
-      '<div class="col-sm-4 block3"> <div class= "segment"><div class="field"><label> Type <em>*</em> </label><i class="fas fa-sort-down"></i>            <select class="form-control"><option value="order_fixed_discount" selected="selected">Order fixed discount</option><option value="unit_fixed_discount">Item fixed discount</option><option value="order_percentage_discount">Order percentage discount</option><option value="unit_percentage_discount">Item percentage discount</option><option value="shipping_percentage_discount">Shipping percentage discount</option></select></div> <div class="field"><label>Amount <em>*</em> </label><div class="labeled"><span class="descr">EGP</span><input type="text" name="" class="form-control" value="" /></div></div><div class="field"><label>App store <em>*</em> </label><div class="labeled"><span class="descr">EGP</span><input type="text" name="" class="form-control" value="" /></div></div></div> <div class="remove3"><span class="fas fa-times"></span></div></div> '
+      '<div class="col-sm-4 block3"> <div class= "segment"><div class="field"><label> Type <em>*</em> </label><i class="fas fa-sort-down"></i>            <select class="form-control"><option value="order_fixed_discount" selected="selected">Order fixed discount</option><option value="unit_fixed_discount">Item fixed discount</option><option value="order_percentage_discount">Order percentage discount</option><option value="unit_percentage_discount">Item percentage discount</option><option value="shipping_percentage_discount">Shipping percentage discount</option></select></div> <div class="field"><label>Amount <em>*</em> </label><div class="labeled r-label"><span class="descr">EGP</span><input type="text" name="" class="form-control" value="" /></div></div><div class="field"><label>App store <em>*</em> </label><div class="labeled r-label"><span class="descr">EGP</span><input type="text" name="" class="form-control" value="" /></div></div></div> <div class="remove3"><span class="fas fa-times"></span></div></div> '
     );
   });
-  $(".optionBox3").on("click", ".remove3", function() {
+  $(".optionBox3").on("click", ".remove3", function () {
     $(this)
       .parent()
       .remove();
   });
 
-  $(".add4").click(function() {
+  $(".add4").click(function () {
     $(".col-sm-4.block4:last").before(
       '<div class="col-sm-12 block4"> <div class="field"> <i class="fas fa-sort-down"></i> <select class="form-control"><option value="color">color</option><option value="size">size</option><option value="Brand">Brand</option></select></div><div class="remove4"><span class="fas fa-times"></span></div></div> '
     );
   });
-  $(".optionBox4").on("click", ".remove4", function() {
+  $(".optionBox4").on("click", ".remove4", function () {
     $(this)
       .parent()
       .remove();
   });
 
-  $(".add5").click(function() {
+  $(".add5").click(function () {
     $(".block5:last").before(
       '<div class="row block5"> <div class="col-sm-6 field"><label> Stock </label>   <input type="text" name="" class="form-control" value=""></div><div class="col-sm-6 field"><label> Warehouse </label> <i class="fas fa-sort-down"></i> <select class="form-control"><option value=""></option><option value="1">Bbn</option><option value="2">Bbn2</option><option value="3">new</option><option value="4">Elthawra</option></select></div><div class="remove5"><span class="fas fa-times"></span></div></div> '
     );
   });
-  $(".optionBox5").on("click", ".remove5", function() {
+  $(".optionBox5").on("click", ".remove5", function () {
     $(this)
       .parent()
       .remove();
   });
 
-  $(".add6").click(function() {
+  $(".add6").click(function () {
     $(".block6:last").before(
       '<div class="row block6"> <div class="col-sm-6 field"><label> Stock </label>   <input type="text" name="" class="form-control" value=""></div><div class="col-sm-6 field"><label> Warehouse </label> <i class="fas fa-sort-down"></i> <select class="form-control"><option value=""></option><option value="1">Bbn</option><option value="2">Bbn2</option><option value="3">new</option><option value="4">Elthawra</option></select></div><div class="remove6"><span class="fas fa-times"></span></div></div> '
     );
   });
-  $(".optionBox6").on("click", ".remove6", function() {
+  $(".optionBox6").on("click", ".remove6", function () {
     $(this)
       .parent()
       .remove();
   });
 
-  $(".add7").click(function() {
+  $(".add7").click(function () {
     $(".col-sm-6.block7:last").before(
       '<div class="col-sm-6 block7"> <div class="segment">   <div class="field"><label> Product Variants  </label><i class="fas fa-sort-down" > </i> <select class = "form-control"> <option value="0" selected="selected" > Default </option><option value="1">Home page banner</option > < option value = "2" > Collection page banner </option><option value="3">Collection logo</option > </select></div>  <div class="imgcent"><img class="img_prev" src="images/photo.jpg" alt="" title=""/><label class="file-bro">Choose file <input type="file" onchange="readURL(this);" style="display: none;"/></label></div></div><div class="remove7"><span class="fas fa-times"></span></div></div> '
     );
   });
-  $(".optionBox7").on("click", ".remove7", function() {
+  $(".optionBox7").on("click", ".remove7", function () {
     $(this)
       .parent()
       .remove();
   });
 
-  $(".add8").click(function() {
+  $(".add8").click(function () {
     $(".col-sm-4.block8:last").before(
       '<div class="col-sm-4 block8"> <div class= "segment"><div class="field"><label> Country <em>*</em> </label><i class="fas fa-sort-down"></i><select class="form-control"><option value=""> Select </option><option value="AU">Australia</option><option value="EG" selected="selected"> Egypt </option><option value="SA">Saudi Arabia</option> <option value="AE"> United Arab Emirates </option><option value="US">United States</option > </select></div></div> <div class="remove8"><span class="fas fa-times"></span></div></div> '
     );
   });
-  $(".optionBox8").on("click", ".remove8", function() {
+  $(".optionBox8").on("click", ".remove8", function () {
     $(this)
       .parent()
       .remove();
   });
-  $(".add9").click(function() {
+  $(".add9").click(function () {
     $(".col-sm-4.block9:last").before(
       '<div class="col-sm-4 block9"> <div class="segment"><div class="field"><label> From <em>*</em></label><i class="fas fa-sort-down"></i> <select class="form-control"><option value = "" > </option><option value = "0" > 00 </option><option value = "1" > 01 </option><option value = "2" > 02 </option><option value = "3" > 03 </option><option value = "4" > 04 </option><option value = "5" > 05 </option><option value = "6" > 06 </option><option value = "7" > 07 </option><option value = "8" > 08 </option><option value = "9" > 09 </option><option value = "10" > 10 </option><option value = "11" > 11 </option><option value = "12" > 12 </option><option value = "13" > 13 </option><option value = "14" > 14 </option><option value = "15" > 15 </option><option value = "16" > 16 </option><option value = "17" > 17 </option><option value = "18" > 18 </option><option value = "19" > 19 </option><option value = "20" > 20 </option><option value = "21" > 21 </option><option value = "22" > 22 </option><option value = "23" > 23 <option></select></div> <div class="field"><label> To <em>*</em> </label><i class="fas fa-sort-down"> </i> <select class="form-control"><option value = "" > </option><option value = "0" > 00 </option><option value = "1" > 01 </option><option value = "2" > 02 </option><option value = "3" > 03 </option><option value = "4" > 04 </option><option value = "5" > 05 </option><option value = "6" > 06 </option><option value = "7" > 07 </option><option value = "8" > 08 </option><option value = "9" > 09 </option><option value = "10" > 10 </option><option value = "11" > 11 </option><option value = "12" > 12 </option><option value = "13" > 13 </option><option value = "14" > 14 </option><option value = "15" > 15 </option><option value = "16" > 16 </option><option value = "17" > 17 </option><option value = "18" > 18 </option><option value = "19" > 19 </option><option value = "20" > 20 </option><option value = "21" > 21 </option ><option value = "22" > 22 </option ><option value = "23" > 23 </option></select></div>  </div><div class="remove9"><span class="fas fa-times"></span > </div></div > '
     );
   });
 
-  $(".optionBox9").on("click", ".remove9", function() {
+  $(".optionBox9").on("click", ".remove9", function () {
     $(this)
       .parent()
       .remove();
   });
 
+  $(".add10").click(function () {
+    $(".block10:last").before(
+      '<div class="row block10"><div class="col-sm-2 field"><div class="wrap-custom-file"><input type="file" name="image2" id="image2" accept=".gif, .jpg, .png"/><label for="image2" class="file-ok"></label></div></div><div class="col-sm-4 field"> <input type="text" name="" class="form-control" placeholder="Choices Name" /> </div> <div class="col-sm-4 field"><div class="labeled r-label"><span class="descr">EGP</span><input type="text" name="" class="form-control" value="50"/></div></div><div class="col-sm-2 field remove10"><span class="fas fa-times"></span> remove</div></div> '
+    );
+  });
+  $(".optionBox10").on("click", ".remove10", function () {
+    $(this)
+      .parent()
+      .remove();
+  });
+
+
   //End Item Media Add Photos
 
-  $(".btnrating").on("click", function(e) {
+  $(".btnrating").on("click", function (e) {
     var previous_value = $("#selected_rating").val();
 
     var selected_value = $(this).attr("data-attr");
@@ -274,8 +287,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 991,
         settings: {
           slidesToShow: 3,
@@ -299,14 +311,14 @@ $(document).ready(function() {
     ]
   });
 
-  $(".theme-img").click(function() {
+  $(".theme-img").click(function () {
     $(".theme-img").removeClass("active");
     $(this).addClass("active");
   });
 
   // End Slider Custom Theme
 
-  $(function() {
+  $(function () {
     $(".colorpicker-component").colorpicker();
   });
 
@@ -318,12 +330,12 @@ $(document).ready(function() {
   });
   //Chosen
 
-  $(".click-chec").change(function() {
+  $(".click-chec").change(function () {
     $(".box-hide").slideToggle("slow");
   });
   // use the :checked selector to find any that are checked
 
-  $(".a-minus").on("click", function() {
+  $(".a-minus").on("click", function () {
     $(this).toggleClass("rotate");
     $(this)
       .parent()
@@ -331,13 +343,13 @@ $(document).ready(function() {
       .slideToggle("slow");
   });
 
-  $(document).on("click", ".revie .red", function() {
+  $(document).on("click", ".revie .red", function () {
     $(this)
       .parents(".revie")
       .remove();
   });
 
-  $(function() {
+  $(function () {
     //ritch text
     var options = {
       // text formatting
@@ -494,7 +506,7 @@ $(document).ready(function() {
       .find(".portimg ");
     if (this.files && this.files[0]) {
       var reader = new FileReader();
-      reader.onload = function(e) {
+      reader.onload = function (e) {
         reset($newinput.next(".delbtn"), true);
         $newinput.attr("src", e.target.result).show();
         $newinput.after('<i class="delbtn fas fa-times removebtn"></i>');
@@ -503,7 +515,7 @@ $(document).ready(function() {
     }
   }
   $(".fileUpload").change(readURL);
-  $("form").on("click", ".delbtn", function(e) {
+  $("form").on("click", ".delbtn", function (e) {
     reset($(this));
   });
 
@@ -529,31 +541,31 @@ $(document).ready(function() {
 
   // End loop of file input elements
 
-  $("#selectAll").click(function() {
+  $("#selectAll").click(function () {
     $(".checkbox").prop("checked", $(this).prop("checked"));
   });
 
-  $(".checkbox").click(function() {
+  $(".checkbox").click(function () {
     if (!$(this).prop("checked")) {
       $("#selectAll").prop("checked", false);
     }
   });
 
-  $("#selectAll2").click(function() {
+  $("#selectAll2").click(function () {
     $(".checkbox2").prop("checked", $(this).prop("checked"));
   });
 
-  $(".checkbox2").click(function() {
+  $(".checkbox2").click(function () {
     if (!$(this).prop("checked")) {
       $("#selectAll2").prop("checked", false);
     }
   });
 
-  $("#selectAll3").click(function() {
+  $("#selectAll3").click(function () {
     $(".checkbox3").prop("checked", $(this).prop("checked"));
   });
 
-  $(".checkbox3").click(function() {
+  $(".checkbox3").click(function () {
     if (!$(this).prop("checked")) {
       $("#selectAll3").prop("checked", false);
     }
@@ -561,7 +573,7 @@ $(document).ready(function() {
 
   // Check or Uncheck All checkboxes
 
-  $('input[type="file"]').each(function() {
+  $('input[type="file"]').each(function () {
     // Refs
     var $file = $(this),
       $label = $file.next("label"),
@@ -569,11 +581,11 @@ $(document).ready(function() {
       labelDefault = $labelText.text();
 
     // When a new file is selected
-    $file.on("change", function(event) {
+    $file.on("change", function (event) {
       var fileName = $file
-          .val()
-          .split("\\")
-          .pop(),
+        .val()
+        .split("\\")
+        .pop(),
         tmppath = URL.createObjectURL(event.target.files[0]);
       //Check successfully selection
       if (fileName) {
@@ -592,7 +604,7 @@ $(document).ready(function() {
 
   // Check or quantity
   var quantitiy = 0;
-  $(".quantity-right-plus").click(function(e) {
+  $(".quantity-right-plus").click(function (e) {
     // Stop acting like a button
     e.preventDefault();
     // Get the field name
@@ -605,7 +617,7 @@ $(document).ready(function() {
     // Increment
   });
 
-  $(".quantity-left-minus").click(function(e) {
+  $(".quantity-left-minus").click(function (e) {
     // Stop acting like a button
     e.preventDefault();
     // Get the field name
@@ -625,11 +637,11 @@ $(document).ready(function() {
 
   $(".multi-select__option.all-zones .custom-check-icon").on(
     "click",
-    function() {
+    function () {
       if (
         $(this)
-          .find(".custom-check-icon__input")
-          .is(":checked")
+        .find(".custom-check-icon__input")
+        .is(":checked")
       ) {
         $(this)
           .find(".custom-check-icon__input")
@@ -637,7 +649,7 @@ $(document).ready(function() {
         $(this)
           .parents(".multi-select__result")
           .find(".parent .custom-check-icon__input")
-          .each(function(index, element) {
+          .each(function (index, element) {
             $(element).prop("checked", false);
             $(element).click();
           });
@@ -648,7 +660,7 @@ $(document).ready(function() {
         $(this)
           .parents(".multi-select__result")
           .find(".parent .custom-check-icon__input")
-          .each(function(index, element) {
+          .each(function (index, element) {
             $(element).prop("checked", true);
             $(element).click();
           });
@@ -657,7 +669,7 @@ $(document).ready(function() {
   );
   // select all zones
   //toggle main option sub cities
-  $(".multi-select__option").on("click", function(e) {
+  $(".multi-select__option").on("click", function (e) {
     e.stopPropagation();
     $(this)
       .find(".multi-select__option-list")
@@ -670,20 +682,20 @@ $(document).ready(function() {
   //stop option childs from fire parent event
   $(".multi-select__option .multi-select__option-item, .custom-check-icon").on(
     "click",
-    function(e) {
+    function (e) {
       e.stopPropagation();
     }
   );
 
   // check all when parent checked
-  $(".multi-select__option-header .custom-check-icon").on("click", function(e) {
+  $(".multi-select__option-header .custom-check-icon").on("click", function (e) {
     e.stopPropagation();
     e.preventDefault();
 
     if (
       !$(this)
-        .find(".custom-check-icon__input")
-        .is(":checked")
+      .find(".custom-check-icon__input")
+      .is(":checked")
     ) {
       $(this)
         .find(".custom-check-icon.child .custom-check-icon__input")
@@ -699,19 +711,19 @@ $(document).ready(function() {
         .find(".multi-select__sub-count")
         .text(
           $(this)
-            .parents(".multi-select__option")
-            .find(".child .custom-check-icon__input:checked").length
+          .parents(".multi-select__option")
+          .find(".child .custom-check-icon__input:checked").length
         );
       // find selected check box length
 
       // if all zones selected select all check
       if (
         $(this)
-          .parents(".multi-select__result")
-          .find(".parent .custom-check-icon__input").length ===
+        .parents(".multi-select__result")
+        .find(".parent .custom-check-icon__input").length ===
         $(this)
-          .parents(".multi-select__result")
-          .find(".parent .custom-check-icon__input:checked").length
+        .parents(".multi-select__result")
+        .find(".parent .custom-check-icon__input:checked").length
       ) {
         $(this)
           .parents(".multi-select__result")
@@ -722,15 +734,15 @@ $(document).ready(function() {
 
       console.log(
         $(this)
-          .parents(".multi-select__option")
-          .find(
-            ".parent .custom-check-icon__input, .parent .custom-check-icon__input:checked"
-          ).length
+        .parents(".multi-select__option")
+        .find(
+          ".parent .custom-check-icon__input, .parent .custom-check-icon__input:checked"
+        ).length
       );
       console.log(
         $(this)
-          .parents(".multi-select__option")
-          .find(".parent .custom-check-icon__input:checked").length
+        .parents(".multi-select__option")
+        .find(".parent .custom-check-icon__input:checked").length
       );
     } else {
       $(this)
@@ -743,17 +755,17 @@ $(document).ready(function() {
         .find(".multi-select__sub-count")
         .text(
           $(this)
-            .parents(".multi-select__option")
-            .find(".child .custom-check-icon__input:checked").length
+          .parents(".multi-select__option")
+          .find(".child .custom-check-icon__input:checked").length
         );
       // find selected check box length
 
       // if any zone isn't selected remove all zones
       if (
         $(this)
-          .parents(".multi-select__result")
-          .find(".multi-select__option.all-zones .custom-check-icon__input")
-          .is(":checked")
+        .parents(".multi-select__result")
+        .find(".multi-select__option.all-zones .custom-check-icon__input")
+        .is(":checked")
       ) {
         $(this)
           .parents(".multi-select__result")
@@ -770,14 +782,14 @@ $(document).ready(function() {
     .not(
       ".multi-select__option-header .custom-check-icon, .multi-select__option.all-zones .custom-check-icon"
     )
-    .on("click", function(e) {
+    .on("click", function (e) {
       // to prevent fire click action twice (when input clicked it clicked label too , action made twice)
       e.preventDefault();
 
       if (
         $(this)
-          .find(".custom-check-icon__input")
-          .is(":checked")
+        .find(".custom-check-icon__input")
+        .is(":checked")
       ) {
         $(this)
           .find(".custom-check-icon__input")
@@ -800,8 +812,8 @@ $(document).ready(function() {
           .find(".multi-select__sub-count")
           .text(
             $(this)
-              .parents(".multi-select__option")
-              .find(".child .custom-check-icon__input:checked").length
+            .parents(".multi-select__option")
+            .find(".child .custom-check-icon__input:checked").length
           );
         // find selected check box length
       } else {
@@ -817,23 +829,23 @@ $(document).ready(function() {
           .find(".multi-select__sub-count")
           .text(
             $(this)
-              .parents(".multi-select__option")
-              .find(".child .custom-check-icon__input:checked").length
+            .parents(".multi-select__option")
+            .find(".child .custom-check-icon__input:checked").length
           );
         // find selected check box length
 
         if (
           $(this)
-            .parent()
-            .siblings()
-            .find(".custom-check-icon__input:checked").length ===
-            $(this)
-              .parent()
-              .siblings()
-              .find(".custom-check-icon__input").length &&
+          .parent()
+          .siblings()
+          .find(".custom-check-icon__input:checked").length ===
           $(this)
-            .find(".custom-check-icon__input")
-            .is(":checked")
+          .parent()
+          .siblings()
+          .find(".custom-check-icon__input").length &&
+          $(this)
+          .find(".custom-check-icon__input")
+          .is(":checked")
         ) {
           $(this)
             .parents(".multi-select__option")
@@ -844,11 +856,11 @@ $(document).ready(function() {
         // if all zones selected select all check
         if (
           $(this)
-            .parents(".multi-select__result")
-            .find(".parent .custom-check-icon__input").length ===
+          .parents(".multi-select__result")
+          .find(".parent .custom-check-icon__input").length ===
           $(this)
-            .parents(".multi-select__result")
-            .find(".parent .custom-check-icon__input:checked").length
+          .parents(".multi-select__result")
+          .find(".parent .custom-check-icon__input:checked").length
         ) {
           $(this)
             .parents(".multi-select__result")
@@ -861,7 +873,7 @@ $(document).ready(function() {
   // select checkbox and test if all siblings is checked will check parent.
 
   // for every group parent find
-  $(".multi-select__option").each(function(index, element) {
+  $(".multi-select__option").each(function (index, element) {
     $(element)
       .find(".multi-select__sub-count")
       .text($(element).find(".child .custom-check-icon__input:checked").length);
@@ -879,7 +891,7 @@ $(document).ready(function() {
       var context = this;
       var args = arguments;
 
-      var later = function() {
+      var later = function () {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
@@ -894,19 +906,19 @@ $(document).ready(function() {
     };
   }
 
-  var returnedFunction = debounce(function() {
+  var returnedFunction = debounce(function () {
     // Retrieve the input field text and reset the count to zero
     var filter = $(this).val();
     var alpha = new RegExp("[\u0600-\u06FF\u0750-\u077F\u0000-\u007F]");
     // Loop through the comment list
     //
-    $(".custom-check-icon-text").each(function() {
+    $(".custom-check-icon-text").each(function () {
       // If the list item does not contain the text phrase fade it out
       if (filter !== "" && alpha.test(filter)) {
         if (
           $(this)
-            .text()
-            .search(new RegExp(filter, "i")) < 0
+          .text()
+          .search(new RegExp(filter, "i")) < 0
         ) {
           $(this)
             .parents(".multi-select__option-item")
@@ -958,7 +970,7 @@ function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
 
-    reader.onload = function(e) {
+    reader.onload = function (e) {
       $(".img_prev").attr("src", e.target.result);
     };
     reader.readAsDataURL(input.files[0]);

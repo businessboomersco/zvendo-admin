@@ -741,6 +741,14 @@
             <li><a href="index.html">Administration</a></li>
             <li>Products</li>
           </ul>
+          <nav>
+            <a href="#" 
+            data-toggle="modal"
+            data-target="#add-new" 
+            class="bottom"
+              ><i class="fas fa-plus"></i> Create</a
+            >
+          </nav>
         </div>
         <!--End wizard -->
         <div class="alert alert-primary alert—ch" role="alert">
@@ -870,299 +878,316 @@
           <!-- Ene filter -->
         </div>
         <!-- Ene segment -->
-
-        <div class="segment">
-          <div class="head">
-            <div class="up-ex">
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFile" />
-                <label class="custom-file-label" for="customFile">
-                  no file</label
+        <form method="" action="#" class="form">
+          <div class="segment">
+            <div class="head">
+              <div class="up-ex">
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="customFile"
+                  />
+                  <label class="custom-file-label" for="customFile">
+                    no file</label
+                  >
+                </div>
+                <!-- End custom-file -->
+                <a href="#" class="bottom">Import</a>
+                <a
+                  href="#"
+                  class="bottom"
+                  data-toggle="modal"
+                  data-target="#export-categ"
+                  >Export categories</a
                 >
               </div>
-              <!-- End custom-file -->
-              <a href="#" class="bottom">Import</a>
-              <a
-                href="#"
-                class="bottom"
-                data-toggle="modal"
-                data-target="#export-categ"
-                >Export categories</a
-              >
+              <!-- End up-ex -->
+              <div class="show-num">
+                <p>Show</p>
+                <div class="field">
+                  <i class="fas fa-sort-down"></i>
+                  <select class="form-control">
+                    <option value=""> 10</option>
+                    <option value="">25</option>
+                    <option value="">50</option>
+                  </select>
+                </div>
+                <!-- End field -->
+                <p>Entries</p>
+              </div>
+              <!-- End show-num -->
             </div>
-            <a href="categories-create.html" class="bottom hide"
-              ><i class="fas fa-plus"></i> Create</a
-            >
+            <!-- End head -->
+
+            <div class="table-responsive">
+               <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <th></th>
+                    <th>image</th>
+                    <th>
+                      <a href="#" class="name-so"></a>
+                        name <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#" class="name-so"
+                        >price <i class="fas fa-sort"></i
+                      ></a>
+                    </th>
+                    <th>Quantity </th>
+                    <th>main category</th>
+                    <th>Enabled</th>
+                    <th>Actions</th>
+                  </tr>
+                  <tr>
+                  <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check">
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+               
+                  <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>mohamed</td>
+                    <td>100 EGP  </td>
+                    <td>2</td>
+                    <td>mele</td>
+                    <td>
+                        <span class="secret">
+                      <i class="fas fa-check"></i> Enabled
+                    </span>
+                      <!-- <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span> -->
+                    </td>
+                    <td>
+                
+                      <a
+                        class="bottom  green"
+                        href="products-create.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a>  
+                      <a class="bottom  red" href="#" title="Delete" data-toggle="modal" data-target="#delete-item">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                    </td>
+                  </tr>
+                    <tr>
+                  <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check">
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+               
+                  <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>mohamed</td>
+                    <td>100 EGP  </td>
+                    <td>2</td>
+                    <td>mele</td>
+                    <td>
+                        <span class="secret">
+                      <i class="fas fa-check"></i> Enabled
+                    </span>
+                      <!-- <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span> -->
+                    </td>
+                    <td>
+                
+                       <a
+                        class="bottom  green"
+                        href="products-create.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a> 
+                      <a class="bottom  red" href="#" title="Delete" data-toggle="modal" data-target="#delete-item">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                    </td>
+                  </tr>
+                    <tr>
+                  <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check">
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+               
+                  <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>mohamed</td>
+                    <td>100 EGP  </td>
+                    <td>2</td>
+                    <td>mele</td>
+                    <td>
+                        <span class="secret">
+                      <i class="fas fa-check"></i> Enabled
+                    </span>
+                      <!-- <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span> -->
+                    </td>
+                    <td>
+                
+                       <a
+                        class="bottom  green"
+                        href="products-create.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a> 
+                      <a class="bottom  red" href="#" title="Delete" data-toggle="modal" data-target="#delete-item">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                    </td>
+                  </tr>
+
+                    <tr>
+                  <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check">
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+               
+                  <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>mohamed</td>
+                    <td>100 EGP  </td>
+                    <td>2</td>
+                    <td>mele</td>
+                    <td>
+                        <span class="secret">
+                      <i class="fas fa-check"></i> Enabled
+                    </span>
+                      <!-- <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span> -->
+                    </td>
+                    <td>
+                
+                       <a
+                        class="bottom  green"
+                        href="products-create.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a> 
+                      <a class="bottom  red" href="#" title="Delete" data-toggle="modal" data-target="#delete-item">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                    </td>
+                  </tr>
+
+                    <tr>
+                  <td class="customchick">
+                      <label class="che-box">
+                        <input type="checkbox" name="check">
+                        <span class="label-text">check</span>
+                      </label>
+                      <!-- customchick -->
+                    </td>
+               
+                  <td>
+                      <img
+                        src="images/pillow2.png"
+                        class="img-tab"
+                        alt="Zvendo"
+                      />
+                    </td>
+                    <td>mohamed</td>
+                    <td>100 EGP  </td>
+                    <td>2</td>
+                    <td>mele</td>
+                    <td>
+                        <span class="secret">
+                      <i class="fas fa-check"></i> Enabled
+                    </span>
+                      <!-- <span class="secret disabled">
+                        <i class="fas fa-user-secret"></i> Guest
+                      </span> -->
+                    </td>
+                    <td>
+                
+                       <a
+                        class="bottom  green"
+                        href="products-create.html"
+                        title="Edit"
+                      >
+                        <i class="far fa-edit"></i>
+                      </a> 
+                      <a class="bottom  red" href="#" title="Delete" data-toggle="modal" data-target="#delete-item">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                    </td>
+                  </tr>
+     
+                </tbody>
+              </table>
+            </div>
           </div>
-          <!-- End Head -->
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <tbody>
-                <tr>
-                  <th>
-                    <a href="#" class="name-so"
-                      >Name <i class="fas fa-sort"></i
-                    ></a>
-                  </th>
-                  <th>Enabled</th>
-                  <th>Actions</th>
-                  <th>Order</th>
-                </tr>
-                <tr>
-                  <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                  <td>
-                    <span class="secret">
-                      <i class="fas fa-check"></i> Enabled
-                    </span>
-                  </td>
-                  <td>
-                    <a
-                      class="bottom  black"
-                      href="categories-create.html"
-                      title="Create"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </a>
-                    <a
-                      class="bottom green"
-                      href="categories-edit.html"
-                      title="Edit"
-                    >
-                      <i class="far fa-edit"></i>
-                    </a>
-                    <a
-                      class="bottom  red"
-                      href="#"
-                      title="Delete"
-                      data-toggle="modal"
-                      data-target="#delete-item"
-                    >
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-up-alt"></i>
-                    </a>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-down-alt"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                  <td>
-                    <span class="secret">
-                      <i class="fas fa-check"></i> Enabled
-                    </span>
-                  </td>
-                  <td>
-                    <a
-                      class="bottom  black"
-                      href="categories-create.html"
-                      title="Create"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </a>
-                    <a
-                      class="bottom green"
-                      href="categories-edit.html"
-                      title="Edit"
-                    >
-                      <i class="far fa-edit"></i>
-                    </a>
-                    <a
-                      class="bottom  red"
-                      href="#"
-                      title="Delete"
-                      data-toggle="modal"
-                      data-target="#delete-item"
-                    >
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-up-alt"></i>
-                    </a>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-down-alt"></i>
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                  <td>
-                    <span class="secret">
-                      <i class="fas fa-check"></i> Enabled
-                    </span>
-                  </td>
-                  <td>
-                    <a
-                      class="bottom  black"
-                      href="categories-create.html"
-                      title="Create"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </a>
-                    <a
-                      class="bottom green"
-                      href="categories-edit.html"
-                      title="Edit"
-                    >
-                      <i class="far fa-edit"></i>
-                    </a>
-                    <a
-                      class="bottom  red"
-                      href="#"
-                      title="Delete"
-                      data-toggle="modal"
-                      data-target="#delete-item"
-                    >
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-up-alt"></i>
-                    </a>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-down-alt"></i>
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                  <td>
-                    <span class="secret">
-                      <i class="fas fa-check"></i> Enabled
-                    </span>
-                  </td>
-                  <td>
-                    <a
-                      class="bottom  black"
-                      href="categories-create.html"
-                      title="Create"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </a>
-                    <a
-                      class="bottom green"
-                      href="categories-edit.html"
-                      title="Edit"
-                    >
-                      <i class="far fa-edit"></i>
-                    </a>
-                    <a
-                      class="bottom  red"
-                      href="#"
-                      title="Delete"
-                      data-toggle="modal"
-                      data-target="#delete-item"
-                    >
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-up-alt"></i>
-                    </a>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-down-alt"></i>
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                  <td>
-                    <span class="secret">
-                      <i class="fas fa-check"></i> Enabled
-                    </span>
-                  </td>
-                  <td>
-                    <a
-                      class="bottom  black"
-                      href="categories-create.html"
-                      title="Create"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </a>
-                    <a
-                      class="bottom green"
-                      href="categories-edit.html"
-                      title="Edit"
-                    >
-                      <i class="far fa-edit"></i>
-                    </a>
-                    <a
-                      class="bottom  red"
-                      href="#"
-                      title="Delete"
-                      data-toggle="modal"
-                      data-target="#delete-item"
-                    >
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-up-alt"></i>
-                    </a>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-down-alt"></i>
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td><a href="#" class="blue">Fresh Vegtables</a></td>
-                  <td>
-                    <span class="secret disabled">
-                      <i class="fas fa-check"></i> disabled
-                    </span>
-                  </td>
-                  <td>
-                    <a
-                      class="bottom  black"
-                      href="categories-create.html"
-                      title="Create"
-                    >
-                      <i class="fas fa-plus"></i>
-                    </a>
-                    <a
-                      class="bottom green"
-                      href="categories-edit.html"
-                      title="Edit"
-                    >
-                      <i class="far fa-edit"></i>
-                    </a>
-                    <a
-                      class="bottom  red"
-                      href="#"
-                      title="Delete"
-                      data-toggle="modal"
-                      data-target="#delete-item"
-                    >
-                      <i class="fas fa-trash-alt"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-up-alt"></i>
-                    </a>
-                    <a href="#" class="up-alt">
-                      <i class="fas fa-level-down-alt"></i>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- segment -->
+          <div class="pager">
+            <p>
+              showing <span>1</span> to <span>10</span> of
+              <span> 350</span> entries
+            </p>
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#"
+                  ><i class="fas fa-chevron-left"></i>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link active" href="#">1 </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#"
+                  ><i class="fas fa-chevron-right"></i
+                ></a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <!-- segment -->
+          <!-- End pager -->
+        </form>
 
         <nav class="icon-right">
           <a
@@ -1433,6 +1458,43 @@
                 <a href="#" class="bottom red" data-dismiss="modal"
                   ><i class="fas fa-times"></i> No</a
                 >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End POPUP -->
+           <div
+          class="modal fade show"
+          id="add-new"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="title">select product type</h2>
+                <span
+                  class="close de-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  ×
+                </span>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+                    <div class="col">
+                      <a href="#" class="inner-prod">product</a>
+                    </div>
+                    <!-- End col -->
+                     <div class="col">
+                      <a href="products-create.html" class="inner-prod">add ons product</a>
+                    </div>
+                    <!-- End col -->
+                  </div>
+                  <!-- end row -->
+               </div>
               </div>
             </div>
           </div>
